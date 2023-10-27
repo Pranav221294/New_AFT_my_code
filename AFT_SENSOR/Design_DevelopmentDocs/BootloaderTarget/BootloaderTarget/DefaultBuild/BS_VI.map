@@ -1,0 +1,2751 @@
+
+
+
+78K0R Linker V1.80                            Date:13 Dec 2021 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -dLinker\eel_sample_linker_file.dr -
+           oDefaultBuild\BS_VI.lmf -gi00000000000000000000h -gb7C63E9H -
+           mi0 -s -pDefaultBuild\BS_VI.map -kl -kp C:\Program Files (x86
+           )\Renesas Electronics\CS+\CACX\CA78K0R\V1.70\lib78k0r\s0rll.r
+           el DefaultBuild\r_cg_adc.rel DefaultBuild\r_cg_cgc.rel Defaul
+           tBuild\r_cg_cgc_user.rel DefaultBuild\r_cg_port.rel DefaultBu
+           ild\r_cg_port_user.rel DefaultBuild\r_cg_serial.rel DefaultBu
+           ild\r_cg_sg.rel DefaultBuild\r_cg_sg_user.rel DefaultBuild\r_
+           cg_timer.rel DefaultBuild\r_cg_wdt.rel DefaultBuild\r_systemi
+           nit.rel DefaultBuild\addressClaim.rel DefaultBuild\Can.rel De
+           faultBuild\J1939.rel DefaultBuild\r_cg_timer_user.rel Default
+           Build\r_cg_wdt_user.rel DefaultBuild\r_main.rel DefaultBuild\
+           P15765.rel DefaultBuild\TML_14229_UDS.rel DefaultBuild\AES.re
+           l DefaultBuild\interrupts.rel DefaultBuild\ramVector.rel Defa
+           ultBuild\securityAcess.rel DefaultBuild\dataflash.rel Default
+           Build\eel_descriptor.rel DefaultBuild\Eol.rel DefaultBuild\fd
+           l_descriptor.rel DefaultBuild\Flash.rel DefaultBuild\FaultDia
+           gnostics.rel -blib\eel.lib -blib\fdl.lib -blib\fsl.lib -bcl0r
+           am.lib -bcl0rm.lib -bcl0rmf.lib -iC:\Program Files (x86)\Rene
+           sas Electronics\CS+\CACX\CA78K0R\V1.70\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\BS_VI.lmf
+Map-file:  DefaultBuild\BS_VI.map
+Direc-file:Linker\eel_sample_linker_file.dr
+Directive: 
+           MEMORY ROM   : ( 000000H , 00F200H )    ; //2bffBoot clusters
+            - 10 KB
+           
+           MERGE FSL_FCD := ROM
+           MERGE FSL_BCD := ROM
+           
+           MERGE FDL_CNST:= ROM
+           MERGE EEL_CNST:= ROM
+           MERGE FDL_CODE:=ROM
+           MERGE EEL_CODE:=ROM
+           ;MEMORY CSEG0B0 :(0000C0H, 000004H)
+           ;MEMORY OCDROM :( 0F200H, 000200H)
+           MEMORY RAM : ( 0FC300H , 0380FH )       ; for device RAM size
+            16-KB
+           ; RAM vector : SIZE = 0X100 : 0xFFB10 - 0x100 : 0xFFA10 
+           ; RAM vector start : 0xFFA10
+           MEMORY STK :(0FFB10H,0300H)     ;stack end edress + size
+           MEMORY RAM_SADDR : ( 0FFE20H , 001E0H ) ; RAM (saddr)
+           
+           MERGE FSL_RCD  := ROM
+           MERGE FDL_SDAT := RAM_SADDR
+           MERGE EEL_SDAT := RAM_SADDR
+           
+           ;MEMORY RAM : ( 0FDF00H , 01D20H )      ; for device RAM size
+            8-KB
+           ;MEMORY STK :(0FFC20H,0200H)    ;stack end edress + size
+           
+           ;MEMORY RAM_SADDR : ( 0FFE20H , 00DFH ) ; RAM (saddr)
+
+
+*** Link information ***
+
+    66 output segment(s)
+ A250H byte(s) real data
+  1721 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=0F200H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         FDL_CNST                     00002H    00000H  CSEG PAGE64KP
+         EEL_CNST                     00002H    00000H  CSEG PAGE64KP
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_adc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_serial
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_sg    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_sg_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  addressClaim
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Can        00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  J1939      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  P15765     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  TML_14229_UDS
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  AES        00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  interrupts
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  ramVector
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  securityAcess
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  dataflash
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Eol        00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Flash      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  FaultDiagnostics
+                                      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_cg_adc   00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_serial
+                                      00002H    00000H
+                  @@RLINIT r_cg_sg    00002H    00000H
+                  @@RLINIT r_cg_sg_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt   00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT addressClaim
+                                      00002H    00000H
+                  @@RLINIT Can        00002H    00000H
+                  @@RLINIT J1939      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt_user
+                                      00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT P15765     00002H    00000H
+                  @@RLINIT TML_14229_UDS
+                                      00002H    00000H
+                  @@RLINIT AES        00002H    00000H
+                  @@RLINIT interrupts
+                                      00002H    00000H
+                  @@RLINIT ramVector
+                                      00002H    00000H
+                  @@RLINIT securityAcess
+                                      00002H    00000H
+                  @@RLINIT dataflash
+                                      00002H    00000H
+                  @@RLINIT eel_descriptor
+                                      00002H    00000H
+                  @@RLINIT Eol        00002H    00000H
+                  @@RLINIT FDL_DESCR
+                                      00002H    00000H
+                  @@RLINIT Flash      00002H    00000H
+                  @@RLINIT FaultDiagnostics
+                                      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_cg_adc   00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_serial
+                                      00002H    00000H
+                  @@R_INIS r_cg_sg    00002H    00000H
+                  @@R_INIS r_cg_sg_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt   00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS addressClaim
+                                      00002H    00000H
+                  @@R_INIS Can        00002H    00000H
+                  @@R_INIS J1939      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt_user
+                                      00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS P15765     00002H    00000H
+                  @@R_INIS TML_14229_UDS
+                                      00002H    00000H
+                  @@R_INIS AES        00002H    00000H
+                  @@R_INIS interrupts
+                                      00002H    00000H
+                  @@R_INIS ramVector
+                                      00002H    00000H
+                  @@R_INIS securityAcess
+                                      00002H    00000H
+                  @@R_INIS dataflash
+                                      00002H    00000H
+                  @@R_INIS eel_descriptor
+                                      00002H    00000H
+                  @@R_INIS Eol        00002H    00000H
+                  @@R_INIS FDL_DESCR
+                                      00002H    00000H
+                  @@R_INIS Flash      00002H    00000H
+                  @@R_INIS FaultDiagnostics
+                                      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_cg_adc   00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_serial
+                                      00002H    00000H
+                  @@CALT   r_cg_sg    00002H    00000H
+                  @@CALT   r_cg_sg_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt   00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   addressClaim
+                                      00002H    00000H
+                  @@CALT   Can        00002H    00000H
+                  @@CALT   J1939      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   P15765     00002H    00000H
+                  @@CALT   TML_14229_UDS
+                                      00002H    00000H
+                  @@CALT   AES        00002H    00000H
+                  @@CALT   interrupts
+                                      00002H    00000H
+                  @@CALT   ramVector
+                                      00002H    00000H
+                  @@CALT   securityAcess
+                                      00002H    00000H
+                  @@CALT   dataflash
+                                      00002H    00000H
+                  @@CALT   eel_descriptor
+                                      00002H    00000H
+                  @@CALT   Eol        00002H    00000H
+                  @@CALT   FDL_DESCR
+                                      00002H    00000H
+                  @@CALT   Flash      00002H    00000H
+                  @@CALT   FaultDiagnostics
+                                      00002H    00000H
+* gap *                               00002H    00002H
+         @@VECT04                     00004H    00046H  CSEG AT
+                  @@VECT04 interrupts
+                                      00004H    00046H
+* gap *                               0004AH    00004H
+         @@VECT4E                     0004EH    00012H  CSEG AT
+                  @@VECT4E interrupts
+                                      0004EH    00012H
+* gap *                               00060H    00002H
+         @@VECT62                     00062H    00002H  CSEG AT
+                  @@VECT62 interrupts
+                                      00062H    00002H
+* gap *                               00064H    00002H
+         @@VECT66                     00066H    00018H  CSEG AT
+                  @@VECT66 interrupts
+                                      00066H    00018H
+         EEL_CNST                     0007EH    00030H  CSEG PAGE64KP
+                  EEL_CNST eel_descriptor
+                                      0007EH    00030H
+         FDL_CNST                     000AEH    0000AH  CSEG PAGE64KP
+                  FDL_CNST FDL_DESCR
+                                      000AEH    0000AH
+* gap *                               000B8H    00008H
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   r_cg_adc   000C4H    00000H
+                  @@CODE   r_cg_cgc   000C4H    00000H
+                  @@CODE   r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_port
+                                      000C4H    00000H
+                  @@CODE   r_cg_port_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_serial
+                                      000C4H    00000H
+                  @@CODE   r_cg_sg    000C4H    00000H
+                  @@CODE   r_cg_sg_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer
+                                      000C4H    00000H
+                  @@CODE   r_cg_wdt   000C4H    00000H
+                  @@CODE   r_systeminit
+                                      000C4H    00000H
+                  @@CODE   addressClaim
+                                      000C4H    00000H
+                  @@CODE   Can        000C4H    00000H
+                  @@CODE   J1939      000C4H    00000H
+                  @@CODE   r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_wdt_user
+                                      000C4H    00000H
+                  @@CODE   r_main     000C4H    00000H
+                  @@CODE   P15765     000C4H    00000H
+                  @@CODE   TML_14229_UDS
+                                      000C4H    00000H
+                  @@CODE   AES        000C4H    00000H
+                  @@CODE   interrupts
+                                      000C4H    00000H
+                  @@CODE   ramVector
+                                      000C4H    00000H
+                  @@CODE   securityAcess
+                                      000C4H    00000H
+                  @@CODE   dataflash
+                                      000C4H    00000H
+                  @@CODE   eel_descriptor
+                                      000C4H    00000H
+                  @@CODE   Eol        000C4H    00000H
+                  @@CODE   FDL_DESCR
+                                      000C4H    00000H
+                  @@CODE   Flash      000C4H    00000H
+                  @@CODE   FaultDiagnostics
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         @@LCODE                      000CEH    001D0H  CSEG BASE
+                  @@LCODE  @cstart    000CEH    000ADH
+                  @@LCODE  @imul      0017BH    00011H
+                  @@LCODE  @isrem     0018CH    00021H
+                  @@LCODE  @iurem     001ADH    0002FH
+                  @@LCODE  @lmul      001DCH    0002BH
+                  @@LCODE  @ladd      00207H    0000FH
+                  @@LCODE  @lsub      00216H    00012H
+                  @@LCODE  @llsh      00228H    0001BH
+                  @@LCODE  @lursh     00243H    0001FH
+                  @@LCODE  @lband     00262H    00014H
+                  @@LCODE  @lbor      00276H    00014H
+                  @@LCODE  @lbxor     0028AH    00014H
+         @@BASE                       0029EH    00F24H  CSEG BASE
+                  @@BASE   r_cg_adc   0029EH    00000H
+                  @@BASE   r_cg_cgc   0029EH    00000H
+                  @@BASE   r_cg_cgc_user
+                                      0029EH    00000H
+                  @@BASE   r_cg_port
+                                      0029EH    00000H
+                  @@BASE   r_cg_port_user
+                                      0029EH    00000H
+                  @@BASE   r_cg_serial
+                                      0029EH    00000H
+                  @@BASE   r_cg_sg    0029EH    00000H
+                  @@BASE   r_cg_sg_user
+                                      0029EH    00000H
+                  @@BASE   r_cg_timer
+                                      0029EH    00000H
+                  @@BASE   r_cg_wdt   0029EH    00000H
+                  @@BASE   r_systeminit
+                                      0029EH    00000H
+                  @@BASE   addressClaim
+                                      0029EH    00000H
+                  @@BASE   Can        0029EH    00000H
+                  @@BASE   J1939      0029EH    00000H
+                  @@BASE   r_cg_timer_user
+                                      0029EH    00000H
+                  @@BASE   r_cg_wdt_user
+                                      0029EH    00000H
+                  @@BASE   r_main     0029EH    00000H
+                  @@BASE   P15765     0029EH    00000H
+                  @@BASE   TML_14229_UDS
+                                      0029EH    00000H
+                  @@BASE   AES        0029EH    00000H
+                  @@BASE   interrupts
+                                      0029EH    00F24H
+                  @@BASE   ramVector
+                                      011C2H    00000H
+                  @@BASE   securityAcess
+                                      011C2H    00000H
+                  @@BASE   dataflash
+                                      011C2H    00000H
+                  @@BASE   eel_descriptor
+                                      011C2H    00000H
+                  @@BASE   Eol        011C2H    00000H
+                  @@BASE   FDL_DESCR
+                                      011C2H    00000H
+                  @@BASE   Flash      011C2H    00000H
+                  @@BASE   FaultDiagnostics
+                                      011C2H    00000H
+         FSL_FCD                      011C2H    00097H  CSEG UNIT64KP
+                  FSL_FCD  fsl_f_init
+                                      011C2H    00062H
+                  FSL_FCD  fsl_f_open
+                                      01224H    00005H
+                  FSL_FCD  fsl_f_close
+                                      0122AH    00005H
+                  FSL_FCD  fsl_f_pfunc
+                                      01230H    00029H
+* gap *                               01259H    00001H
+         FSL_BCD                      0125AH    00100H  CSEG UNIT64KP
+                  FSL_BCD  fsl_b_common
+                                      0125AH    00100H
+         FDL_CODE                     0135AH    0023CH  CSEG UNIT64KP
+                  FDL_CODE fdl        0135AH    000CFH
+                  FDL_CODE fdl_data   0142AH    0001DH
+                  FDL_CODE fdl_functions
+                                      01448H    0014EH
+         EEL_CODE                     01596H    00AB9H  CSEG UNIT64KP
+                  EEL_CODE eel        01596H    00062H
+                  EEL_CODE eel_common
+                                      015F8H    00001H
+                  EEL_CODE eel_data   015FAH    0003DH
+                  EEL_CODE eel_format
+                                      01638H    00127H
+                  EEL_CODE eel_read   01760H    00037H
+                  EEL_CODE eel_shutdown
+                                      01798H    0000BH
+                  EEL_CODE eel_verify
+                                      017A4H    0002CH
+                  EEL_CODE eel_bios   017D0H    000DDH
+                  EEL_CODE eel_functions
+                                      018AEH    002F6H
+                  EEL_CODE eel_refresh
+                                      01BA4H    001F2H
+                  EEL_CODE eel_startup
+                                      01D96H    00184H
+                  EEL_CODE eel_write
+                                      01F1AH    000CFH
+                  EEL_CODE eel_gdrv_sts
+                                      01FEAH    0002EH
+                  EEL_CODE eel_gspace
+                                      02018H    00037H
+* gap *                               0204FH    00001H
+         FSL_RCD                      02050H    00050H  CSEG UNIT64KP
+                  FSL_RCD  fsl_r_std_cmd
+                                      02050H    0001AH
+                  FSL_RCD  fsl_r_status_check
+                                      0206AH    0000EH
+                  FSL_RCD  fsl_r_check_flow
+                                      02078H    00028H
+         @@R_INIT                     020A0H    004C0H  CSEG UNIT64KP
+                  @@R_INIT @cstart    020A0H    00000H
+                  @@R_INIT r_cg_adc   020A0H    00000H
+                  @@R_INIT r_cg_cgc   020A0H    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      020A0H    00000H
+                  @@R_INIT r_cg_port
+                                      020A0H    00000H
+                  @@R_INIT r_cg_port_user
+                                      020A0H    00000H
+                  @@R_INIT r_cg_serial
+                                      020A0H    00000H
+                  @@R_INIT r_cg_sg    020A0H    00000H
+                  @@R_INIT r_cg_sg_user
+                                      020A0H    00000H
+                  @@R_INIT r_cg_timer
+                                      020A0H    00000H
+                  @@R_INIT r_cg_wdt   020A0H    00000H
+                  @@R_INIT r_systeminit
+                                      020A0H    00000H
+                  @@R_INIT addressClaim
+                                      020A0H    00008H
+                  @@R_INIT Can        020A8H    00004H
+                  @@R_INIT J1939      020ACH    00006H
+                  @@R_INIT r_cg_timer_user
+                                      020B2H    0000EH
+                  @@R_INIT r_cg_wdt_user
+                                      020C0H    00000H
+                  @@R_INIT r_main     020C0H    00014H
+                  @@R_INIT P15765     020D4H    00272H
+                  @@R_INIT TML_14229_UDS
+                                      02346H    0002EH
+                  @@R_INIT AES        02374H    00000H
+                  @@R_INIT interrupts
+                                      02374H    00000H
+                  @@R_INIT ramVector
+                                      02374H    00000H
+                  @@R_INIT securityAcess
+                                      02374H    00000H
+                  @@R_INIT dataflash
+                                      02374H    0001EH
+                  @@R_INIT eel_descriptor
+                                      02392H    00000H
+                  @@R_INIT Eol        02392H    000C2H
+                  @@R_INIT FDL_DESCR
+                                      02454H    00000H
+                  @@R_INIT Flash      02454H    0010AH
+                  @@R_INIT FaultDiagnostics
+                                      0255EH    00002H
+                  @@R_INIT @rom       02560H    00000H
+         @@LCODEL                     02560H    000C7H  CSEG
+                  @@LCODEL rand       02560H    00040H
+                  @@LCODEL @stkinit   025A0H    00044H
+                  @@LCODEL exit       025E4H    0001CH
+                  @@LCODEL srand      02600H    00008H
+                  @@LCODEL memcmp_n   02608H    0001FH
+* gap *                               02627H    009D9H
+         @@CNST                       03000H    00436H  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   r_cg_adc   03000H    00000H
+                  @@CNST   r_cg_cgc   03000H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_port
+                                      03000H    00000H
+                  @@CNST   r_cg_port_user
+                                      03000H    00000H
+                  @@CNST   r_cg_serial
+                                      03000H    00000H
+                  @@CNST   r_cg_sg    03000H    00000H
+                  @@CNST   r_cg_sg_user
+                                      03000H    00000H
+                  @@CNST   r_cg_timer
+                                      03000H    00000H
+                  @@CNST   r_cg_wdt   03000H    00000H
+                  @@CNST   r_systeminit
+                                      03000H    00000H
+                  @@CNST   addressClaim
+                                      03000H    00040H
+                  @@CNST   Can        03040H    00000H
+                  @@CNST   J1939      03040H    0003EH
+                  @@CNST   r_cg_timer_user
+                                      0307EH    00000H
+                  @@CNST   r_cg_wdt_user
+                                      0307EH    00000H
+                  @@CNST   r_main     0307EH    00000H
+                  @@CNST   P15765     0307EH    0000CH
+                  @@CNST   TML_14229_UDS
+                                      0308AH    000A4H
+                  @@CNST   AES        0312EH    0020CH
+                  @@CNST   interrupts
+                                      0333AH    00000H
+                  @@CNST   ramVector
+                                      0333AH    00000H
+                  @@CNST   securityAcess
+                                      0333AH    00010H
+                  @@CNST   dataflash
+                                      0334AH    000ECH
+                  @@CNST   eel_descriptor
+                                      03436H    00000H
+                  @@CNST   Eol        03436H    00000H
+                  @@CNST   FDL_DESCR
+                                      03436H    00000H
+                  @@CNST   Flash      03436H    00000H
+                  @@CNST   FaultDiagnostics
+                                      03436H    00000H
+         @@CODEL                      03436H    07812H  CSEG
+                  @@CODEL  r_cg_adc   03436H    0005DH
+                  @@CODEL  r_cg_cgc   03493H    00040H
+                  @@CODEL  r_cg_cgc_user
+                                      034D3H    00001H
+                  @@CODEL  r_cg_port
+                                      034D4H    00044H
+                  @@CODEL  r_cg_port_user
+                                      03518H    00000H
+                  @@CODEL  r_cg_serial
+                                      03518H    00244H
+                  @@CODEL  r_cg_sg    0375CH    00042H
+                  @@CODEL  r_cg_sg_user
+                                      0379EH    00000H
+                  @@CODEL  r_cg_timer
+                                      0379EH    00389H
+                  @@CODEL  r_cg_wdt   03B27H    00014H
+                  @@CODEL  r_systeminit
+                                      03B3BH    00033H
+                  @@CODEL  addressClaim
+                                      03B6EH    00632H
+                  @@CODEL  Can        041A0H    0062BH
+                  @@CODEL  J1939      047CBH    00A52H
+                  @@CODEL  r_cg_timer_user
+                                      0521DH    0000DH
+                  @@CODEL  r_cg_wdt_user
+                                      0522AH    00007H
+                  @@CODEL  r_main     05231H    00453H
+                  @@CODEL  P15765     05684H    00400H
+                  @@CODEL  TML_14229_UDS
+                                      05A84H    02288H
+                  @@CODEL  AES        07D0CH    0132FH
+                  @@CODEL  interrupts
+                                      0903BH    00000H
+                  @@CODEL  ramVector
+                                      0903BH    00000H
+                  @@CODEL  securityAcess
+                                      0903BH    00096H
+                  @@CODEL  dataflash
+                                      090D1H    0128CH
+                  @@CODEL  eel_descriptor
+                                      0A35DH    00000H
+                  @@CODEL  Eol        0A35DH    00412H
+                  @@CODEL  FDL_DESCR
+                                      0A76FH    00000H
+                  @@CODEL  Flash      0A76FH    001B5H
+                  @@CODEL  FaultDiagnostics
+                                      0A924H    00324H
+* gap *                               0AC48H    045B8H
+
+  MEMORY=RAM
+  BASE ADDRESS=FC300H   SIZE=0380FH
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         RAM_VECT                     FC300H    000E4H  DSEG AT
+                  RAM_VECT ramVector
+                                      FC300H    000E4H
+         @@DATA                       FC3E4H    00908H  DSEG BASEP
+                  @@DATA   @cstart    FC3E4H    000BAH
+                  @@DATA   r_cg_adc   FC49EH    00000H
+                  @@DATA   r_cg_cgc   FC49EH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FC49EH    00000H
+                  @@DATA   r_cg_port
+                                      FC49EH    00000H
+                  @@DATA   r_cg_port_user
+                                      FC49EH    00000H
+                  @@DATA   r_cg_serial
+                                      FC49EH    00018H
+                  @@DATA   r_cg_sg    FC4B6H    00000H
+                  @@DATA   r_cg_sg_user
+                                      FC4B6H    00000H
+                  @@DATA   r_cg_timer
+                                      FC4B6H    00000H
+                  @@DATA   r_cg_wdt   FC4B6H    00000H
+                  @@DATA   r_systeminit
+                                      FC4B6H    00000H
+                  @@DATA   addressClaim
+                                      FC4B6H    00014H
+                  @@DATA   Can        FC4CAH    00004H
+                  @@DATA   J1939      FC4CEH    00232H
+                  @@DATA   r_cg_timer_user
+                                      FC700H    00000H
+                  @@DATA   r_cg_wdt_user
+                                      FC700H    00000H
+                  @@DATA   r_main     FC700H    00004H
+                  @@DATA   P15765     FC704H    0020CH
+                  @@DATA   TML_14229_UDS
+                                      FC910H    00140H
+                  @@DATA   AES        FCA50H    00000H
+                  @@DATA   interrupts
+                                      FCA50H    00000H
+                  @@DATA   securityAcess
+                                      FCA50H    00010H
+                  @@DATA   dataflash
+                                      FCA60H    0005CH
+                  @@DATA   eel_descriptor
+                                      FCABCH    00000H
+                  @@DATA   Eol        FCABCH    00000H
+                  @@DATA   FDL_DESCR
+                                      FCABCH    00000H
+                  @@DATA   Flash      FCABCH    00112H
+                  @@DATA   FaultDiagnostics
+                                      FCBCEH    0011EH
+                  @@DATA   @rom       FCCECH    00000H
+         @@INIT                       FCCECH    004C0H  DSEG BASEP
+                  @@INIT   @cstart    FCCECH    00000H
+                  @@INIT   r_cg_adc   FCCECH    00000H
+                  @@INIT   r_cg_cgc   FCCECH    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FCCECH    00000H
+                  @@INIT   r_cg_port
+                                      FCCECH    00000H
+                  @@INIT   r_cg_port_user
+                                      FCCECH    00000H
+                  @@INIT   r_cg_serial
+                                      FCCECH    00000H
+                  @@INIT   r_cg_sg    FCCECH    00000H
+                  @@INIT   r_cg_sg_user
+                                      FCCECH    00000H
+                  @@INIT   r_cg_timer
+                                      FCCECH    00000H
+                  @@INIT   r_cg_wdt   FCCECH    00000H
+                  @@INIT   r_systeminit
+                                      FCCECH    00000H
+                  @@INIT   addressClaim
+                                      FCCECH    00008H
+                  @@INIT   Can        FCCF4H    00004H
+                  @@INIT   J1939      FCCF8H    00006H
+                  @@INIT   r_cg_timer_user
+                                      FCCFEH    0000EH
+                  @@INIT   r_cg_wdt_user
+                                      FCD0CH    00000H
+                  @@INIT   r_main     FCD0CH    00014H
+                  @@INIT   P15765     FCD20H    00272H
+                  @@INIT   TML_14229_UDS
+                                      FCF92H    0002EH
+                  @@INIT   AES        FCFC0H    00000H
+                  @@INIT   interrupts
+                                      FCFC0H    00000H
+                  @@INIT   ramVector
+                                      FCFC0H    00000H
+                  @@INIT   securityAcess
+                                      FCFC0H    00000H
+                  @@INIT   dataflash
+                                      FCFC0H    0001EH
+                  @@INIT   eel_descriptor
+                                      FCFDEH    00000H
+                  @@INIT   Eol        FCFDEH    000C2H
+                  @@INIT   FDL_DESCR
+                                      FD0A0H    00000H
+                  @@INIT   Flash      FD0A0H    0010AH
+                  @@INIT   FaultDiagnostics
+                                      FD1AAH    00002H
+                  @@INIT   @rom       FD1ACH    00000H
+         @@INIS                       FD1ACH    00000H  DSEG UNITP
+                  @@INIS   @cstart    FD1ACH    00000H
+                  @@INIS   r_cg_adc   FD1ACH    00000H
+                  @@INIS   r_cg_cgc   FD1ACH    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_port
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_port_user
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_serial
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_sg    FD1ACH    00000H
+                  @@INIS   r_cg_sg_user
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_timer
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_wdt   FD1ACH    00000H
+                  @@INIS   r_systeminit
+                                      FD1ACH    00000H
+                  @@INIS   addressClaim
+                                      FD1ACH    00000H
+                  @@INIS   Can        FD1ACH    00000H
+                  @@INIS   J1939      FD1ACH    00000H
+                  @@INIS   r_cg_timer_user
+                                      FD1ACH    00000H
+                  @@INIS   r_cg_wdt_user
+                                      FD1ACH    00000H
+                  @@INIS   r_main     FD1ACH    00000H
+                  @@INIS   P15765     FD1ACH    00000H
+                  @@INIS   TML_14229_UDS
+                                      FD1ACH    00000H
+                  @@INIS   AES        FD1ACH    00000H
+                  @@INIS   interrupts
+                                      FD1ACH    00000H
+                  @@INIS   ramVector
+                                      FD1ACH    00000H
+                  @@INIS   securityAcess
+                                      FD1ACH    00000H
+                  @@INIS   dataflash
+                                      FD1ACH    00000H
+                  @@INIS   eel_descriptor
+                                      FD1ACH    00000H
+                  @@INIS   Eol        FD1ACH    00000H
+                  @@INIS   FDL_DESCR
+                                      FD1ACH    00000H
+                  @@INIS   Flash      FD1ACH    00000H
+                  @@INIS   FaultDiagnostics
+                                      FD1ACH    00000H
+                  @@INIS   @rom       FD1ACH    00000H
+         @@DATS                       FD1ACH    00000H  DSEG UNITP
+                  @@DATS   @cstart    FD1ACH    00000H
+                  @@DATS   r_cg_adc   FD1ACH    00000H
+                  @@DATS   r_cg_cgc   FD1ACH    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_port
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_port_user
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_serial
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_sg    FD1ACH    00000H
+                  @@DATS   r_cg_sg_user
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_timer
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_wdt   FD1ACH    00000H
+                  @@DATS   r_systeminit
+                                      FD1ACH    00000H
+                  @@DATS   addressClaim
+                                      FD1ACH    00000H
+                  @@DATS   Can        FD1ACH    00000H
+                  @@DATS   J1939      FD1ACH    00000H
+                  @@DATS   r_cg_timer_user
+                                      FD1ACH    00000H
+                  @@DATS   r_cg_wdt_user
+                                      FD1ACH    00000H
+                  @@DATS   r_main     FD1ACH    00000H
+                  @@DATS   P15765     FD1ACH    00000H
+                  @@DATS   TML_14229_UDS
+                                      FD1ACH    00000H
+                  @@DATS   AES        FD1ACH    00000H
+                  @@DATS   interrupts
+                                      FD1ACH    00000H
+                  @@DATS   ramVector
+                                      FD1ACH    00000H
+                  @@DATS   securityAcess
+                                      FD1ACH    00000H
+                  @@DATS   dataflash
+                                      FD1ACH    00000H
+                  @@DATS   eel_descriptor
+                                      FD1ACH    00000H
+                  @@DATS   Eol        FD1ACH    00000H
+                  @@DATS   FDL_DESCR
+                                      FD1ACH    00000H
+                  @@DATS   Flash      FD1ACH    00000H
+                  @@DATS   FaultDiagnostics
+                                      FD1ACH    00000H
+                  @@DATS   @rom       FD1ACH    00000H
+         @@INITL                      FD1ACH    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FD1ACH    00000H
+                  @@INITL  r_cg_adc   FD1ACH    00000H
+                  @@INITL  r_cg_cgc   FD1ACH    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_port
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_port_user
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_serial
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_sg    FD1ACH    00000H
+                  @@INITL  r_cg_sg_user
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_timer
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_wdt   FD1ACH    00000H
+                  @@INITL  r_systeminit
+                                      FD1ACH    00000H
+                  @@INITL  addressClaim
+                                      FD1ACH    00000H
+                  @@INITL  Can        FD1ACH    00000H
+                  @@INITL  J1939      FD1ACH    00000H
+                  @@INITL  r_cg_timer_user
+                                      FD1ACH    00000H
+                  @@INITL  r_cg_wdt_user
+                                      FD1ACH    00000H
+                  @@INITL  r_main     FD1ACH    00000H
+                  @@INITL  P15765     FD1ACH    00000H
+                  @@INITL  TML_14229_UDS
+                                      FD1ACH    00000H
+                  @@INITL  AES        FD1ACH    00000H
+                  @@INITL  interrupts
+                                      FD1ACH    00000H
+                  @@INITL  ramVector
+                                      FD1ACH    00000H
+                  @@INITL  securityAcess
+                                      FD1ACH    00000H
+                  @@INITL  dataflash
+                                      FD1ACH    00000H
+                  @@INITL  eel_descriptor
+                                      FD1ACH    00000H
+                  @@INITL  Eol        FD1ACH    00000H
+                  @@INITL  FDL_DESCR
+                                      FD1ACH    00000H
+                  @@INITL  Flash      FD1ACH    00000H
+                  @@INITL  FaultDiagnostics
+                                      FD1ACH    00000H
+                  @@INITL  @rom       FD1ACH    00000H
+         @@DATAL                      FD1ACH    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FD1ACH    00000H
+                  @@DATAL  r_cg_adc   FD1ACH    00000H
+                  @@DATAL  r_cg_cgc   FD1ACH    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_port
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_port_user
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_serial
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_sg    FD1ACH    00000H
+                  @@DATAL  r_cg_sg_user
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_timer
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_wdt   FD1ACH    00000H
+                  @@DATAL  r_systeminit
+                                      FD1ACH    00000H
+                  @@DATAL  addressClaim
+                                      FD1ACH    00000H
+                  @@DATAL  Can        FD1ACH    00000H
+                  @@DATAL  J1939      FD1ACH    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FD1ACH    00000H
+                  @@DATAL  r_cg_wdt_user
+                                      FD1ACH    00000H
+                  @@DATAL  r_main     FD1ACH    00000H
+                  @@DATAL  P15765     FD1ACH    00000H
+                  @@DATAL  TML_14229_UDS
+                                      FD1ACH    00000H
+                  @@DATAL  AES        FD1ACH    00000H
+                  @@DATAL  interrupts
+                                      FD1ACH    00000H
+                  @@DATAL  ramVector
+                                      FD1ACH    00000H
+                  @@DATAL  securityAcess
+                                      FD1ACH    00000H
+                  @@DATAL  dataflash
+                                      FD1ACH    00000H
+                  @@DATAL  eel_descriptor
+                                      FD1ACH    00000H
+                  @@DATAL  Eol        FD1ACH    00000H
+                  @@DATAL  FDL_DESCR
+                                      FD1ACH    00000H
+                  @@DATAL  Flash      FD1ACH    00000H
+                  @@DATAL  FaultDiagnostics
+                                      FD1ACH    00000H
+                  @@DATAL  @rom       FD1ACH    00000H
+* gap *                               FD1ACH    02963H
+
+  MEMORY=STK
+  BASE ADDRESS=FFB10H   SIZE=00300H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FFB10H    00300H
+
+  MEMORY=RAM_SADDR
+  BASE ADDRESS=FFE20H   SIZE=001E0H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         FDL_SDAT                     FFE20H    00002H  DSEG
+                  FDL_SDAT fdl_data   FFE20H    00002H
+         EEL_SDAT                     FFE22H    00001H  DSEG
+                  EEL_SDAT eel_data   FFE22H    00001H
+         @@BITS                       FFE23H    00001H  BSEG
+                  @@BITS   @cstart    FFE23H.0  00000H.0
+                  @@BITS   r_cg_adc   FFE23H.0  00000H.0
+                  @@BITS   r_cg_cgc   FFE23H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_serial
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_sg    FFE23H.0  00000H.0
+                  @@BITS   r_cg_sg_user
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_wdt   FFE23H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FFE23H.0  00000H.0
+                  @@BITS   addressClaim
+                                      FFE23H.0  00000H.0
+                  @@BITS   Can        FFE23H.0  00000H.0
+                  @@BITS   J1939      FFE23H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_cg_wdt_user
+                                      FFE23H.0  00000H.0
+                  @@BITS   r_main     FFE23H.0  00000H.0
+                  @@BITS   P15765     FFE23H.0  00000H.0
+                  @@BITS   TML_14229_UDS
+                                      FFE23H.0  00000H.0
+                  @@BITS   AES        FFE23H.0  00000H.0
+                  @@BITS   interrupts
+                                      FFE23H.0  00000H.0
+                  @@BITS   ramVector
+                                      FFE23H.0  00000H.0
+                  @@BITS   securityAcess
+                                      FFE23H.0  00000H.1
+                  @@BITS   dataflash
+                                      FFE23H.1  00000H.0
+                  @@BITS   eel_descriptor
+                                      FFE23H.1  00000H.0
+                  @@BITS   Eol        FFE23H.1  00000H.0
+                  @@BITS   FDL_DESCR
+                                      FFE23H.1  00000H.0
+                  @@BITS   Flash      FFE23H.1  00000H.0
+                  @@BITS   FaultDiagnostics
+                                      FFE23H.1  00000H.0
+* gap *                               FFE24H    000B0H
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG @SEGREG    FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+
+*** Local symbol list ***
+
+MODULE    ATTR       VALUE    NAME
+
+@cstart
+          MOD                 @cstart
+          DSEG                @@DATA
+          CSEG                @@VECT00
+          CSEG                @@LCODE
+          CSEG                @@R_INIT
+          CSEG                @@RLINIT
+          CSEG                @@R_INIS
+          DSEG                @@INIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CALT
+          CSEG                @@CNST
+          CSEG                @@CNSTL
+          BSEG                @@BITS
+r_cg_adc
+          MOD                 r_cg_adc
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_cgc
+          MOD                 r_cg_cgc
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_cgc_user
+          MOD                 r_cg_cgc_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_port
+          MOD                 r_cg_port
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_port_user
+          MOD                 r_cg_port_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_serial
+          MOD                 r_cg_serial
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_sg
+          MOD                 r_cg_sg
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_sg_user
+          MOD                 r_cg_sg_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_timer
+          MOD                 r_cg_timer
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_wdt
+          MOD                 r_cg_wdt
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_systeminit
+          MOD                 r_systeminit
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+addressClaim
+          MOD                 addressClaim
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FC4C6H   _bAnswered
+          ADDR       FC4C8H   _uiDelayTimer
+                     03000H   L0027
+                     03C0AH   __vAddressClaimInit
+                     03DDBH   __bTxISOacknowledge
+                     03E51H   __bTxISOaddressClaim
+                     03E8FH   __ucGetRandomDelayTime
+                     03EB3H   __vS0AddressClaimIdle
+                     03EC8H   __vT0AddressClaimIdle
+                     03ED3H   __vS1AddressClaimRandomDelay
+                     03F0EH   __vT1AddressClaimRandomDelay
+                     03F21H   __vS2AddressClaimTransmit
+                     03F48H   __vT2AddressClaimTransmit
+                     03F59H   __vS3AddressClaimRxCanFrame
+                     03F83H   __vT3AddressClaimRxCanFrame
+                     03FCEH   __vS4AddressClaimFetchNextmyAddress
+                     04063H   __vT4AddressClaimFetchNextmyAddress
+                     04074H   __vS5AddressClaimRxCanFrame
+                     0408DH   __vT5AddressClaimRxCanFrame
+                     040AEH   __vS6AddressClaimRandomDelay
+                     040E5H   __vT6AddressClaimRandomDelay
+                     040F8H   __vS7AddressClaimTransmit
+                     0412BH   __vT7AddressClaimTransmit
+                     0413CH   __vS8AddressClaimRxCanFrame
+                     04149H   __vT8AddressClaimRxCanFrame
+                     0415DH   __vS9AddressClaimTransmit
+                     04178H   __vT9AddressClaimTransmit
+Can
+          MOD                 Can
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCCF4H   _bBusOffFlag
+          ADDR       FCCF5H   _bBusOffDtcFlag
+                     FC4CAH   _TRQ_REGISTER_BUF_14
+                     FC4CCH   _TRQ_REGISTER_BUF_15
+                     FCCF6H   L0015
+J1939
+          MOD                 J1939
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCCF8H   L0003
+          ADDR       FCCFCH   L0081
+                     04929H   __J1939_RxManager
+                     04BD6H   __J1939_TxManager
+                     04F4DH   __vPGN65303_IILPropData
+r_cg_timer_user
+          MOD                 r_cg_timer_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCD02H   _u32CaptureValue
+          ADDR       FCD06H   _u16SpeedoPulses
+          ADDR       FCD08H   _bCaptureSignalStatus
+          ADDR       FCD09H   _bOdoEnableFlag
+          ADDR       FCD0AH   _bSensorStatus
+r_cg_wdt_user
+          MOD                 r_cg_wdt_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_main
+          MOD                 r_main
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCD16H   L0005
+          ADDR       FCD18H   L0006
+          ADDR       FCD19H   L0007
+          ADDR       FCD1AH   L0008
+          ADDR       FCD1CH   L0009
+          ADDR       FCD1EH   L0071
+                     05588H   __vMapInterrupts
+P15765
+          MOD                 P15765
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCF90H   _bFrameSequenceError
+                     FC8F0H   _UDSData
+          ADDR       FC90AH   L0003
+          ADDR       FC90CH   L0004
+          ADDR       FC90EH   L0005
+                     0307EH   L0020
+                     05A25H   _copySingleFrameDataToMultiFrame
+TML_14229_UDS
+          MOD                 TML_14229_UDS
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCFA0H   _bRequestDownloadServiceActive
+          ADDR       FCFA4H   _RoutineControlStatusPending
+          ADDR       FCFA6H   _u8BlockSequenceCounter
+          ADDR       FCFA7H   _bTranferDataStatusPending
+          ADDR       FCFA8H   _BlockCounter
+          ADDR       FCFAAH   _u8BlockNumber
+                     FC910H   _dataTxBuffer
+                     FCA10H   _diagnosticsResponse
+          ADDR       FCA28H   _resetTimeTracker
+          ADDR       FCA2AH   _setTimeForReset
+          ADDR       FCFABH   _activeDiagnosticsSession
+          ADDR       FCFACH   _bECUResetServiceActive
+          ADDR       FCFADH   _bCheckSumVarificationDone
+                     FCA2CH   _encryptedReceivedData
+                     03100H   _TMLAESCipherKey
+                     03111H   _IILAESCipherKey
+                     FCFAEH   _securityAccessInfo
+                     FCA3DH   L0050
+          ADDR       FCFB6H   L0207
+          ADDR       FCFB8H   L0208
+          ADDR       FCFBCH   L0209
+          ADDR       FCFBDH   L0314
+          ADDR       FCFBEH   L0315
+          ADDR       FCA4EH   L0786
+                     03122H   L0119
+                     0764FH   _getEncryptedData
+                     07671H   _formatMulBytesIntoFrames
+AES
+          MOD                 AES
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       0312EH   _sbox
+          ADDR       0322EH   _rsbox
+          ADDR       0332EH   _Rcon
+          ADDR       07D0CH   _expandKey
+                     00004H   _expandedKey
+                     0000CH   _key
+                     00002H   _ii
+                     00000H   _buf1
+          ADDR       07FE5H   _galois_mul2
+                     00000H   _value
+                     00004H   _state
+                     0000CH   _expandedKey
+                     00003H   _buf1
+                     00002H   _buf2
+                     00001H   _buf3
+                     00000H   _round
+                     00004H   _state
+                     0000CH   _expandedKey
+                     00003H   _buf1
+                     00002H   _buf2
+                     00001H   _buf3
+                     00000H   _round
+                     000B0H   _state
+                     000B8H   _key
+                     00000H   _expandedKey
+                     000B0H   _state
+                     000B8H   _key
+                     00000H   _expandedKey
+interrupts
+          MOD                 interrupts
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          CSEG                @@VECT04
+          CSEG                @@VECT4E
+          CSEG                @@VECT62
+          CSEG                @@VECT66
+                     0029EH   _watchdog_intrpt
+                     002E2H   _lvi_intrpt
+                     00326H   _intp0_intrpt
+                     0036AH   _intp1_intrpt
+                     003AEH   _intp2_intrpt
+                     003F2H   _intp3_intrpt
+                     00436H   _intp4_intrpt
+                     0047AH   _intp5_intrpt
+                     004BEH   _clock_monitor_intrpt
+                     00502H   _csi00_end_intrpt
+                     00546H   _csi01_end_intrpt
+                     0058AH   _dma0_end_intrpt
+                     005CEH   _dma1_end_intrpt
+                     00612H   _rtc_intrpt
+                     00656H   _interval_timer_intrpt
+                     0069AH   _lin_uart0_tx_intrpt
+                     006DEH   _lin_uart0_rx_intrpt
+                     00722H   _lin_uart0_rxerr_intrpt
+                     00766H   _lin_uart0_pin_intrpt
+                     007AAH   _sg_intrpt
+                     007EEH   _timer00_intrpt
+                     00832H   _timer01_intrpt
+                     00876H   _timer02_intrpt
+                     008BAH   _timer03_intrpt
+                     008FEH   _adc_intrpt
+                     00942H   _lin_uart1_tx_intrpt
+                     00986H   _lin_uart1_rx_intrpt
+                     009CAH   _lin_uart1_rxerr_intrpt
+                     00A0EH   _lin_uart1_pin_intrpt
+                     00A52H   _csi10_end_intrpt
+                     00A96H   _iic11_end_intrpt
+                     00ADAH   _timer04_intrpt
+                     00B1EH   _timer05_intrpt
+                     00B62H   _timer06_intrpt
+                     00BA6H   _timer07_intrpt
+                     00BEAH   _can0_err_intrpt
+                     00C2EH   _can0_wake_intrpt
+                     00C72H   _can0_rx_intrpt
+                     00CB6H   _can0_tx_intrpt
+                     00CFAH   _timer10_intrpt
+                     00D3EH   _timer11_intrpt
+                     00D82H   _timer12_intrpt
+                     00DC6H   _timer13_intrpt
+                     00E0AH   _division_end_intrpt
+                     00E4EH   _flash_prgrm_intrpt
+                     00E92H   _timer14_intrpt
+                     00ED6H   _timer15_intrpt
+                     00F1AH   _timer16_intrpt
+                     00F5EH   _timer17_intrpt
+                     00FA2H   _timer20_intrpt
+                     00FE6H   _timer21_intrpt
+                     0102AH   _timer22_intrpt
+                     0106EH   _timer23_intrpt
+                     010B2H   _timer24_intrpt
+                     010F6H   _timer26_intrpt
+                     0113AH   _dma2_end_intrpt
+                     0117EH   _dma3_end_intrpt
+ramVector
+          MOD                 ramVector
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                RAM_VECT
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+securityAcess
+          MOD                 securityAcess
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     0333AH   _ScipherKey
+dataflash
+          MOD                 dataflash
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     FCA60H   __snewEelStatus
+                     FCA62H   __pnewVersionStringu8
+                     FCA66H   __snewEelRequestStr
+                     FCA6CH   __snewRefrEelRequestStr
+                     FCA72H   __snewEelDriverStatus
+                     FCA73H   __snewFdlStatus
+                     FCA74H   __snewFdlRequestStr
+                     FCA7CH   __snewRefrFdlRequestStr
+          ADDR       FCFDCH   _u8BootloaderState
+                     FCA84H   _u8OdoSystemParmeter
+                     FCA8EH   _u8HourSystemParmeter
+                     FCA9BH   _u8AfeASystemParmeter
+                     FCAA9H   _u8AfeBSystemParmeter
+          ADDR       FCAB8H   L0076
+                     090D1H   __vMyErrorHandler
+                     090F6H   __vEelInit
+                     09115H   __vFdlInit
+                     09136H   __vEelStartUp
+                     0918CH   __vEolWrite
+                     09204H   __vEolRead
+                     0923FH   __vSysParmsWrite
+                     092B9H   __ulSysParmsRead
+                     092FBH   __vReadOdoSysParms
+                     093EDH   __vReadHourSysParms
+                     0956FH   __vReadTripAAfeSysParms
+                     096A5H   __vReadTripBAfeSysParms
+                     097DBH   __vSaveOdoSysParms
+                     098ABH   __vSaveHourSysParms
+                     099DAH   __vSaveTripAAfeSysParms
+                     09AE2H   __vSaveTripBAfeSysParms
+                     09BEAH   __vGetSysParms
+                     0334AH   L0167
+                     09CAEH   __vSaveSysParms
+                     03378H   L0184
+                     09D77H   __vReadDtcData
+                     09D78H   __vSaveDtcData
+                     033A6H   L0218
+                     033EEH   L0248
+eel_descriptor
+          MOD                 eel_descriptor
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                EEL_CNST
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+Eol
+          MOD                 Eol
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FCFDEH   _u8FuelType
+          ADDR       FCFDFH   _u8EolDteMulFactor
+          ADDR       FCFE0H   _u16EolEngineOverSpeed
+                     FCFE2H   _u8OdoWrite
+FDL_DESCR
+          MOD                 FDL_DESCR
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                FDL_CNST
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+Flash
+          MOD                 Flash
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FD0A0H   _TesterBlockCount
+                     0A76FH   __bVerifyFlashData
+FaultDiagnostics
+          MOD                 FaultDiagnostics
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     FCCCEH   _ProprietaryResponse
+                     FD1AAH   _CountCmd
+          ADDR       FD1ABH   L0020
+                     0A9DFH   __vReadAndSendFlashData
+eel
+          MOD                 eel
+          CSEG                EEL_CODE
+eel_common
+          MOD                 eel_common
+          CSEG                EEL_CODE
+eel_data
+          MOD                 eel_data
+          DSEG                EEL_SDAT
+          CSEG                EEL_CODE
+eel_format
+          MOD                 eel_format
+          CSEG                EEL_CODE
+eel_read
+          MOD                 eel_read
+          CSEG                EEL_CODE
+eel_shutdown
+          MOD                 eel_shutdown
+          CSEG                EEL_CODE
+eel_verify
+          MOD                 eel_verify
+          CSEG                EEL_CODE
+eel_bios
+          MOD                 eel_bios
+          CSEG                EEL_CODE
+eel_functions
+          MOD                 eel_functions
+          CSEG                EEL_CODE
+eel_refresh
+          MOD                 eel_refresh
+          CSEG                EEL_CODE
+eel_startup
+          MOD                 eel_startup
+          CSEG                EEL_CODE
+eel_write
+          MOD                 eel_write
+          CSEG                EEL_CODE
+eel_gdrv_sts
+          MOD                 eel_gdrv_sts
+          CSEG                EEL_CODE
+eel_gspace
+          MOD                 eel_gspace
+          CSEG                EEL_CODE
+fdl
+          MOD                 fdl
+          CSEG                FDL_CODE
+fdl_data
+          MOD                 fdl_data
+          DSEG                FDL_SDAT
+          CSEG                FDL_CODE
+fdl_functions
+          MOD                 fdl_functions
+          CSEG                FDL_CODE
+fsl_f_init
+          MOD                 fsl_f_init
+          CSEG                FSL_FCD
+fsl_f_open
+          MOD                 fsl_f_open
+          CSEG                FSL_FCD
+fsl_f_close
+          MOD                 fsl_f_close
+          CSEG                FSL_FCD
+fsl_f_pfunc
+          MOD                 fsl_f_pfunc
+          CSEG                FSL_FCD
+fsl_b_common
+          MOD                 fsl_b_common
+          CSEG                FSL_BCD
+fsl_r_std_cmd
+          MOD                 fsl_r_std_cmd
+          CSEG                FSL_RCD
+fsl_r_status_check
+          MOD                 fsl_r_status_check
+          CSEG                FSL_RCD
+fsl_r_check_flow
+          MOD                 fsl_r_check_flow
+          CSEG                FSL_RCD
+@imul
+          MOD                 @imul
+          CSEG                @@LCODE
+@isrem
+          MOD                 @isrem
+          CSEG                @@LCODE
+@iurem
+          MOD                 @iurem
+          CSEG                @@LCODE
+rand
+          MOD                 rand
+          CSEG                @@LCODEL
+@lmul
+          MOD                 @lmul
+          CSEG                @@LCODE
+@ladd
+          MOD                 @ladd
+          CSEG                @@LCODE
+@lsub
+          MOD                 @lsub
+          CSEG                @@LCODE
+@llsh
+          MOD                 @llsh
+          CSEG                @@LCODE
+@lursh
+          MOD                 @lursh
+          CSEG                @@LCODE
+@lband
+          MOD                 @lband
+          CSEG                @@LCODE
+@lbor
+          MOD                 @lbor
+          CSEG                @@LCODE
+@lbxor
+          MOD                 @lbxor
+          CSEG                @@LCODE
+@SEGREG
+          MOD                 @SEGREG
+          DSEG                @@SEGREG
+@stkinit
+          MOD                 @stkinit
+          CSEG                @@LCODEL
+@RTARG0
+          MOD                 @RTARG0
+          DSEG                @@RTARG0
+exit
+          MOD                 exit
+          CSEG                @@LCODEL
+srand
+          MOD                 srand
+          CSEG                @@LCODEL
+memcmp_n
+          MOD                 memcmp_n
+          CSEG                @@LCODEL
+@rom
+          MOD                 @rom
+          CSEG                @@R_INIT
+          CSEG                @@RLINIT
+          CSEG                @@R_INIS
+          DSEG                @@INIT
+          DSEG                @@INITL
+          DSEG                @@DATA
+          DSEG                @@DATAL
+          DSEG                @@INIS
+          DSEG                @@DATS
+
+
+
+*** Public symbol list ***
+
+MODULE    ATTR       VALUE    NAME
+
+@cstart
+          ADDR       000CEH   _@cstart
+          ADDR       0017BH   _@cend
+          ADDR       FC47CH   _@BRKADR
+          ADDR       FC47EH   _@MEMTOP
+          ADDR       FC49EH   _@MEMBTM
+          ADDR       FC3E4H   _@FNCTBL
+          ADDR       FC464H   _@FNCENT
+          ADDR       FC466H   _@SEED
+          ADDR       FC46AH   _@DIVR
+          ADDR       FC46EH   _@LDIVR
+          ADDR       FC476H   _@TOKPTR
+          ADDR       FC47AH   _errno
+r_main
+          ADDR       05233H   _main
+          NUM        FFB0EH   _@STBEG
+          NUM        FD1ACH   _@STEND
+@stkinit
+          ADDR       025A0H   _stkinit
+r_systeminit
+          ADDR       03B66H   _hdwinit
+          NUM        000C0H   _@SADSIZ
+          ADDR       FFE20H   _@SADBEG
+exit
+          ADDR       025E4H   _exit
+          NUM        00000H   _@MAA
+@rom
+          ADDR       02560H   _?R_INIT
+          ADDR       00002H   _?RLINIT
+          ADDR       00002H   _?R_INIS
+          ADDR       FCCECH   _?DATA
+          ADDR       FD1ACH   _?DATAL
+          ADDR       FD1ACH   _?DATS
+r_cg_adc
+          ADDR       03436H   _R_ADC_Create
+          ADDR       03466H   _R_ADC_Start
+          ADDR       03470H   _R_ADC_Stop
+          ADDR       0347AH   _R_ADC_Set_OperationOn
+          ADDR       0347EH   _R_ADC_Set_OperationOff
+          ADDR       03482H   _R_ADC_Get_Result
+r_cg_cgc
+          ADDR       03493H   _R_CGC_Create
+r_cg_cgc_user
+          ADDR       034D3H   _R_CGC_Get_ResetSource
+r_cg_port
+          ADDR       034D4H   _R_PORT_Create
+r_cg_serial
+          ADDR       FC49EH   _gp_csi10_rx_address
+                     FC4A0H   _g_csi10_rx_length
+                     FC4A2H   _g_csi10_rx_count
+          ADDR       FC4A4H   _gp_csi10_tx_address
+                     FC4A6H   _g_csi10_tx_length
+                     FC4A8H   _g_csi10_tx_count
+                     FC4AAH   _g_iic11_master_status_flag
+          ADDR       FC4ACH   _gp_iic11_tx_address
+                     FC4AEH   _g_iic11_tx_count
+          ADDR       FC4B0H   _gp_iic11_rx_address
+                     FC4B2H   _g_iic11_rx_count
+                     FC4B4H   _g_iic11_rx_length
+          ADDR       03518H   _R_SAU1_Create
+          ADDR       0352FH   _R_CSI10_Create
+          ADDR       03590H   _R_CSI10_Start
+          ADDR       035BDH   _R_CSI10_Stop
+          ADDR       035D8H   _R_CSI10_Send
+          ADDR       0360CH   _R_IIC11_Create
+          ADDR       03650H   _R_IIC11_Master_Send
+          ADDR       03689H   _R_IIC11_Master_Receive
+          ADDR       036C7H   _R_IIC11_Stop
+          ADDR       036D8H   _R_IIC11_StartCondition
+          ADDR       03715H   _R_IIC11_StopCondition
+r_cg_sg
+          ADDR       0375CH   _R_SG_Create
+          ADDR       03792H   _R_SG_Start
+          ADDR       03799H   _R_SG_Stop
+r_cg_timer
+          ADDR       0379EH   _R_TAU0_Create
+          ADDR       038F8H   _R_TAU0_Channel0_Start
+          ADDR       0390DH   _R_TAU0_Channel0_Stop
+          ADDR       03922H   _R_TAU0_Channel1_Start
+          ADDR       03933H   _R_TAU0_Channel1_Stop
+          ADDR       03944H   _R_TAU0_Channel3_Start
+          ADDR       03955H   _R_TAU0_Channel3_Stop
+          ADDR       03966H   _R_TAU0_Channel4_Start
+          ADDR       03977H   _R_TAU0_Channel4_Stop
+          ADDR       03988H   _R_TAU0_Channel5_Start
+          ADDR       03999H   _R_TAU0_Channel5_Stop
+          ADDR       039AAH   _R_TAU1_Create
+          ADDR       03AC7H   _R_TAU1_Channel0_Start
+          ADDR       03ADCH   _R_TAU1_Channel0_Stop
+          ADDR       03AF1H   _R_TAU1_Channel6_Start
+          ADDR       03B02H   _R_TAU1_Channel6_Stop
+          ADDR       03B13H   _R_TAU1_Channel6_Get_PulseWidth
+r_cg_timer_user
+                     FCCFEH   _g_tau1_ch6_width
+r_cg_wdt
+          ADDR       03B27H   _R_WDT_Create
+          ADDR       03B37H   _R_WDT_Restart
+r_systeminit
+          ADDR       03B3BH   _R_Systeminit
+addressClaim
+                     FC4B6H   _ucMyAddress
+          ADDR       FC4B8H   _sMyName
+          ADDR       FCCECH   _sAddressClaim
+          ADDR       03B6EH   _vAddressClaimStateMgr
+          ADDR       03C58H   _vRxISOaddressClaim
+          ADDR       03CF5H   _vRxISOrequest
+          ADDR       04189H   _bIsAddressClaimed
+          ADDR       04190H   _ucGetMyClaimedAddress
+          ADDR       04196H   _bHasMyClaimedAddressedBeenBumped
+          ADDR       0419CH   _vClearAddressClaimBumped
+@RTARG0
+          ADDR       FFED8H   _@RTARG0
+          ADDR       FFEDAH   _@RTARG2
+@lursh
+          ADDR       00243H   @@lursh
+J1939
+          ADDR       04CA7H   _bProcessISORequest
+@RTARG0
+          ADDR       FFEDCH   _@RTARG4
+@lband
+          ADDR       00262H   @@luband
+Can
+          ADDR       045CCH   _vTxMsgBufProcessing
+r_main
+          ADDR       0555FH   _u16GetClockTicks
+srand
+          ADDR       02600H   _srand
+rand
+          ADDR       02560H   _rand
+@isrem
+          ADDR       0018CH   @@isrem
+r_main
+          ADDR       05558H   _u32GetClockTicks
+@RTARG0
+          ADDR       FFEDDH   _@RTARG5
+          ADDR       FFEDEH   _@RTARG6
+@ladd
+          ADDR       00207H   @@luadd
+Can
+          ADDR       041A0H   _vCanInit
+          ADDR       042C4H   __vConfigureCansetting
+          ADDR       0434DH   _vReCANInit
+          ADDR       04408H   __vCANMsgBufInit
+          ADDR       0446AH   __vTxMsgBufInit
+          ADDR       04542H   __vRxMsgBufInit
+          ADDR       046C2H   _MY_Rx_MsgBuf_Processing
+          ADDR       046C7H   _MY_ISR_CAN_Wakeup
+          ADDR       046CEH   _MY_ISR_CAN_Error
+          ADDR       04727H   _vRecoveryFromBusOffState
+          ADDR       04790H   _MY_Tx_MsgBuf
+          ADDR       04796H   _MY_CAN_SleepMode_Setting
+          ADDR       0479DH   _MY_CAN_StopMode_Setting
+          ADDR       047B3H   _MY_CAN_StopMode_Release
+          ADDR       047BAH   _MY_CAN_SleepMode_Release
+          ADDR       047C1H   _bGetCanBusOffFlagStatus
+          ADDR       047C7H   _vClearCanBusOffFlag
+Eol
+          ADDR       0A369H   _eGetCanBaudRate
+J1939
+          ADDR       0508CH   _vJ1939OnFullRx
+          ADDR       FC4CEH   _tx_msg_data
+          ADDR       FC4D6H   _Rx_Databuf
+          ADDR       FC4DEH   _Aes_Databuf
+                     FC4EEH   _f
+                     FC4EFH   _k
+                     FC4F0H   _rx_data_cnt
+                     FC4F1H   _aescount
+          ADDR       03040H   _sPGNconstantsTx
+          ADDR       0304AH   _sPGNdataTx
+          ADDR       03060H   _sPGNdataRx
+          ADDR       FC4F2H   _sJ1939RxQueue
+          ADDR       FC6D2H   _J1939RxData
+          ADDR       FC6EAH   _J1939_Tx
+          ADDR       FC6F2H   _J1939TxData
+          ADDR       03076H   _sPGNconstantsRx
+          ADDR       047CBH   _vJ1939_ServiceManager
+          ADDR       047D0H   _vJ1939Init
+          ADDR       048BDH   _vJ1939TxInit
+          ADDR       04D03H   _u32GetPGNdata
+          ADDR       04EDEH   _u8GetBitData
+          ADDR       04F99H   _bGetPGNDataReady
+          ADDR       04FBBH   _ClearPGNDataReady
+          ADDR       04FDDH   _bGetPGNTimeOut
+P15765
+          ADDR       FC706H   _diagnosticsBuf
+                     FC8E6H   _diagnosticsTimer
+                     FC704H   _testerAddress
+@lbxor
+          ADDR       0028AH   @@lubxor
+@lsub
+          ADDR       00216H   @@lusub
+@RTARG0
+          ADDR       FFED9H   _@RTARG1
+@llsh
+          ADDR       00228H   @@lulsh
+@lbor
+          ADDR       00276H   @@lubor
+r_cg_timer_user
+          ADDR       0521DH   _r_tau0_channel4_interrupt
+r_main
+                     FCD10H   _gu32Clock1msTicker
+r_cg_wdt_user
+          ADDR       0522AH   _vResetCpu
+          ADDR       05230H   _r_wdt_interrupt
+r_main
+                     FCD0CH   _bFlashWritingStatus
+                     FCD0DH   _bEraseFlashStatus
+                     FCD0EH   _bCheckSum
+          ADDR       FC700H   _sIgnition
+          ADDR       FCD14H   _clusterStatus
+          ADDR       05231H   _dummyfunction
+          ADDR       053F3H   _R_MAIN_UserInit
+          ADDR       05407H   _bCheckIgnitionOff
+          ADDR       05442H   _bCheckIgnitionOn
+          ADDR       0547DH   _UdsServiceSupportedFromMainLoop
+          ADDR       05563H   _vWatingTimeMs
+          ADDR       055FCH   _GetControllerMode
+          ADDR       05600H   _u16GetVehicleSpeed
+          ADDR       05602H   _u16GetEngineSpeed
+          ADDR       05604H   _eGetServiceStatus
+          ADDR       05608H   _vClearServiceReminder
+          ADDR       05609H   _bCheckDepenDencies
+          ADDR       0560BH   _bFlashEarseStatus
+          ADDR       05611H   _ClearFlashEraseFlag
+          ADDR       05615H   _bFlashWriteStatus
+          ADDR       0561BH   _vClearFlashWriteStatus
+          ADDR       0561FH   _bCheckSumStatus
+          ADDR       0563FH   _MyErrorHandler
+          ADDR       05644H   _MY_Application_Run
+dataflash
+          ADDR       0917FH   _vDataFlashinit
+          ADDR       0A337H   _u8GetBootloaderState
+eel
+          ADDR       015C6H   _EEL_Close
+fdl
+          ADDR       013BCH   _FDL_Close
+P15765
+          ADDR       05684H   _processDiagnosticsMessages
+TML_14229_UDS
+          ADDR       077EFH   _sendDiagnosticsResponse
+          ADDR       07BB7H   _sessionTimeout
+          ADDR       07CF9H   _u8GetIILSecurityAccessStatus
+FaultDiagnostics
+          ADDR       0A924H   _vTx_Critical_Internally_Data
+Flash
+          ADDR       0A81AH   _vFlashInit
+TML_14229_UDS
+          ADDR       07CF3H   _bIsECUResetByService
+          ADDR       07CB9H   _diagnosticDataInit
+          ADDR       07CE9H   _u16GetRoutineControlServiceStatus
+Flash
+          ADDR       0A844H   _vEraseFlash
+TML_14229_UDS
+          ADDR       0620BH   _RoutineService
+Flash
+          ADDR       0A806H   _vInitFlashImpVariable
+TML_14229_UDS
+          ADDR       07CEDH   _bTransferDataServiceStatus
+Flash
+          ADDR       0A89CH   _bWriteFlash
+TML_14229_UDS
+          ADDR       066C3H   _TransferData
+          ADDR       07D02H   _bIsCheckSumVarificationDone
+Flash
+          ADDR       0A802H   _u16GetNoOfBlockReturn
+dataflash
+          ADDR       09D79H   _vGetEolData
+Eol
+          ADDR       FD063H   _u8ReprogrammingCounter
+dataflash
+          ADDR       09EF8H   _vSaveEolData
+          ADDR       0A346H   _vSaveBootloaderState
+TML_14229_UDS
+          ADDR       07D08H   _ClearCheckSumVarificationDoneFlag
+ramVector
+          ADDR       FC354H   _RAM_INTTM01_ISR
+          ADDR       FC35CH   _RAM_INTTM03_ISR
+          ADDR       FC37CH   _RAM_INTTM04_ISR
+          ADDR       FC380H   _RAM_INTTM05_ISR
+          ADDR       FC3BCH   _RAM_INTTM16_ISR
+          ADDR       FC360H   _RAM_INTAD_ISR
+          ADDR       FC374H   _RAM_INTCSI10_ISR
+          ADDR       FC378H   _RAM_INTIIC11_ISR
+          ADDR       FC300H   _RAM_INTWDTI_ISR
+          ADDR       FC394H   _RAM_INTC0REC_ISR
+          ADDR       FC398H   _RAM_INTC0TRX_ISR
+          ADDR       FC38CH   _RAM_INTC0ERR_ISR
+          ADDR       FC390H   _RAM_INTC0WUP_ISR
+@SEGREG
+          ADDR       FFED4H   _@SEGAX
+          ADDR       FFED6H   _@SEGDE
+P15765
+          ADDR       FCD20H   _multipleFramesRx
+          ADDR       FCE46H   _multipleFramesTx
+          ADDR       FCF6CH   _singleFrameRx
+          ADDR       FCF7EH   _frameConrolDataToSend
+                     FC8EAH   _diagnosticsCANId
+                     FCF86H   _HSCANBusOffRecoveryClk
+                     FC8EEH   _powerMode
+                     FCF8AH   _UnderVoltageRecoveryTimeout
+                     FCF8CH   _OverVoltageRecoveryTimeout
+                     FCF8EH   _BusOffRecoveryTimeout
+          ADDR       05A79H   _HSCANBusOffRecovery
+          ADDR       05A7AH   _bGetFrameSequenseErrorStatus
+          ADDR       05A80H   _vClearFrameSequenseErrorStatus
+TML_14229_UDS
+          ADDR       05A84H   _startDiagnosticsSession
+          ADDR       05B6BH   _ECUResetService
+          ADDR       05C22H   _securityAccessService
+          ADDR       05EB1H   _communicationControlService
+          ADDR       060AAH   _TesterPresentService
+          ADDR       06109H   _ControlDTCSettingServiceSingle
+          ADDR       06FC9H   _ReadDataByIdentifierServiceMultiple
+          ADDR       06925H   _ReadDataByIdentifierServiceSingle
+          ADDR       06FCAH   _WriteDataByIdentifierServiceSingle
+          ADDR       064A1H   _LinkControlService
+          ADDR       068F5H   _InputOutputControlByIdentifierService
+          ADDR       06856H   _TransferExit
+          ADDR       FCFB4H   _commInfo
+          ADDR       0614BH   _ControlDTCSettingServiceMultiple
+          ADDR       068C0H   _InputOutputControlByIdentifierServiceMul
+          ADDR       0654BH   _RequestDownload
+          ADDR       0308AH   _dtcSupportedGroup
+          ADDR       03093H   _dtcSupportedId
+                     FCF92H   _firstTestFailedDTC
+                     FCF93H   _firstConfirmedDTC
+                     FCF94H   _mostRecentTestFailed
+                     FCF95H   _mostRecentConfirmedDTC
+          ADDR       030ABH   _u8EcuPartNumber
+          ADDR       030B7H   _u8TmlEcuHardwareNumber
+          ADDR       030C6H   _u8TmlContainerPartNumber
+          ADDR       030D2H   _u8TmlEcuSoftwareNumber
+          ADDR       030E1H   _u8IILPcbNo
+                     030EAH   _u16ECUHardwareVersionNum
+          ADDR       030ECH   _u8EcuSerialNumber
+                     030F8H   _u16ReprogrammingCounter
+                     030FAH   _u16ECUSoftwareVersionNum
+          ADDR       030FCH   _u8IILSvnNo
+          ADDR       FCF96H   _sTestEquimentControl
+                     FCFA1H   _criticalFunctionStatus
+                     FCFA2H   _conditionNotCorrect
+                     FCFA3H   _odoProgrammingCtr
+          ADDR       0617FH   _ClearDiagnosticsInformationService
+          ADDR       061BFH   _ReadDiagnosticTroubleInformationService
+          ADDR       07BAAH   _initDiagnosticsSession
+          ADDR       07BAFH   _resetDiagnosticSession
+          ADDR       07BB3H   _setStatusDefaultSession
+          ADDR       07C25H   _securitySessionTimeOutInit
+          ADDR       07C8CH   _isItTimeToReset
+          ADDR       07CC5H   _setConditionNotCorrect
+          ADDR       07CD1H   _getConditionNotCorrect
+          ADDR       07CD7H   _setCriticalFunctionStatus
+          ADDR       07CE3H   _getCriticalFunctionStatus
+AES
+                     0901EH   _data_decrypt
+memcmp_n
+          ADDR       02608H   _memcmp
+Eol
+          ADDR       0A35DH   _vSetCanBaudRate
+Flash
+          ADDR       FD0AAH   _MY_RxByteBuffer
+Eol
+          ADDR       FD028H   _u8VehicleId
+          ADDR       FD039H   _u8VariantDaSetId
+          ADDR       FD03EH   _u8ParameterPartNumber
+          ADDR       FD04FH   _u8ProgrammingShopCode
+          ADDR       FD024H   _u8DateOfLastProgramming
+          ADDR       FD054H   _u8VehicleConfigNumber
+          ADDR       FCFE6H   _u8VehicleOptionContent
+          ADDR       FD001H   _u8AfeOptions
+          ADDR       FCFEBH   _u8VsPulsPerRev
+          ADDR       FCFF0H   _u8EngineOverSpeedWarning
+          ADDR       FD00DH   _u8BuzzerOption
+          ADDR       FD013H   _u8FirstService
+          ADDR       FD016H   _u8ServiceInterval
+          ADDR       FD019H   _u8ServiceThreshold
+          ADDR       FCFFEH   _u8CoolantTempOption
+          ADDR       FCFF2H   _u8FeIndicatorThresh
+          ADDR       FD003H   _u8DteMulFactor
+          ADDR       FD005H   _u8LowOilPressureThresh
+          ADDR       FCFF6H   _u8AirPressureOption
+          ADDR       FD009H   _u8TelltalesOption
+          ADDR       FD007H   _u8DisplayScreenConfig
+          ADDR       FD01CH   _u8FuelTankCapacity
+          ADDR       FD01EH   _u8CanSpeedoFactor
+@imul
+          ADDR       0017BH   @@iumul
+AES
+                     08005H   _aes_encr
+                     08759H   _aes_decr
+                     09001H   _data_encrypt
+interrupts
+          ADDR       00004H   _@vect04
+          ADDR       00006H   _@vect06
+          ADDR       00008H   _@vect08
+          ADDR       0000AH   _@vect0a
+          ADDR       0000CH   _@vect0c
+          ADDR       0000EH   _@vect0e
+          ADDR       00010H   _@vect10
+          ADDR       00012H   _@vect12
+          ADDR       00014H   _@vect14
+          ADDR       00016H   _@vect16
+          ADDR       00018H   _@vect18
+          ADDR       0001AH   _@vect1a
+          ADDR       0001CH   _@vect1c
+          ADDR       0001EH   _@vect1e
+          ADDR       00020H   _@vect20
+          ADDR       00022H   _@vect22
+          ADDR       00024H   _@vect24
+          ADDR       00026H   _@vect26
+          ADDR       00028H   _@vect28
+          ADDR       0002AH   _@vect2a
+          ADDR       0002CH   _@vect2c
+          ADDR       0002EH   _@vect2e
+          ADDR       00030H   _@vect30
+          ADDR       00032H   _@vect32
+          ADDR       00034H   _@vect34
+          ADDR       00036H   _@vect36
+          ADDR       00038H   _@vect38
+          ADDR       0003AH   _@vect3a
+          ADDR       0003CH   _@vect3c
+          ADDR       0003EH   _@vect3e
+          ADDR       00040H   _@vect40
+          ADDR       00042H   _@vect42
+          ADDR       00044H   _@vect44
+          ADDR       00046H   _@vect46
+          ADDR       00048H   _@vect48
+          ADDR       0004EH   _@vect4e
+          ADDR       00050H   _@vect50
+          ADDR       00052H   _@vect52
+          ADDR       00054H   _@vect54
+          ADDR       00056H   _@vect56
+          ADDR       00058H   _@vect58
+          ADDR       0005AH   _@vect5a
+          ADDR       0005CH   _@vect5c
+          ADDR       0005EH   _@vect5e
+          ADDR       00062H   _@vect62
+          ADDR       00066H   _@vect66
+          ADDR       00068H   _@vect68
+          ADDR       0006AH   _@vect6a
+          ADDR       0006CH   _@vect6c
+          ADDR       0006EH   _@vect6e
+          ADDR       00070H   _@vect70
+          ADDR       00072H   _@vect72
+          ADDR       00074H   _@vect74
+          ADDR       00076H   _@vect76
+          ADDR       00078H   _@vect78
+          ADDR       0007AH   _@vect7a
+          ADDR       0007CH   _@vect7c
+ramVector
+          ADDR       FC304H   _RAM_INTLVI_ISR
+          ADDR       FC308H   _RAM_INTP0_ISR
+          ADDR       FC30CH   _RAM_INTP1_ISR
+          ADDR       FC310H   _RAM_INTP2_ISR
+          ADDR       FC314H   _RAM_INTP3_ISR
+          ADDR       FC318H   _RAM_INTP4_ISR
+          ADDR       FC31CH   _RAM_INTP5_ISR
+          ADDR       FC320H   _RAM_INTCLM_ISR
+          ADDR       FC324H   _RAM_INTCSI00_ISR
+          ADDR       FC328H   _RAM_INTCSI01_ISR
+          ADDR       FC32CH   _RAM_INTDMA0_ISR
+          ADDR       FC330H   _RAM_INTDMA1_ISR
+          ADDR       FC334H   _RAM_INTRTC_ISR
+          ADDR       FC338H   _RAM_INTIT_ISR
+          ADDR       FC33CH   _RAM_INTLT0_ISR
+          ADDR       FC340H   _RAM_INTLR0_ISR
+          ADDR       FC344H   _RAM_INTLS0_ISR
+          ADDR       FC348H   _RAM_INTPLR0_ISR
+          ADDR       FC34CH   _RAM_INTSG_ISR
+          ADDR       FC350H   _RAM_INTTM00_ISR
+          ADDR       FC358H   _RAM_INTTM02_ISR
+          ADDR       FC364H   _RAM_INTLT1_ISR
+          ADDR       FC368H   _RAM_INTLR1_ISR
+          ADDR       FC36CH   _RAM_INTLS1_ISR
+          ADDR       FC370H   _RAM_INTPLR1_ISR
+          ADDR       FC384H   _RAM_INTTM06_ISR
+          ADDR       FC388H   _RAM_INTTM07_ISR
+          ADDR       FC39CH   _RAM_INTTM10_ISR
+          ADDR       FC3A0H   _RAM_INTTM11_ISR
+          ADDR       FC3A4H   _RAM_INTTM12_ISR
+          ADDR       FC3A8H   _RAM_INTTM13_ISR
+          ADDR       FC3ACH   _RAM_INTMD_ISR
+          ADDR       FC3B0H   _RAM_INTFL_ISR
+          ADDR       FC3B4H   _RAM_INTTM14_ISR
+          ADDR       FC3B8H   _RAM_INTTM15_ISR
+          ADDR       FC3C0H   _RAM_INTTM17_ISR
+          ADDR       FC3C4H   _RAM_INTTM20_ISR
+          ADDR       FC3C8H   _RAM_INTTM21_ISR
+          ADDR       FC3CCH   _RAM_INTTM22_ISR
+          ADDR       FC3D0H   _RAM_INTTM23_ISR
+          ADDR       FC3D4H   _RAM_INTTM24_ISR
+          ADDR       FC3D8H   _RAM_INTTM26_ISR
+          ADDR       FC3DCH   _RAM_INTDMA2_ISR
+          ADDR       FC3E0H   _RAM_INTDMA3_ISR
+securityAcess
+          SABIT      FFE23H.0 _bKeyMatch
+          ADDR       FCA50H   _data
+          ADDR       0903BH   _sendRandomNumber
+          ADDR       090AAH   _KeyMatch
+dataflash
+                     FCFC0H   _EOL_ADR_OFFSET
+          ADDR       FCFC2H   _ssysParms
+          ADDR       090D5H   _vEelFormat
+          ADDR       0A077H   _vSetDefaultVariablesToFlash
+eel
+          ADDR       015CFH   _EEL_Execute
+          ADDR       015D8H   _EEL_Handler
+          ADDR       01596H   _EEL_Init
+          ADDR       015C2H   _EEL_Open
+eel_gdrv_sts
+          ADDR       01FEAH   _EEL_GetDriverStatus
+FDL_DESCR
+          ADDR       000AEH   _fdl_descriptor_str
+fdl
+          ADDR       0135AH   _FDL_Init
+          ADDR       013A9H   _FDL_Open
+eel_descriptor
+          ADDR       0007EH   _eel_descriptor
+          ADDR       000ADH   _eel_internal_cfg_cau08
+Eol
+          ADDR       FCFE5H   _eBaudRateIndex
+          ADDR       FD010H   _u8OdoWriteData
+          ADDR       FD066H   _sBuzzerEnable
+          ADDR       FD06AH   _sIndicatorEnable
+          ADDR       FD06EH   _sLcdScreenConfig
+          ADDR       FD070H   _sLowOilPressThresh
+          ADDR       FD072H   _sAfeDataOptionBytes
+          ADDR       FD074H   _sCoolantTempBytes
+          ADDR       FD078H   _sAirPressureBytes
+          ADDR       FD080H   _sFeData
+          ADDR       FD088H   _sSpeedSensor
+          ADDR       FD08EH   _sIndicatorInputType
+          ADDR       FD094H   _sServReminder
+          ADDR       0A370H   _u16GetFeededPulse
+          ADDR       0A374H   _vSetEOLBuzzerSetting
+          ADDR       0A38EH   _vSetEOLVehicleOptionContentData
+          ADDR       0A3B4H   _vSetEOLSpeedSensorData
+          ADDR       0A498H   _vSetEOLEngOverSpeedData
+          ADDR       0A4AEH   _vSetEOLFeData
+          ADDR       0A4EEH   _vSetEOLAirPressData
+          ADDR       0A526H   _vSetEOLCoolantTempData
+          ADDR       0A540H   _vSetEOLAfeData
+          ADDR       0A554H   _vSetEOLDteMulFactorData
+          ADDR       0A562H   _vSetEOLServHrReminderData
+          ADDR       0A6C9H   _vSetEOLLowOilPressureData
+          ADDR       0A6DDH   _vSetEOLLcdScreenConfigData
+          ADDR       0A6F1H   _vSetEOLTellTaleControlData
+          ADDR       0A711H   _vSetAllEolData
+          ADDR       0A74BH   _u8GetVehicleType
+          ADDR       0A757H   _u8GetTransmissionType
+          ADDR       0A760H   _bGetTransmissionEnable
+          ADDR       0A769H   _u8GetEolPendingStatus
+Flash
+          ADDR       FCABCH   _my_fsl_write_str
+          ADDR       FCAC4H   _fsl_data_buffer_u08
+                     FCAC6H   _my_fsl_status
+          ADDR       FCAC8H   _fsl_descr
+                     FD0A2H   _u32Address
+                     FD0A6H   _u8verify_block_cnt
+                     FD0A8H   _iverify_blk
+          ADDR       FCACCH   _u8FlashData
+                     FCBCCH   _rxstatus
+fsl_f_init
+          ADDR       011C2H   _FSL_Init
+fsl_f_open
+          ADDR       01224H   _FSL_Open
+fsl_f_pfunc
+          ADDR       01230H   _FSL_PrepareFunctions
+fsl_r_std_cmd
+          ADDR       02054H   _FSL_Erase
+fsl_r_status_check
+          ADDR       0206AH   _FSL_StatusCheck
+fsl_f_close
+          ADDR       0122AH   _FSL_Close
+fsl_r_std_cmd
+          ADDR       0205CH   _FSL_Write
+FaultDiagnostics
+          ADDR       FCBCEH   _u8ReadFlashData
+          ADDR       FCCE6H   _pFlashDataPtr
+          ADDR       FCCEAH   _TxData
+eel_data
+          ADDR       FFE22H   _EEL_flags_u08
+          ADDR       01624H   _EEL_VERSION_STRING
+          ADDR       015FAH   _EEL_CmdRomTable
+          ADDR       0160AH   _EEL_CmdAttrRomTable
+          ADDR       01612H   _EEL_DrvStatesVsFlagsRomTable
+          ADDR       01624H   _EEL_DrvStatesVsFlagsRomTable_end
+          NUM        00009H   _EEL_DrvStatesVsFlagsRomTable_size
+          SABIT      FFE22H.0 EEL_initialized_u01
+          SABIT      FFE22H.1 EEL_opened_u01
+          SABIT      FFE22H.2 EEL_started_up_u01
+          SABIT      FFE22H.3 EEL_busy_u01
+          SABIT      FFE22H.4 EEL_read_enabled_u01
+          SABIT      FFE22H.5 EEL_write_enabled_u01
+          SABIT      FFE22H.6 EEL_format_busy_u01
+eel_functions
+          ADDR       01922H   _EEL_ClearBRAM_refs
+          ADDR       0192CH   _EEL_ClearBRAM_vars
+          ADDR       0194FH   _EEL_CheckConfiguration
+          ADDR       019CDH   _EEL_CheckRequest
+          ADDR       01A6AH   _EEL_StateProlog
+          ADDR       01A76H   _EEL_StateEpilog
+          ADDR       01A52H   _EEL_IdentifyLibrary
+          ADDR       01AF4H   _EEL_ConvertBlockIDtoIDX
+          ADDR       01A80H   _EEL_ReadBlockStatus
+          ADDR       01AA7H   _EEL_AnalyzeBlock
+          ADDR       018AEH   _EEL_AnalyzePool
+          ADDR       01910H   _EEL_SwapBlkInfoOfABlocks
+          ADDR       01909H   _EEL_CalcNextAFlag
+          ADDR       01B2CH   _EEL_IsSeparator
+          ADDR       01AF8H   _EEL_AnalyzeID
+          ADDR       01B37H   _EEL_GetFreeSpace
+          ADDR       0193BH   _EEL_WriteBRAM_ref
+          ADDR       01945H   _EEL_ReadBRAM_ref
+          ADDR       01B07H   _EEL_ReadIDInformation
+          ADDR       01B58H   _EEL_PrepareDataForFlagWrite_complete_sam\
+                              e_error_state
+          ADDR       01B5CH   _EEL_PrepareDataForFlagWrite_complete
+          ADDR       01B73H   _EEL_PrepareDataForFlagWrite_BufferAndCou\
+                              nt
+          ADDR       01B81H   _EEL_PrepareDataForRead
+          ADDR       01B7EH   _EEL_PrepareDataForRead_with_std_buffer
+          ADDR       01B94H   _EEL_finish_command
+eel_common
+          ADDR       015F8H   _EEL_EXIT_STATE
+eel
+          ADDR       015F1H   _EEL_GetVersionString
+          ADDR       01596H   EEL_Init
+          ADDR       015C2H   EEL_Open
+          ADDR       015C6H   EEL_Close
+          ADDR       015CFH   EEL_Execute
+          ADDR       015D8H   EEL_Handler
+          ADDR       015F1H   EEL_GetVersionString
+eel_startup
+          ADDR       01D96H   _EEL_SUP_STATE_0
+          ADDR       01DBEH   _EEL_SUP_STATE_1
+          ADDR       01DCFH   _EEL_SUP_STATE_2
+          ADDR       01DE4H   _EEL_SUP_STATE_3
+          ADDR       01E03H   _EEL_SUP_STATE_4
+          ADDR       01E21H   _EEL_SUP_STATE_5a
+          ADDR       01E23H   _EEL_SUP_STATE_5b
+          ADDR       01E4FH   _EEL_SUP_STATE_6
+          ADDR       01E68H   _EEL_SUP_STATE_7
+          ADDR       01E76H   _EEL_SUP_STATE_8
+          ADDR       01EC2H   _EEL_SUP_STATE_9
+          ADDR       01EE1H   _EEL_SUP_STATE_10
+          ADDR       01F10H   _EEL_SUP_STATE_11
+          ADDR       01F05H   _EEL_SUP_STATE_11a
+eel_write
+          ADDR       01F1AH   _EEL_WRR_STATE_0
+          ADDR       01F63H   _EEL_WRR_STATE_1
+          ADDR       01F91H   _EEL_WRR_STATE_2
+          ADDR       01FBAH   _EEL_WRR_STATE_3
+          ADDR       01FDAH   _EEL_WRR_STATE_4
+eel_read
+          ADDR       01760H   _EEL_RDR_STATE_0
+          ADDR       0178FH   _EEL_RDR_STATE_1
+eel_refresh
+          ADDR       01BA4H   _EEL_REF_STATE_0
+          ADDR       01BB2H   _EEL_REF_STATE_1
+          ADDR       01BE3H   _EEL_REF_STATE_2
+          ADDR       01C0BH   _EEL_REF_STATE_3
+          ADDR       01C27H   _EEL_REF_STATE_4
+          ADDR       01C40H   _EEL_REF_STATE_5
+          ADDR       01C9FH   _EEL_REF_STATE_6
+          ADDR       01CCEH   _EEL_REF_STATE_7
+          ADDR       01CEBH   _EEL_REF_STATE_8
+          ADDR       01D03H   _EEL_REF_STATE_9
+          ADDR       01D19H   _EEL_REF_STATE_10
+          ADDR       01D27H   _EEL_REF_STATE_11
+          ADDR       01D4EH   _EEL_REF_STATE_12
+          ADDR       01D6AH   _EEL_REF_STATE_13
+          ADDR       01D7CH   _EEL_REF_STATE_14
+eel_verify
+          ADDR       017A4H   _EEL_VRF_STATE_0
+          ADDR       017C0H   _EEL_VRF_STATE_1
+eel_format
+          ADDR       01638H   _EEL_FMT_STATE_0
+          ADDR       0164FH   _EEL_FMT_STATE_1
+          ADDR       01660H   _EEL_FMT_STATE_2
+          ADDR       0167BH   _EEL_FMT_STATE_3
+          ADDR       01692H   _EEL_FMT_STATE_4
+          ADDR       016AAH   _EEL_FMT_STATE_5
+          ADDR       016D0H   _EEL_FMT_STATE_6
+          ADDR       016E3H   _EEL_FMT_STATE_7
+          ADDR       016F4H   _EEL_FMT_STATE_8
+          ADDR       0172FH   _EEL_FMT_STATE_9
+          ADDR       01745H   _EEL_FMT_STATE_10
+          ADDR       01758H   _EEL_FMT_STATE_11
+eel_shutdown
+          ADDR       01798H   _EEL_SDN_STATE_0
+eel_bios
+          ADDR       017D6H   _EEL_FDL_RD_CMD_STATE_0
+          ADDR       017DAH   _EEL_FDL_BC_CMD_STATE_0
+          ADDR       017DEH   _EEL_FDL_WR_CMD_STATE_0
+          ADDR       017E2H   _EEL_FDL_IV_CMD_STATE_0
+          ADDR       01801H   _EEL_FDL_CMD_STATE_0
+          ADDR       017D0H   _EEL_FDL_WR_BWV_CMD_STATE_0
+          ADDR       017FDH   _EEL_FDL_ER_CMD_STATE_0
+          ADDR       0182BH   _EEL_FDL_CMD_STATE_1
+          ADDR       01894H   _EEL_FDL_CMD_STATE_2
+fdl
+          ADDR       0138FH   _FDL_ExecuteEEL
+          ADDR       0139BH   _FDL_Handler
+eel_gdrv_sts
+          ADDR       01FEAH   EEL_GetDriverStatus
+eel_gspace
+          ADDR       02018H   EEL_GetSpace
+fdl_data
+          ADDR       01434H   _FDL_VERSION_STRING
+eel_gspace
+          ADDR       02018H   _EEL_GetSpace
+fdl
+          ADDR       01394H   _FDL_Execute
+          ADDR       013FDH   _FDL_Abort
+          ADDR       013D9H   _FDL_StandBy
+          ADDR       013EDH   _FDL_WakeUp
+          ADDR       01422H   _FDL_GetVersionString
+          ADDR       0135AH   FDL_Init
+          ADDR       01394H   FDL_Execute
+          ADDR       0138FH   FDL_ExecuteEEL
+          ADDR       0139BH   FDL_Handler
+          ADDR       013A9H   FDL_Open
+          ADDR       013BCH   FDL_Close
+          ADDR       013FDH   FDL_Abort
+          ADDR       013D9H   FDL_StandBy
+          ADDR       013EDH   FDL_WakeUp
+          ADDR       01422H   FDL_GetVersionString
+fdl_data
+          ADDR       FFE20H   _FDL_flags_u08
+          ADDR       FFE21H   _FDL_attributes_u08
+          SABIT      FFE20H.0 FDL_initialized_u01
+          SABIT      FFE20H.1 FDL_opened_u01
+          SABIT      FFE20H.2 FDL_busy_u01
+          SABIT      FFE20H.3 FDL_eel_command_u01
+          SABIT      FFE20H.4 FDL_stand_by_mode_u01
+          SABIT      FFE20H.7 FDL_eel_request_u01
+          SABIT      FFE21H.0 FDL_erase_command_u01
+          SABIT      FFE21H.1 FDL_write_command_u01
+          SABIT      FFE21H.2 FDL_read_command_u01
+          SABIT      FFE21H.3 FDL_iverify_command_u01
+          SABIT      FFE21H.4 FDL_blankcheck_command_u01
+          SABIT      FFE21H.5 FDL_byte_command_u01
+          SABIT      FFE21H.6 FDL_block_command_u01
+          SABIT      FFE21H.7 FDL_pool_command_u01
+fdl_functions
+          ADDR       01565H   FDL_Copy_to_RAM
+          ADDR       01448H   FDL_CheckConfiguration
+          ADDR       01474H   FDL_CheckRequest
+          ADDR       01556H   FDL_Delay_10us
+          ADDR       01527H   FDL_StateEpilog
+fdl_data
+          ADDR       0142AH   FDL_attribute_table
+          ADDR       0142FH   FDL_command_table
+fdl_functions
+          ADDR       0157CH   FDL_ReadCommand
+fsl_f_pfunc
+          ADDR       01246H   _FSL_Prepare_common
+fsl_b_common
+          ADDR       0125AH   _ASM_BCD_Start
+          ADDR       0135AH   _ASM_BCD_End
+fsl_r_std_cmd
+          ADDR       02050H   _FSL_BlankCheck
+          ADDR       02058H   _FSL_IVerify
+fsl_r_check_flow
+          ADDR       02094H   _ASM_RCD_Check_Flow
+          ADDR       0207FH   _ASM_RCD_Check_Status_Flow
+          ADDR       02078H   _ASM_RCD_Check_Ext_Flow
+          ADDR       02086H   _ASM_RCD_Check_StandBy_Flow
+          ADDR       0208DH   _ASM_RCD_Check_WakeUp_Flow
+@imul
+          ADDR       0017BH   @@ismul
+@iurem
+          ADDR       001ADH   @@iurem
+@lmul
+          ADDR       001DCH   @@lumul
+          ADDR       001DCH   @@lsmul
+@ladd
+          ADDR       00207H   @@lsadd
+@lsub
+          ADDR       00216H   @@lssub
+@RTARG0
+          ADDR       FFEDBH   _@RTARG3
+@llsh
+          ADDR       00228H   @@lslsh
+@lband
+          ADDR       00262H   @@lsband
+@lbor
+          ADDR       00276H   @@lsbor
+@lbxor
+          ADDR       0028AH   @@lsbxor
+@rom
+          ADDR       FD1ACH   _?INIT
+          ADDR       FD1ACH   _?INITL
+          ADDR       FD1ACH   _?INIS
+@SEGREG
+          ADDR       FFED5H   _@SEGBC
+          ADDR       FFED7H   _@SEGHL
+@RTARG0
+          ADDR       FFEDFH   _@RTARG7
+          ADDR       FFED8H   @@CPR1
+          ADDR       FFED8H   @@FPRS
+          ADDR       FFEDCH   @@FPRXP
+          ADDR       FFEDCH   @@FPRXD
+          ADDR       FFEDDH   @@FPRXS
+          ADDR       FFEDEH   @@FPRFP
+          ADDR       FFEDEH   @@FPRF1
+          ADDR       FFEDFH   @@FPRF2
+memcmp_n
+          ADDR       02608H   _memcmp_n
+
+
+ Target chip : R5F10TPJ
+ Device file : V1.01
+

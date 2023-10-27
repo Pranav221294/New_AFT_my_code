@@ -1,0 +1,8 @@
+### HEXMate logfile and output summary ###
+
+### Command-line arguments ###
+ C:\Users\PRANAV~1.MOU\AppData\Local\Temp\xcAs15cs.\driver_tmp_3.o
+ -Odist/default/production\Asembly.X.production.hex
+ -logfile=dist/default/production\Asembly.X.production.hxl
+ -addressing=2
+

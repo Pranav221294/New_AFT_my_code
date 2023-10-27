@@ -1,0 +1,873 @@
+
+
+
+78K0R Linker W1.80                            Date:25 Oct 2023 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -oDefaultBuild\AFT_Sensor_RL78.lmf -
+           gi00000000000000000000h -go85h,0BE00h,512 -gb7AEFE8H -mi0 -s 
+           -pDefaultBuild\AFT_Sensor_RL78.map C:\Program Files (x86)\Ren
+           esas Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r\s0rll.rel De
+           faultBuild\r_cg_cgc.rel DefaultBuild\r_cg_cgc_user.rel Defaul
+           tBuild\r_cg_port.rel DefaultBuild\r_cg_port_user.rel DefaultB
+           uild\r_cg_timer.rel DefaultBuild\r_cg_timer_user.rel DefaultB
+           uild\r_main.rel DefaultBuild\r_systeminit.rel DefaultBuild\Ca
+           libration.rel DefaultBuild\User.rel DefaultBuild\levelCalc.re
+           l DefaultBuild\dataflash.rel DefaultBuild\eel_descriptor.rel 
+           DefaultBuild\fdl_descriptor.rel DefaultBuild\ReadWriteParamFl
+           ash.rel DefaultBuild\Can.rel DefaultBuild\J1939.rel DefaultBu
+           ild\GuiCommProtocol.rel DefaultBuild\r_cg_wdt.rel DefaultBuil
+           d\r_cg_wdt_user.rel DefaultBuild\CalibrationByCAN.rel Default
+           Build\Curve.rel DefaultBuild\MovingAverage.rel DefaultBuild\D
+           iagnosticData.rel -blib\eel.lib -blib\fdl.lib -bcl0ram.lib -b
+           cl0rm.lib -bcl0rmf.lib -iC:\Program Files (x86)\Renesas Elect
+           ronics\CS+\CACX\CA78K0R\V1.72\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\AFT_Sensor_RL78.lmf
+Map-file:  DefaultBuild\AFT_Sensor_RL78.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    60 output segment(s)
+ 5880H byte(s) real data
+  4126 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=0C000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Calibration
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  User       00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  levelCalc
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  dataflash
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  ReadWriteParamFlash
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Can        00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  J1939      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  GuiCommProtocol
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  CalibrationByCAN
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Curve      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  MovingAverage
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  DiagnosticData
+                                      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT Calibration
+                                      00002H    00000H
+                  @@RLINIT User       00002H    00000H
+                  @@RLINIT levelCalc
+                                      00002H    00000H
+                  @@RLINIT dataflash
+                                      00002H    00000H
+                  @@RLINIT eel_descriptor
+                                      00002H    00000H
+                  @@RLINIT FDL_DESCR
+                                      00002H    00000H
+                  @@RLINIT ReadWriteParamFlash
+                                      00002H    00000H
+                  @@RLINIT Can        00002H    00000H
+                  @@RLINIT J1939      00002H    00000H
+                  @@RLINIT GuiCommProtocol
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt   00002H    00000H
+                  @@RLINIT r_cg_wdt_user
+                                      00002H    00000H
+                  @@RLINIT CalibrationByCAN
+                                      00002H    00000H
+                  @@RLINIT Curve      00002H    00000H
+                  @@RLINIT MovingAverage
+                                      00002H    00000H
+                  @@RLINIT DiagnosticData
+                                      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS Calibration
+                                      00002H    00000H
+                  @@R_INIS User       00002H    00000H
+                  @@R_INIS levelCalc
+                                      00002H    00000H
+                  @@R_INIS dataflash
+                                      00002H    00000H
+                  @@R_INIS eel_descriptor
+                                      00002H    00000H
+                  @@R_INIS FDL_DESCR
+                                      00002H    00000H
+                  @@R_INIS ReadWriteParamFlash
+                                      00002H    00000H
+                  @@R_INIS Can        00002H    00000H
+                  @@R_INIS J1939      00002H    00000H
+                  @@R_INIS GuiCommProtocol
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt   00002H    00000H
+                  @@R_INIS r_cg_wdt_user
+                                      00002H    00000H
+                  @@R_INIS CalibrationByCAN
+                                      00002H    00000H
+                  @@R_INIS Curve      00002H    00000H
+                  @@R_INIS MovingAverage
+                                      00002H    00000H
+                  @@R_INIS DiagnosticData
+                                      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   Calibration
+                                      00002H    00000H
+                  @@CALT   User       00002H    00000H
+                  @@CALT   levelCalc
+                                      00002H    00000H
+                  @@CALT   dataflash
+                                      00002H    00000H
+                  @@CALT   eel_descriptor
+                                      00002H    00000H
+                  @@CALT   FDL_DESCR
+                                      00002H    00000H
+                  @@CALT   ReadWriteParamFlash
+                                      00002H    00000H
+                  @@CALT   Can        00002H    00000H
+                  @@CALT   J1939      00002H    00000H
+                  @@CALT   GuiCommProtocol
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt   00002H    00000H
+                  @@CALT   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CALT   CalibrationByCAN
+                                      00002H    00000H
+                  @@CALT   Curve      00002H    00000H
+                  @@CALT   MovingAverage
+                                      00002H    00000H
+                  @@CALT   DiagnosticData
+                                      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+         @@VECT04                     00004H    00002H  CSEG AT
+                  @@VECT04 r_cg_wdt_user
+                                      00004H    00002H
+         EEL_CNST                     00006H    0001CH  CSEG PAGE64KP
+                  EEL_CNST eel_descriptor
+                                      00006H    0001CH
+         FDL_CNST                     00022H    0000AH  CSEG PAGE64KP
+                  FDL_CNST FDL_DESCR
+                                      00022H    0000AH
+         @@VECT2C                     0002CH    00004H  CSEG AT
+                  @@VECT2C r_cg_timer_user
+                                      0002CH    00004H
+* gap *                               00030H    0001EH
+         @@VECT4E                     0004EH    00008H  CSEG AT
+                  @@VECT4E Can        0004EH    00008H
+         @@VECT56                     00056H    00002H  CSEG AT
+                  @@VECT56 r_cg_timer_user
+                                      00056H    00002H
+* gap *                               00058H    00018H
+         @@VECT70                     00070H    00002H  CSEG AT
+                  @@VECT70 r_cg_timer_user
+                                      00070H    00002H
+* gap *                               00072H    0004EH
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   r_cg_cgc   000C4H    00000H
+                  @@CODE   r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_port
+                                      000C4H    00000H
+                  @@CODE   r_cg_port_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODE   r_main     000C4H    00000H
+                  @@CODE   r_systeminit
+                                      000C4H    00000H
+                  @@CODE   Calibration
+                                      000C4H    00000H
+                  @@CODE   User       000C4H    00000H
+                  @@CODE   levelCalc
+                                      000C4H    00000H
+                  @@CODE   dataflash
+                                      000C4H    00000H
+                  @@CODE   eel_descriptor
+                                      000C4H    00000H
+                  @@CODE   FDL_DESCR
+                                      000C4H    00000H
+                  @@CODE   ReadWriteParamFlash
+                                      000C4H    00000H
+                  @@CODE   Can        000C4H    00000H
+                  @@CODE   J1939      000C4H    00000H
+                  @@CODE   GuiCommProtocol
+                                      000C4H    00000H
+                  @@CODE   r_cg_wdt   000C4H    00000H
+                  @@CODE   r_cg_wdt_user
+                                      000C4H    00000H
+                  @@CODE   CalibrationByCAN
+                                      000C4H    00000H
+                  @@CODE   Curve      000C4H    00000H
+                  @@CODE   MovingAverage
+                                      000C4H    00000H
+                  @@CODE   DiagnosticData
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    00892H  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @imul      00185H    00011H
+                  @@LCODE  @lmul      00196H    0002BH
+                  @@LCODE  @lsdiv     001C1H    00039H
+                  @@LCODE  @ludiv     001FAH    0003FH
+                  @@LCODE  m_fmul     00239H    0012BH
+                  @@LCODE  m_fdiv     00364H    001B8H
+                  @@LCODE  @ladd      0051CH    0000FH
+                  @@LCODE  @lsub      0052BH    00012H
+                  @@LCODE  @llsh      0053DH    0001BH
+                  @@LCODE  @lursh     00558H    0001FH
+                  @@LCODE  @lband     00577H    00014H
+                  @@LCODE  @lbor      0058BH    00014H
+                  @@LCODE  m_fcom1    0059FH    000CFH
+                  @@LCODE  m_fcom5    0066EH    0002AH
+                  @@LCODE  m_fcom6    00698H    0001FH
+                  @@LCODE  m_fadd     006B7H    0013AH
+                  @@LCODE  m_fcmp     007F1H    00073H
+                  @@LCODE  m_ftols    00864H    00078H
+                  @@LCODE  m_ftolu    008DCH    0002BH
+                  @@LCODE  m_lstof    00907H    00016H
+                  @@LCODE  m_lutof    0091DH    0004DH
+         @@BASE                       0096AH    00116H  CSEG BASE
+                  @@BASE   r_cg_cgc   0096AH    00000H
+                  @@BASE   r_cg_cgc_user
+                                      0096AH    00000H
+                  @@BASE   r_cg_port
+                                      0096AH    00000H
+                  @@BASE   r_cg_port_user
+                                      0096AH    00000H
+                  @@BASE   r_cg_timer
+                                      0096AH    00000H
+                  @@BASE   r_cg_timer_user
+                                      0096AH    0006FH
+                  @@BASE   r_main     009D9H    00000H
+                  @@BASE   r_systeminit
+                                      009D9H    00000H
+                  @@BASE   Calibration
+                                      009D9H    00000H
+                  @@BASE   User       009D9H    00000H
+                  @@BASE   levelCalc
+                                      009D9H    00000H
+                  @@BASE   dataflash
+                                      009D9H    00000H
+                  @@BASE   eel_descriptor
+                                      009D9H    00000H
+                  @@BASE   FDL_DESCR
+                                      009D9H    00000H
+                  @@BASE   ReadWriteParamFlash
+                                      009D9H    00000H
+                  @@BASE   Can        009D9H    000A5H
+                  @@BASE   J1939      00A7EH    00000H
+                  @@BASE   GuiCommProtocol
+                                      00A7EH    00000H
+                  @@BASE   r_cg_wdt   00A7EH    00000H
+                  @@BASE   r_cg_wdt_user
+                                      00A7EH    00002H
+                  @@BASE   CalibrationByCAN
+                                      00A80H    00000H
+                  @@BASE   Curve      00A80H    00000H
+                  @@BASE   MovingAverage
+                                      00A80H    00000H
+                  @@BASE   DiagnosticData
+                                      00A80H    00000H
+         @@CNSTL                      00A80H    000CEH  CSEG PAGE64KP
+                  @@CNSTL  m_fcom5    00A80H    000CEH
+         @@R_INIT                     00B4EH    00112H  CSEG UNIT64KP
+                  @@R_INIT @cstart    00B4EH    00000H
+                  @@R_INIT r_cg_cgc   00B4EH    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      00B4EH    00000H
+                  @@R_INIT r_cg_port
+                                      00B4EH    00000H
+                  @@R_INIT r_cg_port_user
+                                      00B4EH    00000H
+                  @@R_INIT r_cg_timer
+                                      00B4EH    00000H
+                  @@R_INIT r_cg_timer_user
+                                      00B4EH    00018H
+                  @@R_INIT r_main     00B66H    00002H
+                  @@R_INIT r_systeminit
+                                      00B68H    00000H
+                  @@R_INIT Calibration
+                                      00B68H    0001CH
+                  @@R_INIT User       00B84H    00004H
+                  @@R_INIT levelCalc
+                                      00B88H    00060H
+                  @@R_INIT dataflash
+                                      00BE8H    00004H
+                  @@R_INIT eel_descriptor
+                                      00BECH    00000H
+                  @@R_INIT FDL_DESCR
+                                      00BECH    00000H
+                  @@R_INIT ReadWriteParamFlash
+                                      00BECH    00000H
+                  @@R_INIT Can        00BECH    00002H
+                  @@R_INIT J1939      00BEEH    00024H
+                  @@R_INIT GuiCommProtocol
+                                      00C12H    00006H
+                  @@R_INIT r_cg_wdt   00C18H    00000H
+                  @@R_INIT r_cg_wdt_user
+                                      00C18H    00000H
+                  @@R_INIT CalibrationByCAN
+                                      00C18H    0001EH
+                  @@R_INIT Curve      00C36H    00000H
+                  @@R_INIT MovingAverage
+                                      00C36H    00020H
+                  @@R_INIT DiagnosticData
+                                      00C56H    0000AH
+                  @@R_INIT @rom       00C60H    00000H
+         EEL_CODE                     00C60H    00AB9H  CSEG UNIT64KP
+                  EEL_CODE eel        00C60H    00062H
+                  EEL_CODE eel_common
+                                      00CC2H    00001H
+                  EEL_CODE eel_data   00CC4H    0003DH
+                  EEL_CODE eel_format
+                                      00D02H    00127H
+                  EEL_CODE eel_read   00E2AH    00037H
+                  EEL_CODE eel_shutdown
+                                      00E62H    0000BH
+                  EEL_CODE eel_verify
+                                      00E6EH    0002CH
+                  EEL_CODE eel_bios   00E9AH    000DDH
+                  EEL_CODE eel_functions
+                                      00F78H    002F6H
+                  EEL_CODE eel_refresh
+                                      0126EH    001F2H
+                  EEL_CODE eel_startup
+                                      01460H    00184H
+                  EEL_CODE eel_write
+                                      015E4H    000CFH
+                  EEL_CODE eel_gdrv_sts
+                                      016B4H    0002EH
+                  EEL_CODE eel_gspace
+                                      016E2H    00037H
+* gap *                               01719H    00001H
+         FDL_CODE                     0171AH    0023CH  CSEG UNIT64KP
+                  FDL_CODE fdl        0171AH    000CFH
+                  FDL_CODE fdl_data   017EAH    0001DH
+                  FDL_CODE fdl_functions
+                                      01808H    0014EH
+         @@LCODEL                     01956H    00060H  CSEG
+                  @@LCODEL @stkinit   01956H    00044H
+                  @@LCODEL exit       0199AH    0001CH
+* gap *                               019B6H    0164AH
+         @@CNST                       03000H    0011AH  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   r_cg_cgc   03000H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_port
+                                      03000H    00000H
+                  @@CNST   r_cg_port_user
+                                      03000H    00000H
+                  @@CNST   r_cg_timer
+                                      03000H    00000H
+                  @@CNST   r_cg_timer_user
+                                      03000H    00000H
+                  @@CNST   r_main     03000H    00000H
+                  @@CNST   r_systeminit
+                                      03000H    00000H
+                  @@CNST   Calibration
+                                      03000H    00000H
+                  @@CNST   User       03000H    00000H
+                  @@CNST   levelCalc
+                                      03000H    00000H
+                  @@CNST   dataflash
+                                      03000H    00000H
+                  @@CNST   eel_descriptor
+                                      03000H    00000H
+                  @@CNST   FDL_DESCR
+                                      03000H    00000H
+                  @@CNST   ReadWriteParamFlash
+                                      03000H    00000H
+                  @@CNST   Can        03000H    00000H
+                  @@CNST   J1939      03000H    00000H
+                  @@CNST   GuiCommProtocol
+                                      03000H    00008H
+                  @@CNST   r_cg_wdt   03008H    00000H
+                  @@CNST   r_cg_wdt_user
+                                      03008H    00000H
+                  @@CNST   CalibrationByCAN
+                                      03008H    0002AH
+                  @@CNST   Curve      03032H    00030H
+                  @@CNST   MovingAverage
+                                      03062H    00098H
+                  @@CNST   DiagnosticData
+                                      030FAH    00020H
+         @@CODEL                      0311AH    03C3EH  CSEG
+                  @@CODEL  r_cg_cgc   0311AH    0003FH
+                  @@CODEL  r_cg_cgc_user
+                                      03159H    00005H
+                  @@CODEL  r_cg_port
+                                      0315EH    0002CH
+                  @@CODEL  r_cg_port_user
+                                      0318AH    00000H
+                  @@CODEL  r_cg_timer
+                                      0318AH    001ECH
+                  @@CODEL  r_cg_timer_user
+                                      03376H    00108H
+                  @@CODEL  r_main     0347EH    00111H
+                  @@CODEL  r_systeminit
+                                      0358FH    0002BH
+                  @@CODEL  Calibration
+                                      035BAH    0041FH
+                  @@CODEL  User       039D9H    001F2H
+                  @@CODEL  levelCalc
+                                      03BCBH    009DDH
+                  @@CODEL  dataflash
+                                      045A8H    003D6H
+                  @@CODEL  eel_descriptor
+                                      0497EH    00000H
+                  @@CODEL  FDL_DESCR
+                                      0497EH    00000H
+                  @@CODEL  ReadWriteParamFlash
+                                      0497EH    0046CH
+                  @@CODEL  Can        04DEAH    00671H
+                  @@CODEL  J1939      0545BH    001B6H
+                  @@CODEL  GuiCommProtocol
+                                      05611H    0036BH
+                  @@CODEL  r_cg_wdt   0597CH    00014H
+                  @@CODEL  r_cg_wdt_user
+                                      05990H    00000H
+                  @@CODEL  CalibrationByCAN
+                                      05990H    00506H
+                  @@CODEL  Curve      05E96H    003DAH
+                  @@CODEL  MovingAverage
+                                      06270H    0081CH
+                  @@CODEL  DiagnosticData
+                                      06A8CH    002CCH
+* gap *                               06D58H    050A8H
+         ??OCDROM                     0BE00H    00200H  CSEG
+
+  MEMORY=RAM
+  BASE ADDRESS=FF300H   SIZE=00D00H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FF300H    005D4H  DSEG BASEP
+                  @@DATA   @cstart    FF300H    000BAH
+                  @@DATA   r_cg_cgc   FF3BAH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_port
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_port_user
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_timer
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_timer_user
+                                      FF3BAH    00018H
+                  @@DATA   r_main     FF3D2H    00000H
+                  @@DATA   r_systeminit
+                                      FF3D2H    00000H
+                  @@DATA   Calibration
+                                      FF3D2H    000CCH
+                  @@DATA   User       FF49EH    00000H
+                  @@DATA   levelCalc
+                                      FF49EH    000DEH
+                  @@DATA   dataflash
+                                      FF57CH    00028H
+                  @@DATA   eel_descriptor
+                                      FF5A4H    00000H
+                  @@DATA   FDL_DESCR
+                                      FF5A4H    00000H
+                  @@DATA   ReadWriteParamFlash
+                                      FF5A4H    00000H
+                  @@DATA   Can        FF5A4H    00004H
+                  @@DATA   J1939      FF5A8H    00000H
+                  @@DATA   GuiCommProtocol
+                                      FF5A8H    00028H
+                  @@DATA   r_cg_wdt   FF5D0H    00000H
+                  @@DATA   r_cg_wdt_user
+                                      FF5D0H    00000H
+                  @@DATA   CalibrationByCAN
+                                      FF5D0H    00008H
+                  @@DATA   Curve      FF5D8H    0001CH
+                  @@DATA   MovingAverage
+                                      FF5F4H    002E0H
+                  @@DATA   DiagnosticData
+                                      FF8D4H    00000H
+                  @@DATA   @rom       FF8D4H    00000H
+         @@INIT                       FF8D4H    00112H  DSEG BASEP
+                  @@INIT   @cstart    FF8D4H    00000H
+                  @@INIT   r_cg_cgc   FF8D4H    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FF8D4H    00000H
+                  @@INIT   r_cg_port
+                                      FF8D4H    00000H
+                  @@INIT   r_cg_port_user
+                                      FF8D4H    00000H
+                  @@INIT   r_cg_timer
+                                      FF8D4H    00000H
+                  @@INIT   r_cg_timer_user
+                                      FF8D4H    00018H
+                  @@INIT   r_main     FF8ECH    00002H
+                  @@INIT   r_systeminit
+                                      FF8EEH    00000H
+                  @@INIT   Calibration
+                                      FF8EEH    0001CH
+                  @@INIT   User       FF90AH    00004H
+                  @@INIT   levelCalc
+                                      FF90EH    00060H
+                  @@INIT   dataflash
+                                      FF96EH    00004H
+                  @@INIT   eel_descriptor
+                                      FF972H    00000H
+                  @@INIT   FDL_DESCR
+                                      FF972H    00000H
+                  @@INIT   ReadWriteParamFlash
+                                      FF972H    00000H
+                  @@INIT   Can        FF972H    00002H
+                  @@INIT   J1939      FF974H    00024H
+                  @@INIT   GuiCommProtocol
+                                      FF998H    00006H
+                  @@INIT   r_cg_wdt   FF99EH    00000H
+                  @@INIT   r_cg_wdt_user
+                                      FF99EH    00000H
+                  @@INIT   CalibrationByCAN
+                                      FF99EH    0001EH
+                  @@INIT   Curve      FF9BCH    00000H
+                  @@INIT   MovingAverage
+                                      FF9BCH    00020H
+                  @@INIT   DiagnosticData
+                                      FF9DCH    0000AH
+                  @@INIT   @rom       FF9E6H    00000H
+         @@INIS                       FF9E6H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FF9E6H    00000H
+                  @@INIS   r_cg_cgc   FF9E6H    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FF9E6H    00000H
+                  @@INIS   r_cg_port
+                                      FF9E6H    00000H
+                  @@INIS   r_cg_port_user
+                                      FF9E6H    00000H
+                  @@INIS   r_cg_timer
+                                      FF9E6H    00000H
+                  @@INIS   r_cg_timer_user
+                                      FF9E6H    00000H
+                  @@INIS   r_main     FF9E6H    00000H
+                  @@INIS   r_systeminit
+                                      FF9E6H    00000H
+                  @@INIS   Calibration
+                                      FF9E6H    00000H
+                  @@INIS   User       FF9E6H    00000H
+                  @@INIS   levelCalc
+                                      FF9E6H    00000H
+                  @@INIS   dataflash
+                                      FF9E6H    00000H
+                  @@INIS   eel_descriptor
+                                      FF9E6H    00000H
+                  @@INIS   FDL_DESCR
+                                      FF9E6H    00000H
+                  @@INIS   ReadWriteParamFlash
+                                      FF9E6H    00000H
+                  @@INIS   Can        FF9E6H    00000H
+                  @@INIS   J1939      FF9E6H    00000H
+                  @@INIS   GuiCommProtocol
+                                      FF9E6H    00000H
+                  @@INIS   r_cg_wdt   FF9E6H    00000H
+                  @@INIS   r_cg_wdt_user
+                                      FF9E6H    00000H
+                  @@INIS   CalibrationByCAN
+                                      FF9E6H    00000H
+                  @@INIS   Curve      FF9E6H    00000H
+                  @@INIS   MovingAverage
+                                      FF9E6H    00000H
+                  @@INIS   DiagnosticData
+                                      FF9E6H    00000H
+                  @@INIS   @rom       FF9E6H    00000H
+         @@DATS                       FF9E6H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FF9E6H    00000H
+                  @@DATS   r_cg_cgc   FF9E6H    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FF9E6H    00000H
+                  @@DATS   r_cg_port
+                                      FF9E6H    00000H
+                  @@DATS   r_cg_port_user
+                                      FF9E6H    00000H
+                  @@DATS   r_cg_timer
+                                      FF9E6H    00000H
+                  @@DATS   r_cg_timer_user
+                                      FF9E6H    00000H
+                  @@DATS   r_main     FF9E6H    00000H
+                  @@DATS   r_systeminit
+                                      FF9E6H    00000H
+                  @@DATS   Calibration
+                                      FF9E6H    00000H
+                  @@DATS   User       FF9E6H    00000H
+                  @@DATS   levelCalc
+                                      FF9E6H    00000H
+                  @@DATS   dataflash
+                                      FF9E6H    00000H
+                  @@DATS   eel_descriptor
+                                      FF9E6H    00000H
+                  @@DATS   FDL_DESCR
+                                      FF9E6H    00000H
+                  @@DATS   ReadWriteParamFlash
+                                      FF9E6H    00000H
+                  @@DATS   Can        FF9E6H    00000H
+                  @@DATS   J1939      FF9E6H    00000H
+                  @@DATS   GuiCommProtocol
+                                      FF9E6H    00000H
+                  @@DATS   r_cg_wdt   FF9E6H    00000H
+                  @@DATS   r_cg_wdt_user
+                                      FF9E6H    00000H
+                  @@DATS   CalibrationByCAN
+                                      FF9E6H    00000H
+                  @@DATS   Curve      FF9E6H    00000H
+                  @@DATS   MovingAverage
+                                      FF9E6H    00000H
+                  @@DATS   DiagnosticData
+                                      FF9E6H    00000H
+                  @@DATS   @rom       FF9E6H    00000H
+         @@INITL                      FF9E6H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FF9E6H    00000H
+                  @@INITL  r_cg_cgc   FF9E6H    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FF9E6H    00000H
+                  @@INITL  r_cg_port
+                                      FF9E6H    00000H
+                  @@INITL  r_cg_port_user
+                                      FF9E6H    00000H
+                  @@INITL  r_cg_timer
+                                      FF9E6H    00000H
+                  @@INITL  r_cg_timer_user
+                                      FF9E6H    00000H
+                  @@INITL  r_main     FF9E6H    00000H
+                  @@INITL  r_systeminit
+                                      FF9E6H    00000H
+                  @@INITL  Calibration
+                                      FF9E6H    00000H
+                  @@INITL  User       FF9E6H    00000H
+                  @@INITL  levelCalc
+                                      FF9E6H    00000H
+                  @@INITL  dataflash
+                                      FF9E6H    00000H
+                  @@INITL  eel_descriptor
+                                      FF9E6H    00000H
+                  @@INITL  FDL_DESCR
+                                      FF9E6H    00000H
+                  @@INITL  ReadWriteParamFlash
+                                      FF9E6H    00000H
+                  @@INITL  Can        FF9E6H    00000H
+                  @@INITL  J1939      FF9E6H    00000H
+                  @@INITL  GuiCommProtocol
+                                      FF9E6H    00000H
+                  @@INITL  r_cg_wdt   FF9E6H    00000H
+                  @@INITL  r_cg_wdt_user
+                                      FF9E6H    00000H
+                  @@INITL  CalibrationByCAN
+                                      FF9E6H    00000H
+                  @@INITL  Curve      FF9E6H    00000H
+                  @@INITL  MovingAverage
+                                      FF9E6H    00000H
+                  @@INITL  DiagnosticData
+                                      FF9E6H    00000H
+                  @@INITL  @rom       FF9E6H    00000H
+         @@DATAL                      FF9E6H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FF9E6H    00000H
+                  @@DATAL  r_cg_cgc   FF9E6H    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FF9E6H    00000H
+                  @@DATAL  r_cg_port
+                                      FF9E6H    00000H
+                  @@DATAL  r_cg_port_user
+                                      FF9E6H    00000H
+                  @@DATAL  r_cg_timer
+                                      FF9E6H    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FF9E6H    00000H
+                  @@DATAL  r_main     FF9E6H    00000H
+                  @@DATAL  r_systeminit
+                                      FF9E6H    00000H
+                  @@DATAL  Calibration
+                                      FF9E6H    00000H
+                  @@DATAL  User       FF9E6H    00000H
+                  @@DATAL  levelCalc
+                                      FF9E6H    00000H
+                  @@DATAL  dataflash
+                                      FF9E6H    00000H
+                  @@DATAL  eel_descriptor
+                                      FF9E6H    00000H
+                  @@DATAL  FDL_DESCR
+                                      FF9E6H    00000H
+                  @@DATAL  ReadWriteParamFlash
+                                      FF9E6H    00000H
+                  @@DATAL  Can        FF9E6H    00000H
+                  @@DATAL  J1939      FF9E6H    00000H
+                  @@DATAL  GuiCommProtocol
+                                      FF9E6H    00000H
+                  @@DATAL  r_cg_wdt   FF9E6H    00000H
+                  @@DATAL  r_cg_wdt_user
+                                      FF9E6H    00000H
+                  @@DATAL  CalibrationByCAN
+                                      FF9E6H    00000H
+                  @@DATAL  Curve      FF9E6H    00000H
+                  @@DATAL  MovingAverage
+                                      FF9E6H    00000H
+                  @@DATAL  DiagnosticData
+                                      FF9E6H    00000H
+                  @@DATAL  @rom       FF9E6H    00000H
+         @@BITS                       FF9E6H    00000H  BSEG
+                  @@BITS   @cstart    FF9E6H.0  00000H.0
+                  @@BITS   r_cg_cgc   FF9E6H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FF9E6H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FF9E6H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FF9E6H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FF9E6H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FF9E6H.0  00000H.0
+                  @@BITS   r_main     FF9E6H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FF9E6H.0  00000H.0
+                  @@BITS   Calibration
+                                      FF9E6H.0  00000H.0
+                  @@BITS   User       FF9E6H.0  00000H.0
+                  @@BITS   levelCalc
+                                      FF9E6H.0  00000H.0
+                  @@BITS   dataflash
+                                      FF9E6H.0  00000H.0
+                  @@BITS   eel_descriptor
+                                      FF9E6H.0  00000H.0
+                  @@BITS   FDL_DESCR
+                                      FF9E6H.0  00000H.0
+                  @@BITS   ReadWriteParamFlash
+                                      FF9E6H.0  00000H.0
+                  @@BITS   Can        FF9E6H.0  00000H.0
+                  @@BITS   J1939      FF9E6H.0  00000H.0
+                  @@BITS   GuiCommProtocol
+                                      FF9E6H.0  00000H.0
+                  @@BITS   r_cg_wdt   FF9E6H.0  00000H.0
+                  @@BITS   r_cg_wdt_user
+                                      FF9E6H.0  00000H.0
+                  @@BITS   CalibrationByCAN
+                                      FF9E6H.0  00000H.0
+                  @@BITS   Curve      FF9E6H.0  00000H.0
+                  @@BITS   MovingAverage
+                                      FF9E6H.0  00000H.0
+                  @@BITS   DiagnosticData
+                                      FF9E6H.0  00000H.0
+* gap *                               FF9E6H    0043AH
+         EEL_SDAT                     FFE20H    00001H  DSEG SADDRP
+                  EEL_SDAT eel_data   FFE20H    00001H
+* gap *                               FFE21H    00001H
+         FDL_SDAT                     FFE22H    00002H  DSEG SADDRP
+                  FDL_SDAT fdl_data   FFE22H    00002H
+* gap *                               FFE24H    000B0H
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG @SEGREG    FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+ Target chip : R5F10DGD
+ Device file : V1.01
+

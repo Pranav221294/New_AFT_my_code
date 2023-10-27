@@ -1,0 +1,32 @@
+
+
+MEMORY ROM   : ( 004000H , 0BFFFH )	; ROM - 48 KB
+
+MERGE FDL_CNST:=ROM
+MERGE EEL_CNST:=ROM
+;MEMORY OCDROM :( 03A00H, 000200H)
+MEMORY D_ROM : (0000H, 0C0H)
+
+MEMORY CSEG0B0 :(0000C0H, 000004H)
+
+MEMORY OCDSTAD :(0000CEH, 00000AH)
+MERGE @@CNST : AT (05000H ) = ROM
+
+MEMORY RAM : ( 0FF700H , 0520H )	; for device RAM size 3-KB 
+MEMORY STK : ( 0FFC20H , 0200H )	;stack end edress + size
+
+
+; SADDR	=	short addressing
+MEMORY RAM_SADDR : ( 0FFE20H , 00DFH )	; RAM (saddr)
+
+MERGE FDL_CODE:=ROM
+MERGE EEL_CODE:=ROM
+
+;*******************************************************************************
+; EEL_SDAT and FDL_SDAT segment is located inside saddr RAM
+;*******************************************************************************
+MERGE FDL_SDAT:=RAM_SADDR
+MERGE EEL_SDAT:=RAM_SADDR
+;*******************************************************************************
+; EEL_CNST and FDL_CNST segments are located inside ROM
+;*******************************************************************************

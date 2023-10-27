@@ -1,0 +1,114 @@
+
+/*****************************************************************************
+ DISCLAIMER
+ This software is supplied by Renesas Electronics Corporation and is only
+ intended for use with Renesas products. No other uses are authorized. This
+ software is owned by Renesas Electronics Corporation and is protected under
+ all applicable laws, including copyright laws.
+ THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+ THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+ LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+ TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+ ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+ FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+ ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+ BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ Renesas reserves the right, without notice, to make changes to this software
+ and to discontinue the availability of this software. By using this software,
+ you agree to the additional terms and conditions found by accessing the
+ following link:
+ http://www.renesas.com/disclaimer
+ Copyright (C) 2016-2018 Renesas Electronics Corporation. All rights reserved.
+******************************************************************************/
+/*****************************************************************************
+ **  Module: J1939.c
+ **
+ ** ---------------------------------------------------------------------------
+ **  Description:
+ **      Provides all J1939 functions except address claim
+ **
+ *****************************************************************************/
+
+#include "J1939.h" 
+#include "Can.h"
+#include "r_cg_userdefine.h"
+#include "User.h"
+
+// constant declarations -----------------------------------------------------
+
+typedef struct
+{	
+	u32     CanTimeStamp;
+	bool    DataReady;
+	u8      data[8];
+		
+} RPM_DATA_TYPE;
+
+RPM_DATA_TYPE sRPM = {0x00,0x00,0x00};
+
+
+
+/*********************************************************************//**
+ *
+ * This method is called from the CAN receive interrupt.
+ * 
+ *
+ * @param      None
+ *
+ * @return     None
+ *************************************************************************/
+void vJ1939OnFullRx(void)
+{
+	u32 MsgBuf_address;
+	u8 rx_msg_DLC;	
+	u32 rx_msg_ID;
+	u8  rx_buffer_number;
+	u8 rx_data_cnt;
+	u16 PGN =0;
+	
+
+	C0INTS = 0x0002;	
+	rx_buffer_number = C0LIPT;						// Get receive message buffer number
+	MsgBuf_address = (MSGBUF_BASE_ADD + (0x10 * rx_buffer_number));		// Set CAN message buffer[n] register address
+
+			
+	// Get the ID
+	*((u32 *)(MsgBuf_address + 0x0e)) = 0x0004;		// Clear DN bit
+	rx_msg_DLC = *((u8 *)(MsgBuf_address + 0x08));	// Get receive message data length
+	rx_msg_ID = (*((uint32_t *)(MsgBuf_address + 0x0c))<< 16 )  | (*((uint32_t *)(MsgBuf_address + 0x0A)));
+	rx_msg_ID &= ~(0x80000000U);                                    // clear the IDE bit
+
+	PGN = (rx_msg_ID>> 8) & 0x0003FFFFU;
+
+	switch(PGN)
+	{
+		case PGN_FF61_startLiveData:
+			setGuiCommStatus(e_liveDataStarted);
+			sRPM.DataReady = TRUE;
+			// Deposit the data
+			for(rx_data_cnt = 0 ;((rx_data_cnt < rx_msg_DLC) && (rx_data_cnt < 8)) ; rx_data_cnt++)
+			{
+				sRPM.data[rx_data_cnt] = *((u8 *)(MsgBuf_address + (0x01 * rx_data_cnt)));	
+			}
+			sRPM.CanTimeStamp =  u32GetMilTick();
+			break;
+
+		case PGN_FF62_stopLiveData:
+			setGuiCommStatus(e_liveDataStopped);
+			break;
+		
+		case PGN_FF63_getStoredData:
+			setGuiCommStatus(e_getStoredData);
+			break;
+		
+		default:
+			break;
+	}
+					
+
+}
+
+
+
+

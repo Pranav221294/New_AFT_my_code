@@ -1,0 +1,124 @@
+#05
+;FF     PUBLIC
+02FFED8@@CPR1
+02FFEDE@@FPRF1
+02FFEDF@@FPRF2
+02FFEDE@@FPRFP
+02FFED8@@FPRS
+02FFEDC@@FPRXD
+02FFEDC@@FPRXP
+02FFEDD@@FPRXS
+0100200@@lsadd
+010020F@@lssub
+0100200@@luadd
+0100185@@ludiv
+01001C4@@lurem
+010020F@@lusub
+02FF824_?DATA
+02FF848_?DATAL
+02FF848_?DATS
+02FF848_?INIS
+02FF848_?INIT
+02FF848_?INITL
+0100002_?RLINIT
+0100002_?R_INIS
+010002A_?R_INIT
+02FF798_@BRKADR
+02FF786_@DIVR
+02FF780_@FNCENT
+02FF700_@FNCTBL
+02FF78A_@LDIVR
+0000000_@MAA
+02FF7BA_@MEMBTM
+02FF79A_@MEMTOP
+02FFED8_@RTARG0
+02FFED9_@RTARG1
+02FFEDA_@RTARG2
+02FFEDB_@RTARG3
+02FFEDC_@RTARG4
+02FFEDD_@RTARG5
+02FFEDE_@RTARG6
+02FFEDF_@RTARG7
+01FFE20_@SADBEG
+00000C0_@SADSIZ
+02FF782_@SEED
+00FFED8_@STBEG
+00FF848_@STEND
+02FF792_@TOKPTR
+0100185_@cend
+01000D8_@cstart
+0100004_@vect04
+0103014_FRAEN_MicroStepTab
+02FF833_Ing_off_flag
+010027E_LCD_Display
+0100223_R_CGC_Create
+010023B_R_CGC_Get_ResetSource
+0100250_R_LCD_Create
+010026E_R_LCD_Start
+0100272_R_LCD_Stop
+010027A_R_LCD_VoltageOff
+0100276_R_LCD_VoltageOn
+01005BA_R_MAIN_UserInit
+010054E_R_PORT_Create
+010077E_R_Systeminit
+0100569_R_WDT_Create
+0100579_R_WDT_Restart
+02FF834_Start_HR_Count_flag
+02FF828_UstepDly
+02FF82D_avg_count_freq
+02FF7BA_avg_sample
+02FF838_calculated_gap
+02FF836_calculated_position
+02FF82A_capture_timer
+02FF83E_capture_value
+02FF825_captureflag
+01005BE_check_Freq
+02FF82C_count_currupt
+02FF82E_data_change
+0100240_delay
+02FF824_display_change
+02FF796_errno
+0100957_exit
+02FF842_freq
+0100799_hdwinit
+02FF832_hrCount_fraction
+010057D_main
+02FF846_max_sample_for_avg
+02FF826_motor_direction
+02FF83A_present_position
+02FF82B_reverse_flag
+02FF830_sec
+02FF83C_sec_add
+0103000_segment
+02FF829_setUstepDly
+0100913_stkinit
+02FF81E_total_hour
+02FF827_ustep_counter
+010086D_vFullPosition
+01007C5_vHomePosition
+01007A1_vStepper_init
+;FF     @cstart
+;FF     r_cg_cgc
+;FF     r_cg_cgc_user
+;FF     r_cg_lcd
+;FF     r_cg_lcd_user
+<010300BL0003
+;FF     r_cg_port
+;FF     r_cg_port_user
+;FF     r_cg_wdt
+;FF     r_cg_wdt_user
+<0100221_r_wdt_interrupt
+;FF     r_main
+<02FF822_old_freq
+;FF     r_systeminit
+;FF     r_Stepper
+;FF     @ludiv
+;FF     @lurem
+;FF     @ladd
+;FF     @lsub
+;FF     @stkinit
+;FF     @RTARG0
+;FF     exit
+;FF     @rom
+=
+

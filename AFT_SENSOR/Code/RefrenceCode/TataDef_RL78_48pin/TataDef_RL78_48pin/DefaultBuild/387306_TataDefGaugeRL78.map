@@ -1,0 +1,1931 @@
+
+
+
+78K0R Linker V1.80                            Date: 1 Sep 2022 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -oDefaultBuild\387306_TataDefGaugeRL
+           78.lmf -gi00000000000000000000h -go84h,03A00h,512 -gb7C53E9H 
+           -mi0 -s -pDefaultBuild\387306_TataDefGaugeRL78.map -kl -kp C:
+           \Program Files (x86)\Renesas Electronics\CS+\CACX\CA78K0R\V1.
+           72\lib78k0r\s0rll.rel DefaultBuild\r_cg_cgc.rel DefaultBuild\
+           r_cg_cgc_user.rel DefaultBuild\r_cg_port.rel DefaultBuild\r_c
+           g_port_user.rel DefaultBuild\r_cg_timer.rel DefaultBuild\r_cg
+           _wdt.rel DefaultBuild\r_cg_wdt_user.rel DefaultBuild\r_system
+           init.rel DefaultBuild\r_cg_timer_user.rel DefaultBuild\r_main
+           .rel DefaultBuild\StepperDriver.rel DefaultBuild\Can.rel Defa
+           ultBuild\J1939.rel DefaultBuild\addressClaim.rel DefaultBuild
+           \defGauge.rel DefaultBuild\TellTales.rel DefaultBuild\SoftVer
+           sion.rel -bcl0ram.lib -bcl0rm.lib -bcl0rmf.lib -iC:\Program F
+           iles (x86)\Renesas Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0
+           r
+Para-file:
+Out-file:  DefaultBuild\387306_TataDefGaugeRL78.lmf
+Map-file:  DefaultBuild\387306_TataDefGaugeRL78.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    47 output segment(s)
+ 343DH byte(s) real data
+  2848 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=0C000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  StepperDriver
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Can        00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  J1939      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  addressClaim
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  defGauge   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  TellTales
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  SoftVersion
+                                      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt   00002H    00000H
+                  @@RLINIT r_cg_wdt_user
+                                      00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT StepperDriver
+                                      00002H    00000H
+                  @@RLINIT Can        00002H    00000H
+                  @@RLINIT J1939      00002H    00000H
+                  @@RLINIT addressClaim
+                                      00002H    00000H
+                  @@RLINIT defGauge   00002H    00000H
+                  @@RLINIT TellTales
+                                      00002H    00000H
+                  @@RLINIT SoftVersion
+                                      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt   00002H    00000H
+                  @@R_INIS r_cg_wdt_user
+                                      00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS StepperDriver
+                                      00002H    00000H
+                  @@R_INIS Can        00002H    00000H
+                  @@R_INIS J1939      00002H    00000H
+                  @@R_INIS addressClaim
+                                      00002H    00000H
+                  @@R_INIS defGauge   00002H    00000H
+                  @@R_INIS TellTales
+                                      00002H    00000H
+                  @@R_INIS SoftVersion
+                                      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt   00002H    00000H
+                  @@CALT   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   StepperDriver
+                                      00002H    00000H
+                  @@CALT   Can        00002H    00000H
+                  @@CALT   J1939      00002H    00000H
+                  @@CALT   addressClaim
+                                      00002H    00000H
+                  @@CALT   defGauge   00002H    00000H
+                  @@CALT   TellTales
+                                      00002H    00000H
+                  @@CALT   SoftVersion
+                                      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+         @@VECT04                     00004H    00002H  CSEG AT
+                  @@VECT04 r_cg_wdt_user
+                                      00004H    00002H
+* gap *                               00006H    00028H
+         @@VECT2E                     0002EH    00002H  CSEG AT
+                  @@VECT2E r_cg_timer_user
+                                      0002EH    00002H
+* gap *                               00030H    00012H
+         @@VECT42                     00042H    00002H  CSEG AT
+                  @@VECT42 r_cg_timer_user
+                                      00042H    00002H
+* gap *                               00044H    0000AH
+         @@VECT4E                     0004EH    00008H  CSEG AT
+                  @@VECT4E Can        0004EH    00008H
+         @@R_INIT                     00056H    00064H  CSEG UNIT64KP
+                  @@R_INIT @cstart    00056H    00000H
+                  @@R_INIT r_cg_cgc   00056H    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      00056H    00000H
+                  @@R_INIT r_cg_port
+                                      00056H    00000H
+                  @@R_INIT r_cg_port_user
+                                      00056H    00000H
+                  @@R_INIT r_cg_timer
+                                      00056H    00000H
+                  @@R_INIT r_cg_wdt   00056H    00000H
+                  @@R_INIT r_cg_wdt_user
+                                      00056H    00000H
+                  @@R_INIT r_systeminit
+                                      00056H    00000H
+                  @@R_INIT r_cg_timer_user
+                                      00056H    00002H
+                  @@R_INIT r_main     00058H    00008H
+                  @@R_INIT StepperDriver
+                                      00060H    00012H
+                  @@R_INIT Can        00072H    00002H
+                  @@R_INIT J1939      00074H    0001CH
+                  @@R_INIT addressClaim
+                                      00090H    00008H
+                  @@R_INIT defGauge   00098H    00012H
+                  @@R_INIT TellTales
+                                      000AAH    0000CH
+                  @@R_INIT SoftVersion
+                                      000B6H    00004H
+                  @@R_INIT @rom       000BAH    00000H
+* gap *                               000BAH    00006H
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODEL                      000C4H    00000H  CSEG
+                  @@CODEL  r_cg_cgc   000C4H    00000H
+                  @@CODEL  r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODEL  r_cg_port
+                                      000C4H    00000H
+                  @@CODEL  r_cg_port_user
+                                      000C4H    00000H
+                  @@CODEL  r_cg_timer
+                                      000C4H    00000H
+                  @@CODEL  r_cg_wdt   000C4H    00000H
+                  @@CODEL  r_cg_wdt_user
+                                      000C4H    00000H
+                  @@CODEL  r_systeminit
+                                      000C4H    00000H
+                  @@CODEL  r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODEL  r_main     000C4H    00000H
+                  @@CODEL  StepperDriver
+                                      000C4H    00000H
+                  @@CODEL  Can        000C4H    00000H
+                  @@CODEL  J1939      000C4H    00000H
+                  @@CODEL  addressClaim
+                                      000C4H    00000H
+                  @@CODEL  defGauge   000C4H    00000H
+                  @@CODEL  TellTales
+                                      000C4H    00000H
+                  @@CODEL  SoftVersion
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    0022CH  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @lmul      00185H    0002BH
+                  @@LCODE  @isrem     001B0H    00021H
+                  @@LCODE  @iurem     001D1H    0002FH
+                  @@LCODE  @ludiv     00200H    0003FH
+                  @@LCODE  @ladd      0023FH    0000FH
+                  @@LCODE  @lsub      0024EH    00012H
+                  @@LCODE  @llsh      00260H    0001BH
+                  @@LCODE  @lursh     0027BH    0001FH
+                  @@LCODE  @iscmp     0029AH    0000CH
+                  @@LCODE  @lband     002A6H    00014H
+                  @@LCODE  @lbor      002BAH    00014H
+                  @@LCODE  @lbxor     002CEH    00014H
+                  @@LCODE  @LND0      002E2H    0000AH
+                  @@LCODE  @DN4INC    002ECH    00018H
+         @@CODE                       00304H    0227CH  CSEG BASE
+                  @@CODE   r_cg_cgc   00304H    0003FH
+                  @@CODE   r_cg_cgc_user
+                                      00343H    00005H
+                  @@CODE   r_cg_port
+                                      00348H    00031H
+                  @@CODE   r_cg_port_user
+                                      00379H    00000H
+                  @@CODE   r_cg_timer
+                                      00379H    000BBH
+                  @@CODE   r_cg_wdt   00434H    00014H
+                  @@CODE   r_cg_wdt_user
+                                      00448H    00000H
+                  @@CODE   r_systeminit
+                                      00448H    0001DH
+                  @@CODE   r_cg_timer_user
+                                      00465H    00000H
+                  @@CODE   r_main     00465H    000A2H
+                  @@CODE   StepperDriver
+                                      00507H    00792H
+                  @@CODE   Can        00C99H    005DBH
+                  @@CODE   J1939      01274H    00A7AH
+                  @@CODE   addressClaim
+                                      01CEEH    00587H
+                  @@CODE   defGauge   02275H    00132H
+                  @@CODE   TellTales
+                                      023A7H    000FCH
+                  @@CODE   SoftVersion
+                                      024A3H    000DDH
+         @@BASE                       02580H    00281H  CSEG BASE
+                  @@BASE   r_cg_cgc   02580H    00000H
+                  @@BASE   r_cg_cgc_user
+                                      02580H    00000H
+                  @@BASE   r_cg_port
+                                      02580H    00000H
+                  @@BASE   r_cg_port_user
+                                      02580H    00000H
+                  @@BASE   r_cg_timer
+                                      02580H    00000H
+                  @@BASE   r_cg_wdt   02580H    00000H
+                  @@BASE   r_cg_wdt_user
+                                      02580H    00002H
+                  @@BASE   r_systeminit
+                                      02582H    00000H
+                  @@BASE   r_cg_timer_user
+                                      02582H    001DBH
+                  @@BASE   r_main     0275DH    00000H
+                  @@BASE   StepperDriver
+                                      0275DH    00000H
+                  @@BASE   Can        0275DH    000A4H
+                  @@BASE   J1939      02801H    00000H
+                  @@BASE   addressClaim
+                                      02801H    00000H
+                  @@BASE   defGauge   02801H    00000H
+                  @@BASE   TellTales
+                                      02801H    00000H
+                  @@BASE   SoftVersion
+                                      02801H    00000H
+         @@LCODEL                     02801H    000A8H  CSEG
+                  @@LCODEL rand       02801H    00040H
+                  @@LCODEL @stkinit   02841H    00044H
+                  @@LCODEL exit       02885H    0001CH
+                  @@LCODEL srand      028A1H    00008H
+* gap *                               028A9H    00757H
+         @@CNST                       03000H    009DEH  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   r_cg_cgc   03000H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_port
+                                      03000H    00000H
+                  @@CNST   r_cg_port_user
+                                      03000H    00000H
+                  @@CNST   r_cg_timer
+                                      03000H    00000H
+                  @@CNST   r_cg_wdt   03000H    00000H
+                  @@CNST   r_cg_wdt_user
+                                      03000H    00000H
+                  @@CNST   r_systeminit
+                                      03000H    00000H
+                  @@CNST   r_cg_timer_user
+                                      03000H    00000H
+                  @@CNST   r_main     03000H    00000H
+                  @@CNST   StepperDriver
+                                      03000H    00940H
+                  @@CNST   Can        03940H    00000H
+                  @@CNST   J1939      03940H    0006EH
+                  @@CNST   addressClaim
+                                      039AEH    0002AH
+                  @@CNST   defGauge   039D8H    00000H
+                  @@CNST   TellTales
+                                      039D8H    00000H
+                  @@CNST   SoftVersion
+                                      039D8H    00006H
+* gap *                               039DEH    00022H
+         ??OCDROM                     03A00H    00200H  CSEG
+* gap *                               03C00H    08400H
+
+  MEMORY=RAM
+  BASE ADDRESS=FF300H   SIZE=00D00H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FF300H    005B2H  DSEG BASEP
+                  @@DATA   @cstart    FF300H    000BAH
+                  @@DATA   r_cg_cgc   FF3BAH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_port
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_port_user
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_timer
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_wdt   FF3BAH    00000H
+                  @@DATA   r_cg_wdt_user
+                                      FF3BAH    00000H
+                  @@DATA   r_systeminit
+                                      FF3BAH    00000H
+                  @@DATA   r_cg_timer_user
+                                      FF3BAH    00002H
+                  @@DATA   r_main     FF3BCH    00000H
+                  @@DATA   StepperDriver
+                                      FF3BCH    00012H
+                  @@DATA   Can        FF3CEH    00004H
+                  @@DATA   J1939      FF3D2H    004D2H
+                  @@DATA   addressClaim
+                                      FF8A4H    0000EH
+                  @@DATA   defGauge   FF8B2H    00000H
+                  @@DATA   TellTales
+                                      FF8B2H    00000H
+                  @@DATA   SoftVersion
+                                      FF8B2H    00000H
+                  @@DATA   @rom       FF8B2H    00000H
+         @@INIT                       FF8B2H    00064H  DSEG BASEP
+                  @@INIT   @cstart    FF8B2H    00000H
+                  @@INIT   r_cg_cgc   FF8B2H    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FF8B2H    00000H
+                  @@INIT   r_cg_port
+                                      FF8B2H    00000H
+                  @@INIT   r_cg_port_user
+                                      FF8B2H    00000H
+                  @@INIT   r_cg_timer
+                                      FF8B2H    00000H
+                  @@INIT   r_cg_wdt   FF8B2H    00000H
+                  @@INIT   r_cg_wdt_user
+                                      FF8B2H    00000H
+                  @@INIT   r_systeminit
+                                      FF8B2H    00000H
+                  @@INIT   r_cg_timer_user
+                                      FF8B2H    00002H
+                  @@INIT   r_main     FF8B4H    00008H
+                  @@INIT   StepperDriver
+                                      FF8BCH    00012H
+                  @@INIT   Can        FF8CEH    00002H
+                  @@INIT   J1939      FF8D0H    0001CH
+                  @@INIT   addressClaim
+                                      FF8ECH    00008H
+                  @@INIT   defGauge   FF8F4H    00012H
+                  @@INIT   TellTales
+                                      FF906H    0000CH
+                  @@INIT   SoftVersion
+                                      FF912H    00004H
+                  @@INIT   @rom       FF916H    00000H
+         @@INIS                       FF916H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FF916H    00000H
+                  @@INIS   r_cg_cgc   FF916H    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FF916H    00000H
+                  @@INIS   r_cg_port
+                                      FF916H    00000H
+                  @@INIS   r_cg_port_user
+                                      FF916H    00000H
+                  @@INIS   r_cg_timer
+                                      FF916H    00000H
+                  @@INIS   r_cg_wdt   FF916H    00000H
+                  @@INIS   r_cg_wdt_user
+                                      FF916H    00000H
+                  @@INIS   r_systeminit
+                                      FF916H    00000H
+                  @@INIS   r_cg_timer_user
+                                      FF916H    00000H
+                  @@INIS   r_main     FF916H    00000H
+                  @@INIS   StepperDriver
+                                      FF916H    00000H
+                  @@INIS   Can        FF916H    00000H
+                  @@INIS   J1939      FF916H    00000H
+                  @@INIS   addressClaim
+                                      FF916H    00000H
+                  @@INIS   defGauge   FF916H    00000H
+                  @@INIS   TellTales
+                                      FF916H    00000H
+                  @@INIS   SoftVersion
+                                      FF916H    00000H
+                  @@INIS   @rom       FF916H    00000H
+         @@DATS                       FF916H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FF916H    00000H
+                  @@DATS   r_cg_cgc   FF916H    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FF916H    00000H
+                  @@DATS   r_cg_port
+                                      FF916H    00000H
+                  @@DATS   r_cg_port_user
+                                      FF916H    00000H
+                  @@DATS   r_cg_timer
+                                      FF916H    00000H
+                  @@DATS   r_cg_wdt   FF916H    00000H
+                  @@DATS   r_cg_wdt_user
+                                      FF916H    00000H
+                  @@DATS   r_systeminit
+                                      FF916H    00000H
+                  @@DATS   r_cg_timer_user
+                                      FF916H    00000H
+                  @@DATS   r_main     FF916H    00000H
+                  @@DATS   StepperDriver
+                                      FF916H    00000H
+                  @@DATS   Can        FF916H    00000H
+                  @@DATS   J1939      FF916H    00000H
+                  @@DATS   addressClaim
+                                      FF916H    00000H
+                  @@DATS   defGauge   FF916H    00000H
+                  @@DATS   TellTales
+                                      FF916H    00000H
+                  @@DATS   SoftVersion
+                                      FF916H    00000H
+                  @@DATS   @rom       FF916H    00000H
+         @@INITL                      FF916H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FF916H    00000H
+                  @@INITL  r_cg_cgc   FF916H    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FF916H    00000H
+                  @@INITL  r_cg_port
+                                      FF916H    00000H
+                  @@INITL  r_cg_port_user
+                                      FF916H    00000H
+                  @@INITL  r_cg_timer
+                                      FF916H    00000H
+                  @@INITL  r_cg_wdt   FF916H    00000H
+                  @@INITL  r_cg_wdt_user
+                                      FF916H    00000H
+                  @@INITL  r_systeminit
+                                      FF916H    00000H
+                  @@INITL  r_cg_timer_user
+                                      FF916H    00000H
+                  @@INITL  r_main     FF916H    00000H
+                  @@INITL  StepperDriver
+                                      FF916H    00000H
+                  @@INITL  Can        FF916H    00000H
+                  @@INITL  J1939      FF916H    00000H
+                  @@INITL  addressClaim
+                                      FF916H    00000H
+                  @@INITL  defGauge   FF916H    00000H
+                  @@INITL  TellTales
+                                      FF916H    00000H
+                  @@INITL  SoftVersion
+                                      FF916H    00000H
+                  @@INITL  @rom       FF916H    00000H
+         @@DATAL                      FF916H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FF916H    00000H
+                  @@DATAL  r_cg_cgc   FF916H    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FF916H    00000H
+                  @@DATAL  r_cg_port
+                                      FF916H    00000H
+                  @@DATAL  r_cg_port_user
+                                      FF916H    00000H
+                  @@DATAL  r_cg_timer
+                                      FF916H    00000H
+                  @@DATAL  r_cg_wdt   FF916H    00000H
+                  @@DATAL  r_cg_wdt_user
+                                      FF916H    00000H
+                  @@DATAL  r_systeminit
+                                      FF916H    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FF916H    00000H
+                  @@DATAL  r_main     FF916H    00000H
+                  @@DATAL  StepperDriver
+                                      FF916H    00000H
+                  @@DATAL  Can        FF916H    00000H
+                  @@DATAL  J1939      FF916H    00000H
+                  @@DATAL  addressClaim
+                                      FF916H    00000H
+                  @@DATAL  defGauge   FF916H    00000H
+                  @@DATAL  TellTales
+                                      FF916H    00000H
+                  @@DATAL  SoftVersion
+                                      FF916H    00000H
+                  @@DATAL  @rom       FF916H    00000H
+         @@BITS                       FF916H    00000H  BSEG
+                  @@BITS   @cstart    FF916H.0  00000H.0
+                  @@BITS   r_cg_cgc   FF916H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FF916H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FF916H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FF916H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FF916H.0  00000H.0
+                  @@BITS   r_cg_wdt   FF916H.0  00000H.0
+                  @@BITS   r_cg_wdt_user
+                                      FF916H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FF916H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FF916H.0  00000H.0
+                  @@BITS   r_main     FF916H.0  00000H.0
+                  @@BITS   StepperDriver
+                                      FF916H.0  00000H.0
+                  @@BITS   Can        FF916H.0  00000H.0
+                  @@BITS   J1939      FF916H.0  00000H.0
+                  @@BITS   addressClaim
+                                      FF916H.0  00000H.0
+                  @@BITS   defGauge   FF916H.0  00000H.0
+                  @@BITS   TellTales
+                                      FF916H.0  00000H.0
+                  @@BITS   SoftVersion
+                                      FF916H.0  00000H.0
+* gap *                               FF916H    005BEH
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG @SEGREG    FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+
+*** Local symbol list ***
+
+MODULE    ATTR       VALUE    NAME
+
+@cstart
+          MOD                 @cstart
+          DSEG                @@DATA
+          CSEG                @@VECT00
+          CSEG                @@LCODE
+          CSEG                @@R_INIT
+          CSEG                @@RLINIT
+          CSEG                @@R_INIS
+          DSEG                @@INIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CALT
+          CSEG                @@CNST
+          CSEG                @@CNSTL
+          BSEG                @@BITS
+r_cg_cgc
+          MOD                 r_cg_cgc
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00001H   _temp_stab_set
+                     00000H   _temp_stab_wait
+r_cg_cgc_user
+          MOD                 r_cg_cgc_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00006H   _reset_flag
+r_cg_port
+          MOD                 r_cg_port
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_port_user
+          MOD                 r_cg_port_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_timer
+          MOD                 r_cg_timer
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_wdt
+          MOD                 r_cg_wdt
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_wdt_user
+          MOD                 r_cg_wdt_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          CSEG                @@VECT04
+          ADDR       02580H   _r_wdt_interrupt
+r_systeminit
+          MOD                 r_systeminit
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+r_cg_timer_user
+          MOD                 r_cg_timer_user
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          CSEG                @@VECT2E
+          CSEG                @@VECT42
+                     00000H   .2fake
+                     00000H   _S16ZeroOffSet
+                     00002H   _s16MaxNeedlePos
+                     00004H   _s16CountsFromStart
+                     00006H   _s16CurrentPosition
+                     00008H   _s16TargetPosition
+                     0000AH   _s16CurrentTarget
+                     0000CH   _s16CountdownReload
+                     00000H   .0fake
+                     00000H   _u16Mtr1Pwm
+                     00002H   _u16Mtr2Pwm
+                     00004H   _u8Polarity
+          ADDR       02582H   _r_tau0_channel1_interrupt
+          ADDR       FF8B2H   _step
+                     00002H   _goingClockWise
+          ADDR       FF3BAH   _countDown
+                     00001H   _var
+                     00000H   _num
+          ADDR       0274FH   _r_tau0_channel4_interrupt
+r_main
+          MOD                 r_main
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       FF8B8H   _TimeStamp
+          ADDR       FF8BAH   _bstatus
+          ADDR       0048BH   __vTasksAfterSysTurn_ON
+          ADDR       004A6H   __vTasksAfterLongHoming
+          ADDR       004ACH   __vMapInterrupts
+          ADDR       004B8H   _vUnusedMCUPinsMakeAsOutPut
+StepperDriver
+          MOD                 StepperDriver
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00000H   .0fake
+                     00000H   _u16Mtr1Pwm
+                     00002H   _u16Mtr2Pwm
+                     00004H   _u8Polarity
+                     00000H   .2fake
+                     00000H   _S16ZeroOffSet
+                     00002H   _s16MaxNeedlePos
+                     00004H   _s16CountsFromStart
+                     00006H   _s16CurrentPosition
+                     00008H   _s16TargetPosition
+                     0000AH   _s16CurrentTarget
+                     0000CH   _s16CountdownReload
+                     00000H   .1fake
+                     00000H   _eDefGauge
+                     00001H   _eNumOfMeters
+          ADDR       00507H   bs_S0220
+          ADDR       0050EH   es_S0220
+          ADDR       0050EH   bs_F0221
+          ADDR       00513H   es_F0221
+          ADDR       00513H   bs_S0222
+          ADDR       0051AH   es_S0222
+          ADDR       0051AH   bs_S0219
+          ADDR       0051FH   es_S0219
+          ADDR       0051FH   bs_S0217
+          ADDR       00528H   es_S0217
+          ADDR       00528H   bs_S0218
+          ADDR       00531H   es_S0218
+          ADDR       00531H   bs_S0214
+          ADDR       0053AH   es_S0214
+          ADDR       0053AH   bs_S0215
+          ADDR       00544H   es_S0215
+          ADDR       00544H   bs_S0216
+          ADDR       0054DH   es_S0216
+          ADDR       0054DH   bs_S0207
+          ADDR       00558H   es_S0207
+          ADDR       00558H   bs_S0208
+          ADDR       00563H   es_S0208
+          ADDR       00563H   bs_S0209
+          ADDR       0056EH   es_S0209
+          ADDR       0056EH   bs_S0210
+          ADDR       00579H   es_S0210
+          ADDR       00579H   bs_S0211
+          ADDR       00584H   es_S0211
+          ADDR       00584H   bs_S0212
+          ADDR       0058FH   es_S0212
+          ADDR       0058FH   bs_S0213
+          ADDR       0059AH   es_S0213
+          ADDR       0059AH   bs_S0204
+          ADDR       005A6H   es_S0204
+          ADDR       005A6H   bs_F0205
+          ADDR       005B4H   es_F0205
+          ADDR       005B4H   bs_S0206
+          ADDR       005C0H   es_S0206
+          ADDR       005C0H   bs_S0195
+          ADDR       005CFH   es_S0195
+          ADDR       005CFH   bs_S0196
+          ADDR       005DDH   es_S0196
+          ADDR       005DDH   bs_S0197
+          ADDR       005EBH   es_S0197
+          ADDR       005EBH   bs_S0198
+          ADDR       005F9H   es_S0198
+          ADDR       005F9H   bs_S0199
+          ADDR       00606H   es_S0199
+          ADDR       00606H   bs_S0200
+          ADDR       00614H   es_S0200
+          ADDR       00614H   bs_S0201
+          ADDR       00622H   es_S0201
+          ADDR       00622H   bs_S0202
+          ADDR       00630H   es_S0202
+          ADDR       00630H   bs_S0203
+          ADDR       0063EH   es_S0203
+          ADDR       FF8BFH   _bacceleratingStartup
+                     0000AH   _meterType
+                     00008H   _GapPos
+                     00007H   _bManualSelfTestState
+                     00004H   _temp
+          ADDR       FF8C0H   _stepperDriveState
+          ADDR       FF8C2H   _previousTarget
+          ADDR       FF8C4H   _accelerating
+                     00002H   _distCur
+                     00000H   _distNew
+                     00008H   _accelerating
+                     00010H   _meterType
+          ADDR       FF8C6H   _clkPeriod
+                     00006H   _newclkPeriod
+                     00004H   _distCur
+          ADDR       FF8C8H   _FirstEntry
+                     00003H   _moveStepperFast
+          ADDR       FF8CAH   _timestamp
+                     00000H   _temp
+                     00004H   _accelerating
+                     0000CH   _meterType
+          ADDR       FF8CCH   _clkPeriod
+                     00002H   _newclkPeriod
+                     00000H   _distCur
+                     00007H   _IgnitionStatus
+                     00006H   _i
+                     00006H   _i
+                     00006H   _i
+                     00006H   _i
+          ADDR       FF3CAH   _u32SelfTestClock
+                     00006H   _GaugeType
+                     00000H   _TargetPosition
+                     00008H   _GaugeType
+                     00006H   _GaugeType
+                     00006H   _GaugeType
+                     00006H   _i
+                     00000H   _ZpdSM1DetectFlag
+                     00008H   _ZpdSM2DetectFlag
+                     0000AH   _ZpdSM3DetectFlag
+                     0000CH   _ZpdSM4DetectFlag
+                     00000H   _ZpdSM1DetectFlag
+                     00008H   _ZpdSM2DetectFlag
+                     0000AH   _ZpdSM3DetectFlag
+                     0000CH   _ZpdSM4DetectFlag
+                     00000H   _ZpdSM1DetectFlag
+                     00008H   _ZpdSM2DetectFlag
+                     0000AH   _ZpdSM3DetectFlag
+                     0000CH   _ZpdSM4DetectFlag
+                     00000H   _ZpdSM1DetectFlag
+                     00008H   _ZpdSM2DetectFlag
+                     0000AH   _ZpdSM3DetectFlag
+                     0000CH   _ZpdSM4DetectFlag
+                     00002H   _i
+                     00000H   _j
+Can
+          MOD                 Can
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          CSEG                @@VECT4E
+          ADDR       00C99H   bs_S0151
+          ADDR       00CA0H   es_S0151
+          ADDR       00CA0H   bs_S0149
+          ADDR       00CA9H   es_S0149
+          ADDR       00CA9H   bs_S0150
+          ADDR       00CB2H   es_S0150
+          ADDR       00CB2H   bs_S0144
+          ADDR       00CBAH   es_S0144
+          ADDR       00CBAH   bs_S0145
+          ADDR       00CC2H   es_S0145
+          ADDR       00CC2H   bs_S0146
+          ADDR       00CCBH   es_S0146
+          ADDR       00CCBH   bs_S0147
+          ADDR       00CD4H   es_S0147
+          ADDR       00CD4H   bs_S0148
+          ADDR       00CDDH   es_S0148
+          ADDR       00CDDH   bs_S0140
+          ADDR       00CE8H   es_S0140
+          ADDR       00CE8H   bs_S0141
+          ADDR       00CF2H   es_S0141
+          ADDR       00CF2H   bs_S0142
+          ADDR       00CFDH   es_S0142
+          ADDR       00CFDH   bs_S0143
+          ADDR       00D08H   es_S0143
+          ADDR       00D08H   bs_S0139
+          ADDR       00D1CH   es_S0139
+          ADDR       FF8CEH   _bBusOffFlag
+          ADDR       FF8CFH   _bBusOffDtcFlag
+          ADDR       FF3CEH   _TRQ_REGISTER_BUF_14
+          ADDR       FF3D0H   _TRQ_REGISTER_BUF_15
+                     00000H   _MsgBuf_address
+                     00005H   _buffer_number
+                     00000H   _MsgBuf_address
+                     00006H   _buffer_number
+                     0000EH   _tx_msg_ID
+                     00012H   _tx_msg_DLC
+                     00002H   _MsgBuf_address
+                     00001H   _data_cnt
+                     00004H   _buffer_number
+                     0000CH   _rx_mask_ID
+                     00000H   _MsgBuf_address
+                     00006H   _BufferStatusFlag
+                     0000EH   _ID_msg_rx
+                     00018H   _tx_msg_DLC
+                     0001AH   _tx_msg_data
+                     0001CH   _TxType
+                     0000AH   _MsgBuf_address
+                     00008H   _C0MCTRLm
+                     00007H   _temp
+                     00006H   _buffer_number
+                     00005H   _BuzzerCheckingFlag
+                     00002H   _BuzzerCheckingTimeOut
+                     00001H   _data_cnt
+                     00103H   _read_regiter
+                     00003H   _temp
+                     00000H   _Ptr_C0MCTRL
+J1939
+          MOD                 J1939
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00000H   .10fake
+                     00000H   _ePGN_J1939
+                     00001H   _ePGN_NMEA
+                     00002H   _ePGN_FAST_PACKET
+                     00000H   .17fake
+                     00000H   _PGN
+                     00002H   _ID
+                     00006H   _PGNtype
+                     00008H   _rate
+                     00000H   .16fake
+                     00000H   _PGNindex
+                     00001H   _byteIndex
+                     00002H   _byteSize
+                     00003H   _bitMask
+                     00004H   _dataOffset
+                     00006H   _bitRes
+                     0000AH   _overrangeData
+                     0000EH   _underrangeData
+                     00012H   _u32TimeStamp
+                     00000H   .6fake
+                     00000H   _DataPage
+                     00001H   _Reserved
+                     00002H   _Priority
+                     00005H   _UnusedMSB
+                     00000H   .5fake
+                     00000H   _SourceAddress
+                     00001H   _PduSpecific
+                     00002H   _PduFormat
+                     00003H   _sBitField
+                     00000H   .4fake
+                     00000H   _Identifier
+                     00000H   _sIdField
+                     00000H   .7fake
+                     00000H   _sMsgID
+                     00004H   _u32TimeStamp
+                     00008H   _u32ValidDataTS
+                     0000CH   _bDataRdy
+                     0000DH   _ucNumofRxBytes
+                     0000EH   _u8data
+                     00016H   _bDataOutDate
+                     00000H   .15fake
+                     00000H   _PGN_ext
+                     00004H   _timeInterval
+                     00000H   .8fake
+                     00000H   _SPNValue
+                     00004H   _FMICode
+                     00000H   .13fake
+                     00000H   _bEnabled
+                     00001H   _bSendOnDemand
+                     00002H   _u8data
+                     0000AH   _u32TimeStamp
+                     00000H   .18fake
+                     00000H   _PGN
+                     00002H   _u8SourceAdd
+                     00003H   _u8Priority
+                     00004H   _RxFunct
+                     00000H   .1fake
+                     00000H   _eTx65303
+                     00001H   _eNoOfPgnTx
+                     00000H   .0fake
+                     00000H   _eJSoftVersionDataTx
+                     00001H   _eNumofTxDataTypes
+                     00000H   .2fake
+                     00000H   _eJLowDEFGauge
+                     00001H   _eJLowDEFLamp
+                     00002H   _eJRequestPGNSoftVersion
+                     00003H   _eNumofRxDataTypes
+          ADDR       01274H   bs_S0248
+          ADDR       01279H   es_S0248
+          ADDR       01279H   bs_S0247
+          ADDR       01280H   es_S0247
+          ADDR       01280H   bs_S0237
+          ADDR       01289H   es_S0237
+          ADDR       01289H   bs_S0238
+          ADDR       01292H   es_S0238
+          ADDR       01292H   bs_S0239
+          ADDR       0129AH   es_S0239
+          ADDR       0129AH   bs_S0240
+          ADDR       012A3H   es_S0240
+          ADDR       012A3H   bs_S0241
+          ADDR       012ACH   es_S0241
+          ADDR       012ACH   bs_S0242
+          ADDR       012B5H   es_S0242
+          ADDR       012B5H   bs_S0243
+          ADDR       012BEH   es_S0243
+          ADDR       012BEH   bs_S0244
+          ADDR       012C8H   es_S0244
+          ADDR       012C8H   bs_S0245
+          ADDR       012D2H   es_S0245
+          ADDR       012D2H   bs_S0246
+          ADDR       012DBH   es_S0246
+          ADDR       012DBH   bs_F0227
+          ADDR       012E5H   es_F0227
+          ADDR       012E5H   bs_S0228
+          ADDR       012EFH   es_S0228
+          ADDR       012EFH   bs_F0229
+          ADDR       012FAH   es_F0229
+          ADDR       012FAH   bs_S0230
+          ADDR       01305H   es_S0230
+          ADDR       01305H   bs_S0231
+          ADDR       01310H   es_S0231
+          ADDR       01310H   bs_S0232
+          ADDR       01319H   es_S0232
+          ADDR       01319H   bs_S0233
+          ADDR       01325H   es_S0233
+          ADDR       01325H   bs_S0234
+          ADDR       0132EH   es_S0234
+          ADDR       0132EH   bs_S0235
+          ADDR       0133AH   es_S0235
+          ADDR       0133AH   bs_S0236
+          ADDR       01343H   es_S0236
+          ADDR       01343H   bs_S0223
+          ADDR       0134BH   es_S0223
+          ADDR       0134BH   bs_S0224
+          ADDR       01355H   es_S0224
+          ADDR       01355H   bs_S0225
+          ADDR       0135FH   es_S0225
+          ADDR       0135FH   bs_S0226
+          ADDR       01369H   es_S0226
+          ADDR       01369H   bs_S0219
+          ADDR       01375H   es_S0219
+          ADDR       01375H   bs_S0220
+          ADDR       01381H   es_S0220
+          ADDR       01381H   bs_S0221
+          ADDR       0138EH   es_S0221
+          ADDR       0138EH   bs_S0222
+          ADDR       01399H   es_S0222
+          ADDR       01399H   bs_S0205
+          ADDR       013A8H   es_S0205
+          ADDR       013A8H   bs_S0206
+          ADDR       013B5H   es_S0206
+          ADDR       013B5H   bs_S0207
+          ADDR       013C2H   es_S0207
+          ADDR       013C2H   bs_S0208
+          ADDR       013CFH   es_S0208
+          ADDR       013CFH   bs_S0209
+          ADDR       013DCH   es_S0209
+          ADDR       013DCH   bs_S0210
+          ADDR       013EBH   es_S0210
+          ADDR       013EBH   bs_S0211
+          ADDR       013F8H   es_S0211
+          ADDR       013F8H   bs_S0212
+          ADDR       01406H   es_S0212
+          ADDR       01406H   bs_S0213
+          ADDR       01415H   es_S0213
+          ADDR       01415H   bs_S0214
+          ADDR       01426H   es_S0214
+          ADDR       01426H   bs_S0215
+          ADDR       01438H   es_S0215
+          ADDR       01438H   bs_S0216
+          ADDR       01444H   es_S0216
+          ADDR       01444H   bs_S0217
+          ADDR       01451H   es_S0217
+          ADDR       01451H   bs_S0218
+          ADDR       01465H   es_S0218
+          ADDR       FF3D2H   _u32MultiPacketTimer
+          ADDR       FF8D0H   _u8MultiPacketDM1
+          ADDR       FF8D5H   _u8MultiFrameSA
+          ADDR       FF8DAH   _u8DM1NumFrames
+          ADDR       FF8DBH   _u8DTCready
+          ADDR       FF8DCH   _u8DTCSA
+          ADDR       FF8DDH   _u8DTCCount
+          ADDR       FF8DEH   _u16lTotalBytes
+          ADDR       FF8A0H   _bSpnDataReadyStatus
+          ADDR       FF8E2H   _u32DtcFrameData
+          ADDR       FF8E6H   _serviceTime
+                     00002H   _i
+                     00000H   _j
+                     00002H   _i
+                     00000H   _j
+          ADDR       01572H   __J1939_RxManager
+                     0002CH   _PGN
+                     00028H   _ID
+                     00026H   _msg
+                     00024H   _UDSbufPtr
+                     0000CH   _UDSMsg
+                     0000AH   _RxQuePush
+                     00008H   _i
+                     00006H   _timeNow
+                     00005H   _RxQuePop
+                     00004H   _SOURCEADD
+                     00003H   _Priority
+                     00002H   _framNum
+                     00001H   _frameIndex
+                     00000H   _SourceAddType
+          ADDR       016EFH   __J1939_TxManager
+          ADDR       FF8EAH   _n
+                     00007H   _TxReturnCode
+                     00006H   _StatusFlag
+                     00006H   _eTxPgn
+                     00007H   _EnableFlag
+                     00006H   _eTxPgn
+                     00006H   _eTxPgn
+                     00004H   _PGN
+                     00002H   _n
+                     00001H   _foundPGN
+                     00008H   _dtype
+                     00010H   _rawData
+                     00014H   _overrange
+                     00004H   _data
+                     00002H   _dataPtr
+                     00000H   .19fake
+                     00000H   _byteSize
+                     00001H   _bitMask
+                     00000H   _b
+                     00006H   _dtype
+                     00002H   _data
+                     00001H   _i
+                     00000H   .20fake
+                     00000H   _byteSize
+                     00000H   _bitMask
+                     00000H   _b
+                     00002H   _dType
+                     00001H   _bitMask
+                     00000H   _data
+          ADDR       01A87H   __vPGN65110_DEF
+                     00002H   _msg
+                     00000H   _i
+          ADDR       01ACAH   __vPGN59904_SoftVersionRead
+                     00002H   _msg
+                     00000H   _i
+          ADDR       01B34H   __vResetDM1Reception
+                     00006H   _SourceAdd
+                     00006H   _dtype
+                     00006H   _dtype
+                     00006H   _dtype
+                     00006H   _dtype
+                     00006H   _dtype
+                     0000AH   _MsgBuf_address
+                     00009H   _rx_msg_DLC
+                     00004H   _rx_msg_ID
+                     00003H   _rx_buffer_number
+                     00002H   _rx_data_cnt
+                     00000H   _RxQuePush
+                     00006H   _i
+addressClaim
+          MOD                 addressClaim
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00000H   .13fake
+                     00000H   _IdentityNumber_u83
+                     00005H   _ManufacturerCode_u83
+                     00000H   .14fake
+                     00000H   _EcuInstance
+                     00003H   _FunctionInstance
+                     00000H   .15fake
+                     00000H   _Reserved
+                     00001H   _VehicleSystem
+                     00000H   .16fake
+                     00000H   _VehicleSystemInstance
+                     00004H   _IndustryGroup
+                     00007H   _ArbitraryAddressCapable
+                     00000H   .12fake
+                     00000H   _IdentityNumber_u81
+                     00001H   _IdentityNumber_u82
+                     00002H   _u83
+                     00003H   _ManufacturerCode_u84
+                     00004H   _u85
+                     00005H   _DeviceFunction
+                     00006H   _u87
+                     00007H   _u88
+                     00000H   .10fake
+                     00000H   _eAC_INIT
+                     00001H   _eAC_S0_IDLE
+                     00002H   _eAC_T0_IDLE
+                     00003H   _eAC_S1_RANDOM_DELAY
+                     00004H   _eAC_T1_RANDOM_DELAY
+                     00005H   _eAC_S2_TRANSMIT
+                     00006H   _eAC_T2_TRANSMIT
+                     00007H   _eAC_S3_RXCANFRAME
+                     00008H   _eAC_T3_RXCANFRAME
+                     00009H   _eAC_S4_FETCH_NEXT_myAddress
+                     0000AH   _eAC_T4_FETCH_NEXT_myAddress
+                     0000BH   _eAC_S5_RXCANFRAME
+                     0000CH   _eAC_T5_RXCANFRAME
+                     0000DH   _eAC_S6_RANDOM_DELAY
+                     0000EH   _eAC_T6_RANDOM_DELAY
+                     0000FH   _eAC_S7_TRANSMIT
+                     00010H   _eAC_T7_TRANSMIT
+                     00011H   _eAC_S8_RXCANFRAME
+                     00012H   _eAC_T8_RXCANFRAME
+                     00013H   _eAC_S9_TRANSMIT
+                     00014H   _eAC_T9_TRANSMIT
+                     00000H   .11fake
+                     00000H   _state
+                     00010H   _idleState
+                     00011H   _startRandomDelay
+                     00012H   _start250MsDelay
+                     00013H   _delayComplete
+                     00014H   _selectStartAddress
+                     00015H   _fetchNextMyAddress
+                     00016H   _commandedAddress
+                     00017H   _addressClaimed
+                     00018H   _cannotClaimAddress
+                     00019H   _iWin
+                     0001AH   _iLose
+                     0001BH   _canMsgSent
+                     0001CH   _noMessage
+                     0001DH   _requestPgn
+                     0001EH   _pendingRequestPgn
+                     0001FH   _adrClaimContention
+                     00004H   _uiAdrClaimCounter
+                     00006H   _bIwon
+                     00007H   _bBumpedByHigher
+                     00000H   .6fake
+                     00000H   _DataPage
+                     00001H   _Reserved
+                     00002H   _Priority
+                     00005H   _UnusedMSB
+                     00000H   .5fake
+                     00000H   _SourceAddress
+                     00001H   _PduSpecific
+                     00002H   _PduFormat
+                     00003H   _sBitField
+                     00000H   .4fake
+                     00000H   _Identifier
+                     00000H   _sIdField
+                     00000H   .7fake
+                     00000H   _sMsgID
+                     00004H   _u32TimeStamp
+                     00008H   _u32ValidDataTS
+                     0000CH   _bDataRdy
+                     0000DH   _ucNumofRxBytes
+                     0000EH   _u8data
+                     00016H   _bDataOutDate
+                     00000H   .17fake
+                     00000H   _DataPage
+                     00001H   _Reserved
+                     00002H   _UnusedMSB
+                     00000H   _j1939_Request_Message_Struct
+                     00000H   _PduSpecific
+                     00001H   _PduFormat
+                     00002H   _sBitField
+          ADDR       01CEEH   bs_F0177
+          ADDR       01CF6H   es_F0177
+          ADDR       01CF6H   bs_S0178
+          ADDR       01CFEH   es_S0178
+          ADDR       01CFEH   bs_S0176
+          ADDR       01D07H   es_S0176
+          ADDR       01D07H   bs_F0174
+          ADDR       01D11H   es_F0174
+          ADDR       01D11H   bs_S0175
+          ADDR       01D1AH   es_S0175
+          ADDR       01D1AH   bs_S0170
+          ADDR       01D26H   es_S0170
+          ADDR       01D26H   bs_F0171
+          ADDR       01D34H   es_F0171
+          ADDR       01D34H   bs_S0172
+          ADDR       01D44H   es_S0172
+          ADDR       01D44H   bs_F0173
+          ADDR       01D51H   es_F0173
+          ADDR       FF8AEH   _bAnswered
+          ADDR       FF8B0H   _uiDelayTimer
+          ADDR       01DBCH   __vAddressClaimInit
+                     00008H   _msg
+                     00006H   _acPGN
+                     00004H   _myNamePtr
+                     00002H   _RxNamePtr
+                     00001H   _nameCount
+                     00006H   _msg
+                     00004H   _PgnRequest
+                     00000H   .18fake
+                     00000H   _ID
+                     00000H   _PGN
+                     00000H   _j1939
+          ADDR       01F65H   __bTxISOacknowledge
+                     0000CH   _DA
+                     00014H   _SA
+                     00016H   _PGN
+                     0001AH   _groupFnct
+                     0001CH   _status
+                     00004H   _msgData
+                     00000H   _ID
+          ADDR       01FD4H   __bTxISOaddressClaim
+                     00004H   _DA
+                     0000CH   _SA
+                     00000H   _acPGN
+          ADDR       0200EH   __ucGetRandomDelayTime
+                     00006H   _delay
+          ADDR       02029H   __vS0AddressClaimIdle
+          ADDR       0203EH   __vT0AddressClaimIdle
+          ADDR       02049H   __vS1AddressClaimRandomDelay
+          ADDR       02066H   __vT1AddressClaimRandomDelay
+          ADDR       02074H   __vS2AddressClaimTransmit
+          ADDR       0208DH   __vT2AddressClaimTransmit
+          ADDR       0209DH   __vS3AddressClaimRxCanFrame
+          ADDR       020C6H   __vT3AddressClaimRxCanFrame
+          ADDR       02108H   __vS4AddressClaimFetchNextmyAddress
+                     00006H   _contentionRandomTime
+          ADDR       0217CH   __vT4AddressClaimFetchNextmyAddress
+          ADDR       0218CH   __vS5AddressClaimRxCanFrame
+          ADDR       021A5H   __vT5AddressClaimRxCanFrame
+          ADDR       021C5H   __vS6AddressClaimRandomDelay
+          ADDR       021DEH   __vT6AddressClaimRandomDelay
+          ADDR       021ECH   __vS7AddressClaimTransmit
+          ADDR       02211H   __vT7AddressClaimTransmit
+          ADDR       02221H   __vS8AddressClaimRxCanFrame
+          ADDR       0222EH   __vT8AddressClaimRxCanFrame
+          ADDR       02241H   __vS9AddressClaimTransmit
+          ADDR       0224EH   __vT9AddressClaimTransmit
+                     039AEH   L0027
+defGauge
+          MOD                 defGauge
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00000H   .13fake
+                     00000H   _u16DefSignalData
+                     00004H   _u8DefLevel
+                     00005H   _u8PreviousDefLevel
+                     00006H   _u8DefBarNo
+                     00007H   _bSymboleStatus
+          ADDR       FF8FCH   _WarningLedStatus
+                     0000AH   _RowData
+                     00009H   _i
+          ADDR       FF8FDH   _u8AvgSampleCount
+                     00004H   _microsteps
+                     00000H   _temp
+          ADDR       FF8FEH   _FirstEntry
+          ADDR       FF8FFH   _InDefGaugeTimeOutEntry
+          ADDR       FF900H   _bCAN_TimeOut
+          ADDR       FF901H   _Hysterisis
+          ADDR       FF902H   _firstentry
+          ADDR       FF904H   _timestamp
+TellTales
+          MOD                 TellTales
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+          ADDR       023A7H   bs_F0037
+          ADDR       023B3H   es_F0037
+          ADDR       023B3H   bs_F0035
+          ADDR       023C5H   es_F0035
+          ADDR       023C5H   bs_S0036
+          ADDR       023D7H   es_S0036
+          ADDR       FF906H   _blinkflag
+          ADDR       FF908H   _blinktimestamp
+          ADDR       FF90CH   _FirstEntry
+          ADDR       FF90DH   _LedStatus
+          ADDR       FF90EH   _blinkCount
+          ADDR       FF910H   _badBlinkRate
+                     00006H   _btimeout
+SoftVersion
+          MOD                 SoftVersion
+          BSEG                @@BITS
+          CSEG                @@CNST
+          CSEG                @@R_INIT
+          DSEG                @@INIT
+          DSEG                @@DATA
+          CSEG                @@R_INIS
+          DSEG                @@INIS
+          DSEG                @@DATS
+          CSEG                @@CNSTL
+          CSEG                @@RLINIT
+          DSEG                @@INITL
+          DSEG                @@DATAL
+          CSEG                @@CALT
+          CSEG                @@CODE
+          CSEG                @@CODEL
+          CSEG                @@BASE
+                     00015H   _Count
+                     00010H   _Data
+          ADDR       FF914H   _FirstEntry
+                     0000CH   _requestedPGN
+                     00004H   _data
+                     00002H   _i
+                     00000H   _j
+                     039D8H   L0001
+@lmul
+          MOD                 @lmul
+          CSEG                @@LCODE
+@isrem
+          MOD                 @isrem
+          CSEG                @@LCODE
+@iurem
+          MOD                 @iurem
+          CSEG                @@LCODE
+@ludiv
+          MOD                 @ludiv
+          CSEG                @@LCODE
+rand
+          MOD                 rand
+          CSEG                @@LCODEL
+@ladd
+          MOD                 @ladd
+          CSEG                @@LCODE
+@lsub
+          MOD                 @lsub
+          CSEG                @@LCODE
+@llsh
+          MOD                 @llsh
+          CSEG                @@LCODE
+@lursh
+          MOD                 @lursh
+          CSEG                @@LCODE
+@iscmp
+          MOD                 @iscmp
+          CSEG                @@LCODE
+@lband
+          MOD                 @lband
+          CSEG                @@LCODE
+@lbor
+          MOD                 @lbor
+          CSEG                @@LCODE
+@lbxor
+          MOD                 @lbxor
+          CSEG                @@LCODE
+@SEGREG
+          MOD                 @SEGREG
+          DSEG                @@SEGREG
+@stkinit
+          MOD                 @stkinit
+          CSEG                @@LCODEL
+@LND0
+          MOD                 @LND0
+          CSEG                @@LCODE
+@DN4INC
+          MOD                 @DN4INC
+          CSEG                @@LCODE
+@RTARG0
+          MOD                 @RTARG0
+          DSEG                @@RTARG0
+exit
+          MOD                 exit
+          CSEG                @@LCODEL
+srand
+          MOD                 srand
+          CSEG                @@LCODEL
+@rom
+          MOD                 @rom
+          CSEG                @@R_INIT
+          CSEG                @@RLINIT
+          CSEG                @@R_INIS
+          DSEG                @@INIT
+          DSEG                @@INITL
+          DSEG                @@DATA
+          DSEG                @@DATAL
+          DSEG                @@INIS
+          DSEG                @@DATS
+
+
+
+*** Public symbol list ***
+
+MODULE    ATTR       VALUE    NAME
+
+@cstart
+          ADDR       000D8H   _@cstart
+          ADDR       00185H   _@cend
+          ADDR       FF398H   _@BRKADR
+          ADDR       FF39AH   _@MEMTOP
+          ADDR       FF3BAH   _@MEMBTM
+          ADDR       FF300H   _@FNCTBL
+          ADDR       FF380H   _@FNCENT
+          ADDR       FF382H   _@SEED
+          ADDR       FF386H   _@DIVR
+          ADDR       FF38AH   _@LDIVR
+          ADDR       FF392H   _@TOKPTR
+          ADDR       FF396H   _errno
+r_main
+                     00465H   _main
+          NUM        FFED4H   _@STBEG
+          NUM        FF916H   _@STEND
+@stkinit
+          ADDR       02841H   _stkinit
+r_systeminit
+                     0045EH   _hdwinit
+          NUM        000C0H   _@SADSIZ
+          ADDR       FFE20H   _@SADBEG
+exit
+          ADDR       02885H   _exit
+          NUM        00000H   _@MAA
+@rom
+          ADDR       000BAH   _?R_INIT
+          ADDR       00002H   _?RLINIT
+          ADDR       00002H   _?R_INIS
+          ADDR       FF8B2H   _?DATA
+          ADDR       FF916H   _?DATAL
+          ADDR       FF916H   _?DATS
+r_cg_cgc
+                     00304H   _R_CGC_Create
+r_cg_cgc_user
+                     00343H   _R_CGC_Get_ResetSource
+r_cg_port
+                     00348H   _R_PORT_Create
+r_cg_timer
+                     00379H   _R_TAU0_Create
+                     003F0H   _R_TAU0_Channel1_Start
+                     00401H   _R_TAU0_Channel1_Stop
+                     00412H   _R_TAU0_Channel4_Start
+                     00423H   _R_TAU0_Channel4_Stop
+r_cg_wdt
+                     00434H   _R_WDT_Create
+                     00444H   _R_WDT_Restart
+r_cg_wdt_user
+          ADDR       00004H   _@vect04
+r_systeminit
+                     00448H   _R_Systeminit
+r_cg_timer_user
+          ADDR       0002EH   _@vect2e
+          ADDR       00042H   _@vect42
+@RTARG0
+          ADDR       FFED8H   _@RTARG0
+StepperDriver
+                     FF3BCH   _stepperCB
+                     FF8BDH   _bMoveStepperMotor
+                     FF8BCH   _bStartUp
+@iscmp
+          ADDR       0029AH   @@iscmp
+StepperDriver
+                     03000H   _MicroStepPWM
+r_main
+                     FF8B4H   _gu32Clock1msTicker
+@DN4INC
+          ADDR       002FCH   @@dn4ip
+r_main
+                     00487H   _R_MAIN_UserInit
+                     004ADH   _u32GetClockTicks
+                     004B4H   _u16GetClockTicks
+addressClaim
+                     01D51H   _vAddressClaimStateMgr
+J1939
+                     01465H   _vJ1939_ServiceManager
+StepperDriver
+                     0063EH   _vStepperPositionDriver
+defGauge
+                     02275H   _vDefGauge
+TellTales
+                     023D7H   _vControlDefTellTales
+Can
+                     011EBH   _vRecoveryFromBusOffState
+StepperDriver
+                     00C24H   _vStepperInit
+                     00B36H   _vLongHoming
+                     00AC6H   _vShortHoming
+Can
+                     00D1CH   _vCanInit
+J1939
+                     01490H   _vJ1939Init
+StepperDriver
+                     008CCH   __bAccelDecel
+                     00997H   __bAccelDecelStartUp
+                     00A2DH   _vStepperSelfTest
+                     00B00H   _vPointerSetToE_Pos
+                     00BAEH   _u16GaugeMaxMicroSteps
+                     00BB7H   _vSetTargetPosition
+                     00BE8H   _s16GetCurrentPosition
+                     00BF1H   _s16GetTargetPosition
+                     00BFCH   _vMoveStepperToHomePosition
+                     00C49H   _vDisableStepper
+                     00C4FH   _vStepperSM1
+                     00C57H   _vStepperSM2
+                     00C5FH   _vStepperSM3
+                     00C67H   _vStepperSM4
+                     00C6FH   _vZPD
+                     00C70H   __vDelay
+                     030C0H   _accelDecelStartUpCurve
+                     03140H   _accelDecelCurveExt
+                     FF8BEH   _bSelfTestStatus
+@RTARG0
+          ADDR       FFEDAH   _@RTARG2
+          ADDR       FFEDCH   _@RTARG4
+@lsub
+          ADDR       0024EH   @@lusub
+Can
+                     00E29H   __vCANInit
+                     00E96H   _vReCANInit
+                     00EF5H   __vCANMsgBufInit
+                     00F3BH   __vTxMsgBufInit
+                     00FE7H   __vRxMsgBufInit
+                     010D4H   _bCheckCanTxBufferAvailable
+                     010EBH   _vTxMsgBufProcessing
+                     0275DH   _MY_Rx_MsgBuf_Processing
+                     0278CH   _MY_ISR_CAN_Wakeup
+                     02796H   _MY_ISR_CAN_Error
+                     027F8H   _MY_Tx_MsgBuf
+                     0123FH   _MY_CAN_SleepMode_Setting
+                     01246H   _MY_CAN_StopMode_Setting
+                     0125CH   _MY_CAN_StopMode_Release
+                     01263H   _MY_CAN_SleepMode_Release
+                     0126AH   _bGetCanBusOffFlagStatus
+                     01270H   _vClearCanBusOffFlag
+          ADDR       0004EH   _@vect4e
+          ADDR       00050H   _@vect50
+          ADDR       00052H   _@vect52
+          ADDR       00054H   _@vect54
+@RTARG0
+          ADDR       FFEDDH   _@RTARG5
+          ADDR       FFEDEH   _@RTARG6
+@ladd
+          ADDR       0023FH   @@luadd
+@lursh
+          ADDR       0027BH   @@lursh
+@SEGREG
+          ADDR       FFED4H   _@SEGAX
+J1939
+                     01BD7H   _vJ1939OnFullRx
+@SEGREG
+          ADDR       FFED6H   _@SEGDE
+J1939
+                     0152DH   _vJ1939TxInit
+                     01786H   _vJ1939_TxMsgEnableDisable
+                     01791H   _vJ1939_TxSendOnDemandEnable
+                     0179BH   _vJ1939_TxSendOnDemandDisable
+                     017A5H   _bProcessISORequest
+                     017FEH   _vPutPGNdata
+                     018CDH   _u32GetPGNdata
+                     01A38H   _u8GetBitData
+                     01B0DH   _vResetDTCParameters
+                     01B18H   _u8GetDTCStatus
+                     01B1EH   _u8GetDTCCount
+                     01B24H   _u8GetDTCSA
+                     01B2AH   _u8GetDtcFramNum
+                     01B30H   _u16GetDtcTotalBytes
+                     01B42H   _bGetPGNDataReady
+                     01B53H   _ClearPGNDataReady
+                     01B61H   _bGetSPNDataReady
+                     01B70H   _vClearSPNDataReady
+                     01B7EH   _bGetPGNTimeOut
+                     01CE6H   _vClearDTC
+                     03940H   _sPGNconstantsTx
+                     0394AH   _sPGNdataTx
+                     03960H   _sPGNdataRx
+                     FF3E6H   _sJ1939RxQueue
+                     FF6B6H   _J1939RxData
+                     FF6E6H   _J1939_Tx
+                     FF6EEH   _DTC_J1939
+                     FF8E0H   _u8DtcFramNum
+                     FF892H   _J1939TxData
+                     039A2H   _sPGNconstantsRx
+addressClaim
+                     01E87H   _vRxISOrequest
+@lmul
+          ADDR       00185H   @@lumul
+@LND0
+          ADDR       002E2H   @@lnd0
+@lband
+          ADDR       002A6H   @@luband
+addressClaim
+                     02265H   _ucGetMyClaimedAddress
+@lbxor
+          ADDR       002CEH   @@lubxor
+addressClaim
+                     0225EH   _bIsAddressClaimed
+                     0226BH   _bHasMyClaimedAddressedBeenBumped
+                     02271H   _vClearAddressClaimBumped
+                     01E02H   _vRxISOaddressClaim
+@llsh
+          ADDR       00260H   @@lulsh
+@RTARG0
+          ADDR       FFED9H   _@RTARG1
+@lbor
+          ADDR       002BAH   @@lubor
+SoftVersion
+                     024A3H   _vSoftwareVersionRead
+addressClaim
+                     FF8A4H   _ucMyAddress
+                     FF8A6H   _sMyName
+                     FF8ECH   _sAddressClaim
+srand
+          ADDR       028A1H   _srand
+rand
+          ADDR       02801H   _rand
+@isrem
+          ADDR       001B0H   @@isrem
+defGauge
+                     02383H   _u8GetLowDefGuageWarningLampsStatus
+                     FF8F4H   _sDEF
+@ludiv
+          ADDR       00200H   @@ludiv
+SoftVersion
+                     FF912H   _progVersion
+@lmul
+          ADDR       00185H   @@lsmul
+@iurem
+          ADDR       001D1H   @@iurem
+@RTARG0
+          ADDR       FFEDBH   _@RTARG3
+@ladd
+          ADDR       0023FH   @@lsadd
+@lsub
+          ADDR       0024EH   @@lssub
+@llsh
+          ADDR       00260H   @@lslsh
+@lband
+          ADDR       002A6H   @@lsband
+@lbor
+          ADDR       002BAH   @@lsbor
+@lbxor
+          ADDR       002CEH   @@lsbxor
+@rom
+          ADDR       FF916H   _?INIT
+          ADDR       FF916H   _?INITL
+          ADDR       FF916H   _?INIS
+@SEGREG
+          ADDR       FFED5H   _@SEGBC
+          ADDR       FFED7H   _@SEGHL
+@DN4INC
+          ADDR       002ECH   @@dn4in
+@RTARG0
+          ADDR       FFEDFH   _@RTARG7
+          ADDR       FFED8H   @@CPR1
+          ADDR       FFED8H   @@FPRS
+          ADDR       FFEDCH   @@FPRXP
+          ADDR       FFEDCH   @@FPRXD
+          ADDR       FFEDDH   @@FPRXS
+          ADDR       FFEDEH   @@FPRFP
+          ADDR       FFEDEH   @@FPRF1
+          ADDR       FFEDFH   @@FPRF2
+
+
+ Target chip : R5F10DGD
+ Device file : V1.01
+

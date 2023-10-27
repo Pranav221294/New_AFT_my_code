@@ -1,0 +1,452 @@
+
+
+
+78K0R Linker W1.80                            Date:18 Aug 2022 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -oDefaultBuild\AFT_Proto_CS+.lmf -gi
+           00000000000000000000h -go85h,5E00h,512 -gb00EFE9H -mi0 -s -pD
+           efaultBuild\AFT_Proto_CS+.map C:\Program Files (x86)\Renesas 
+           Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r\s0rll.rel Default
+           Build\r_cg_cgc.rel DefaultBuild\r_cg_cgc_user.rel DefaultBuil
+           d\r_cg_port.rel DefaultBuild\r_cg_port_user.rel DefaultBuild\
+           r_cg_timer.rel DefaultBuild\r_cg_timer_user.rel DefaultBuild\
+           r_main.rel DefaultBuild\r_systeminit.rel DefaultBuild\Calibra
+           tion.rel DefaultBuild\User.rel DefaultBuild\levelCalc.rel -bc
+           l0ram.lib -bcl0rm.lib -bcl0rmf.lib -iC:\Program Files (x86)\R
+           enesas Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\AFT_Proto_CS+.lmf
+Map-file:  DefaultBuild\AFT_Proto_CS+.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    40 output segment(s)
+ 1A2BH byte(s) real data
+   988 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=06000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  Calibration
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  User       00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  levelCalc
+                                      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT Calibration
+                                      00002H    00000H
+                  @@RLINIT User       00002H    00000H
+                  @@RLINIT levelCalc
+                                      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS Calibration
+                                      00002H    00000H
+                  @@R_INIS User       00002H    00000H
+                  @@R_INIS levelCalc
+                                      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   Calibration
+                                      00002H    00000H
+                  @@CALT   User       00002H    00000H
+                  @@CALT   levelCalc
+                                      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+* gap *                               00004H    00028H
+         @@VECT2C                     0002CH    00004H  CSEG AT
+                  @@VECT2C r_cg_timer_user
+                                      0002CH    00004H
+         @@R_INIT                     00030H    0002AH  CSEG UNIT64KP
+                  @@R_INIT @cstart    00030H    00000H
+                  @@R_INIT r_cg_cgc   00030H    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      00030H    00000H
+                  @@R_INIT r_cg_port
+                                      00030H    00000H
+                  @@R_INIT r_cg_port_user
+                                      00030H    00000H
+                  @@R_INIT r_cg_timer
+                                      00030H    00000H
+                  @@R_INIT r_cg_timer_user
+                                      00030H    00004H
+                  @@R_INIT r_main     00034H    00004H
+                  @@R_INIT r_systeminit
+                                      00038H    00000H
+                  @@R_INIT Calibration
+                                      00038H    00016H
+                  @@R_INIT User       0004EH    00004H
+                  @@R_INIT levelCalc
+                                      00052H    00008H
+                  @@R_INIT @rom       0005AH    00000H
+* gap *                               0005AH    00014H
+         @@VECT6E                     0006EH    00002H  CSEG AT
+                  @@VECT6E r_cg_timer_user
+                                      0006EH    00002H
+* gap *                               00070H    00050H
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   r_cg_cgc   000C4H    00000H
+                  @@CODE   r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_port
+                                      000C4H    00000H
+                  @@CODE   r_cg_port_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODE   r_main     000C4H    00000H
+                  @@CODE   r_systeminit
+                                      000C4H    00000H
+                  @@CODE   Calibration
+                                      000C4H    00000H
+                  @@CODE   User       000C4H    00000H
+                  @@CODE   levelCalc
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    0081EH  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @lmul      00185H    0002BH
+                  @@LCODE  @isdiv     001B0H    00022H
+                  @@LCODE  @iudiv     001D2H    0002DH
+                  @@LCODE  @ludiv     001FFH    0003FH
+                  @@LCODE  m_fmul     0023EH    0012BH
+                  @@LCODE  m_fdiv     00369H    001B8H
+                  @@LCODE  @ladd      00521H    0000FH
+                  @@LCODE  @lsub      00530H    00012H
+                  @@LCODE  m_fcom1    00542H    000CFH
+                  @@LCODE  m_fcom5    00611H    0002AH
+                  @@LCODE  m_fcom6    0063BH    0001FH
+                  @@LCODE  m_fadd     0065AH    0013AH
+                  @@LCODE  m_fsub     00794H    00014H
+                  @@LCODE  m_fcmp     007A8H    00073H
+                  @@LCODE  m_ftols    0081BH    00078H
+                  @@LCODE  m_lstof    00893H    00016H
+                  @@LCODE  m_lutof    008A9H    0004DH
+         @@BASE                       008F6H    000A8H  CSEG BASE
+                  @@BASE   r_cg_cgc   008F6H    00000H
+                  @@BASE   r_cg_cgc_user
+                                      008F6H    00000H
+                  @@BASE   r_cg_port
+                                      008F6H    00000H
+                  @@BASE   r_cg_port_user
+                                      008F6H    00000H
+                  @@BASE   r_cg_timer
+                                      008F6H    00000H
+                  @@BASE   r_cg_timer_user
+                                      008F6H    000A8H
+                  @@BASE   r_main     0099EH    00000H
+                  @@BASE   r_systeminit
+                                      0099EH    00000H
+                  @@BASE   Calibration
+                                      0099EH    00000H
+                  @@BASE   User       0099EH    00000H
+                  @@BASE   levelCalc
+                                      0099EH    00000H
+         @@CNSTL                      0099EH    000CEH  CSEG PAGE64KP
+                  @@CNSTL  m_fcom5    0099EH    000CEH
+         @@CODEL                      00A6CH    00DDFH  CSEG
+                  @@CODEL  r_cg_cgc   00A6CH    0001BH
+                  @@CODEL  r_cg_cgc_user
+                                      00A87H    00005H
+                  @@CODEL  r_cg_port
+                                      00A8CH    0000EH
+                  @@CODEL  r_cg_port_user
+                                      00A9AH    00000H
+                  @@CODEL  r_cg_timer
+                                      00A9AH    0019FH
+                  @@CODEL  r_cg_timer_user
+                                      00C39H    00000H
+                  @@CODEL  r_main     00C39H    0008DH
+                  @@CODEL  r_systeminit
+                                      00CC6H    00023H
+                  @@CODEL  Calibration
+                                      00CE9H    00478H
+                  @@CODEL  User       01161H    00129H
+                  @@CODEL  levelCalc
+                                      0128AH    005C1H
+         @@LCODEL                     0184BH    00060H  CSEG
+                  @@LCODEL @stkinit   0184BH    00044H
+                  @@LCODEL exit       0188FH    0001CH
+* gap *                               018ABH    01755H
+         @@CNST                       03000H    0000CH  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   r_cg_cgc   03000H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_port
+                                      03000H    00000H
+                  @@CNST   r_cg_port_user
+                                      03000H    00000H
+                  @@CNST   r_cg_timer
+                                      03000H    00000H
+                  @@CNST   r_cg_timer_user
+                                      03000H    00000H
+                  @@CNST   r_main     03000H    00000H
+                  @@CNST   r_systeminit
+                                      03000H    00000H
+                  @@CNST   Calibration
+                                      03000H    0000CH
+                  @@CNST   User       0300CH    00000H
+                  @@CNST   levelCalc
+                                      0300CH    00000H
+* gap *                               0300CH    02DF4H
+         ??OCDROM                     05E00H    00200H  CSEG
+
+  MEMORY=RAM
+  BASE ADDRESS=FF700H   SIZE=00900H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FF700H    001A8H  DSEG BASEP
+                  @@DATA   @cstart    FF700H    000BAH
+                  @@DATA   r_cg_cgc   FF7BAH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_port
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_port_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_timer
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_timer_user
+                                      FF7BAH    00000H
+                  @@DATA   r_main     FF7BAH    00000H
+                  @@DATA   r_systeminit
+                                      FF7BAH    00000H
+                  @@DATA   Calibration
+                                      FF7BAH    00036H
+                  @@DATA   User       FF7F0H    00000H
+                  @@DATA   levelCalc
+                                      FF7F0H    000B8H
+                  @@DATA   @rom       FF8A8H    00000H
+         @@INIT                       FF8A8H    0002AH  DSEG BASEP
+                  @@INIT   @cstart    FF8A8H    00000H
+                  @@INIT   r_cg_cgc   FF8A8H    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FF8A8H    00000H
+                  @@INIT   r_cg_port
+                                      FF8A8H    00000H
+                  @@INIT   r_cg_port_user
+                                      FF8A8H    00000H
+                  @@INIT   r_cg_timer
+                                      FF8A8H    00000H
+                  @@INIT   r_cg_timer_user
+                                      FF8A8H    00004H
+                  @@INIT   r_main     FF8ACH    00004H
+                  @@INIT   r_systeminit
+                                      FF8B0H    00000H
+                  @@INIT   Calibration
+                                      FF8B0H    00016H
+                  @@INIT   User       FF8C6H    00004H
+                  @@INIT   levelCalc
+                                      FF8CAH    00008H
+                  @@INIT   @rom       FF8D2H    00000H
+         @@INIS                       FF8D2H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FF8D2H    00000H
+                  @@INIS   r_cg_cgc   FF8D2H    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FF8D2H    00000H
+                  @@INIS   r_cg_port
+                                      FF8D2H    00000H
+                  @@INIS   r_cg_port_user
+                                      FF8D2H    00000H
+                  @@INIS   r_cg_timer
+                                      FF8D2H    00000H
+                  @@INIS   r_cg_timer_user
+                                      FF8D2H    00000H
+                  @@INIS   r_main     FF8D2H    00000H
+                  @@INIS   r_systeminit
+                                      FF8D2H    00000H
+                  @@INIS   Calibration
+                                      FF8D2H    00000H
+                  @@INIS   User       FF8D2H    00000H
+                  @@INIS   levelCalc
+                                      FF8D2H    00000H
+                  @@INIS   @rom       FF8D2H    00000H
+         @@DATS                       FF8D2H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FF8D2H    00000H
+                  @@DATS   r_cg_cgc   FF8D2H    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FF8D2H    00000H
+                  @@DATS   r_cg_port
+                                      FF8D2H    00000H
+                  @@DATS   r_cg_port_user
+                                      FF8D2H    00000H
+                  @@DATS   r_cg_timer
+                                      FF8D2H    00000H
+                  @@DATS   r_cg_timer_user
+                                      FF8D2H    00000H
+                  @@DATS   r_main     FF8D2H    00000H
+                  @@DATS   r_systeminit
+                                      FF8D2H    00000H
+                  @@DATS   Calibration
+                                      FF8D2H    00000H
+                  @@DATS   User       FF8D2H    00000H
+                  @@DATS   levelCalc
+                                      FF8D2H    00000H
+                  @@DATS   @rom       FF8D2H    00000H
+         @@INITL                      FF8D2H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FF8D2H    00000H
+                  @@INITL  r_cg_cgc   FF8D2H    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FF8D2H    00000H
+                  @@INITL  r_cg_port
+                                      FF8D2H    00000H
+                  @@INITL  r_cg_port_user
+                                      FF8D2H    00000H
+                  @@INITL  r_cg_timer
+                                      FF8D2H    00000H
+                  @@INITL  r_cg_timer_user
+                                      FF8D2H    00000H
+                  @@INITL  r_main     FF8D2H    00000H
+                  @@INITL  r_systeminit
+                                      FF8D2H    00000H
+                  @@INITL  Calibration
+                                      FF8D2H    00000H
+                  @@INITL  User       FF8D2H    00000H
+                  @@INITL  levelCalc
+                                      FF8D2H    00000H
+                  @@INITL  @rom       FF8D2H    00000H
+         @@DATAL                      FF8D2H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FF8D2H    00000H
+                  @@DATAL  r_cg_cgc   FF8D2H    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FF8D2H    00000H
+                  @@DATAL  r_cg_port
+                                      FF8D2H    00000H
+                  @@DATAL  r_cg_port_user
+                                      FF8D2H    00000H
+                  @@DATAL  r_cg_timer
+                                      FF8D2H    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FF8D2H    00000H
+                  @@DATAL  r_main     FF8D2H    00000H
+                  @@DATAL  r_systeminit
+                                      FF8D2H    00000H
+                  @@DATAL  Calibration
+                                      FF8D2H    00000H
+                  @@DATAL  User       FF8D2H    00000H
+                  @@DATAL  levelCalc
+                                      FF8D2H    00000H
+                  @@DATAL  @rom       FF8D2H    00000H
+         @@BITS                       FF8D2H    00000H  BSEG
+                  @@BITS   @cstart    FF8D2H.0  00000H.0
+                  @@BITS   r_cg_cgc   FF8D2H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FF8D2H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FF8D2H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FF8D2H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FF8D2H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FF8D2H.0  00000H.0
+                  @@BITS   r_main     FF8D2H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FF8D2H.0  00000H.0
+                  @@BITS   Calibration
+                                      FF8D2H.0  00000H.0
+                  @@BITS   User       FF8D2H.0  00000H.0
+                  @@BITS   levelCalc
+                                      FF8D2H.0  00000H.0
+* gap *                               FF8D2H    00602H
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG @SEGREG    FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+ Target chip : R5F10CGB
+ Device file : V1.01
+

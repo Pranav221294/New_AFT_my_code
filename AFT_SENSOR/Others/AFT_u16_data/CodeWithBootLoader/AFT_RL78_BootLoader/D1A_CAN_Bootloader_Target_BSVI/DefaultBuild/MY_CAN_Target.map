@@ -1,0 +1,527 @@
+
+
+
+78K0R Linker V1.80                            Date: 7 Mar 2023 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -dfsl_sample_linker_file.dr -oDefaul
+           tBuild\MY_CAN_Target.lmf -gi00000000000000000000h -go84h,3A00
+           h,512 -gb7A63E9H -mi0 -s -pDefaultBuild\MY_CAN_Target.map C:\
+           Program Files (x86)\Renesas Electronics\CS+\CACX\CA78K0R\V1.7
+           2\lib78k0r\s0rll.rel DefaultBuild\my_can.rel DefaultBuild\my_
+           cgc.rel DefaultBuild\my_cgc_user.rel DefaultBuild\my_main.rel
+            DefaultBuild\my_port.rel DefaultBuild\my_systeminit.rel Defa
+           ultBuild\my_timer.rel DefaultBuild\my_timer_user.rel DefaultB
+           uild\MY_interrupts.rel DefaultBuild\MY_ram_vector.rel Default
+           Build\securityAcess.rel DefaultBuild\aes.rel -bfsl.lib -bcl0r
+           am.lib -bcl0rmf.lib -bcl0rm.lib -iC:\Program Files (x86)\Rene
+           sas Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\MY_CAN_Target.lmf
+Map-file:  DefaultBuild\MY_CAN_Target.map
+Direc-file:fsl_sample_linker_file.dr
+Directive: ;MEMORY ROM   : ( 000000H , 0032FFH )   ; //2bffBoot clusters
+            - 10 KB
+           ;MERGE FSL_FCD  : = ROM
+           ;MERGE FSL_BCD  : = ROM
+           ;MERGE FSL_RCD  : = ROM
+           ;MEMORY OCDROM :( 03A00H, 000200H)
+           ;MEMORY RAM : ( 0FDF00H , 01C10H )      ; for device RAM size
+            8-KB
+           
+           ;MEMORY RAM_SADDR : ( 0FFE20H , 001E0H )        ; RAM (saddr)
+           
+           ;MEMORY STK :(0FFB10H,0300H)    ;stack end edress + size
+           
+           ;MEMORY RAM : ( 0FDF00H , 01D20H )      ; for device RAM size
+            8-KB
+           ;MEMORY STK :(0FFC20H,0200H)    ;stack end edress + size
+           
+           ;MEMORY RAM_SADDR : ( 0FFE20H , 00DFH ) ; RAM (saddr)
+           
+           ;------------------------------------------------------------
+           -
+           
+           MEMORY ROM   : ( 000000H , 0032FFH )    ; //2bffBoot clusters
+            - 10 KB
+           MERGE FSL_FCD  : = ROM
+           MERGE FSL_BCD  : = ROM
+           MERGE FSL_RCD  : = ROM
+           MEMORY OCDROM :( 03A00H, 000200H)
+           
+           MEMORY RAM : ( 0FF700H ,00520H )        ; for device RAM size
+            3-KB, 2KB
+           
+           MEMORY STK :(0FFC20H,0200H)     ;stack end edress + size
+           
+           MEMORY RAM_SADDR : ( 0FFE20H , 001E0H ) ; RAM (saddr)
+           
+           ;MEMORY RAM : ( 0FDF00H , 01D20H )      ; for device RAM size
+            8-KB
+           ;MEMORY STK :(0FFC20H,0200H)    ;stack end edress + size
+           
+           ;
+
+
+*** Link information ***
+
+    49 output segment(s)
+ 31F1H byte(s) real data
+  1571 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=032FFH
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_can     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_cgc     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_main    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_port    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_timer   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  my_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  MY_interrupts
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  MY_ram_vector
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  securityAcess
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  aes        00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT my_can     00002H    00000H
+                  @@RLINIT my_cgc     00002H    00000H
+                  @@RLINIT my_cgc_user
+                                      00002H    00000H
+                  @@RLINIT my_main    00002H    00000H
+                  @@RLINIT my_port    00002H    00000H
+                  @@RLINIT my_systeminit
+                                      00002H    00000H
+                  @@RLINIT my_timer   00002H    00000H
+                  @@RLINIT my_timer_user
+                                      00002H    00000H
+                  @@RLINIT MY_interrupts
+                                      00002H    00000H
+                  @@RLINIT MY_ram_vector
+                                      00002H    00000H
+                  @@RLINIT securityAcess
+                                      00002H    00000H
+                  @@RLINIT aes        00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS my_can     00002H    00000H
+                  @@R_INIS my_cgc     00002H    00000H
+                  @@R_INIS my_cgc_user
+                                      00002H    00000H
+                  @@R_INIS my_main    00002H    00000H
+                  @@R_INIS my_port    00002H    00000H
+                  @@R_INIS my_systeminit
+                                      00002H    00000H
+                  @@R_INIS my_timer   00002H    00000H
+                  @@R_INIS my_timer_user
+                                      00002H    00000H
+                  @@R_INIS MY_interrupts
+                                      00002H    00000H
+                  @@R_INIS MY_ram_vector
+                                      00002H    00000H
+                  @@R_INIS securityAcess
+                                      00002H    00000H
+                  @@R_INIS aes        00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   my_can     00002H    00000H
+                  @@CALT   my_cgc     00002H    00000H
+                  @@CALT   my_cgc_user
+                                      00002H    00000H
+                  @@CALT   my_main    00002H    00000H
+                  @@CALT   my_port    00002H    00000H
+                  @@CALT   my_systeminit
+                                      00002H    00000H
+                  @@CALT   my_timer   00002H    00000H
+                  @@CALT   my_timer_user
+                                      00002H    00000H
+                  @@CALT   MY_interrupts
+                                      00002H    00000H
+                  @@CALT   MY_ram_vector
+                                      00002H    00000H
+                  @@CALT   securityAcess
+                                      00002H    00000H
+                  @@CALT   aes        00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+         @@VECT04                     00004H    00004H  CSEG AT
+                  @@VECT04 MY_interrupts
+                                      00004H    00004H
+* gap *                               00008H    00002H
+         @@VECT0A                     0000AH    00018H  CSEG AT
+                  @@VECT0A MY_interrupts
+                                      0000AH    00018H
+* gap *                               00022H    00008H
+         @@VECT2A                     0002AH    00014H  CSEG AT
+                  @@VECT2A MY_interrupts
+                                      0002AH    00014H
+* gap *                               0003EH    00002H
+         @@VECT40                     00040H    0000AH  CSEG AT
+                  @@VECT40 MY_interrupts
+                                      00040H    0000AH
+* gap *                               0004AH    00004H
+         @@VECT4E                     0004EH    00012H  CSEG AT
+                  @@VECT4E MY_interrupts
+                                      0004EH    00012H
+* gap *                               00060H    00002H
+         @@VECT62                     00062H    00002H  CSEG AT
+                  @@VECT62 MY_interrupts
+                                      00062H    00002H
+* gap *                               00064H    00002H
+         @@VECT66                     00066H    00014H  CSEG AT
+                  @@VECT66 MY_interrupts
+                                      00066H    00014H
+* gap *                               0007AH    00046H
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   my_can     000C4H    00000H
+                  @@CODE   my_cgc     000C4H    00000H
+                  @@CODE   my_cgc_user
+                                      000C4H    00000H
+                  @@CODE   my_main    000C4H    00000H
+                  @@CODE   my_port    000C4H    00000H
+                  @@CODE   my_systeminit
+                                      000C4H    00000H
+                  @@CODE   my_timer   000C4H    00000H
+                  @@CODE   my_timer_user
+                                      000C4H    00000H
+                  @@CODE   MY_interrupts
+                                      000C4H    00000H
+                  @@CODE   MY_ram_vector
+                                      000C4H    00000H
+                  @@CODE   securityAcess
+                                      000C4H    00000H
+                  @@CODE   aes        000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    0018CH  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @isrem     00185H    00021H
+                  @@LCODE  @iurem     001A6H    0002FH
+                  @@LCODE  @lmul      001D5H    0002BH
+                  @@LCODE  @ladd      00200H    0000FH
+                  @@LCODE  @lsub      0020FH    00012H
+                  @@LCODE  @llsh      00221H    0001BH
+                  @@LCODE  @lscmp     0023CH    00014H
+                  @@LCODE  @lbor      00250H    00014H
+         @@BASE                       00264H    00D04H  CSEG BASE
+                  @@BASE   my_can     00264H    00000H
+                  @@BASE   my_cgc     00264H    00000H
+                  @@BASE   my_cgc_user
+                                      00264H    00000H
+                  @@BASE   my_main    00264H    00000H
+                  @@BASE   my_port    00264H    00000H
+                  @@BASE   my_systeminit
+                                      00264H    00000H
+                  @@BASE   my_timer   00264H    00000H
+                  @@BASE   my_timer_user
+                                      00264H    00000H
+                  @@BASE   MY_interrupts
+                                      00264H    00D04H
+                  @@BASE   MY_ram_vector
+                                      00F68H    00000H
+                  @@BASE   securityAcess
+                                      00F68H    00000H
+                  @@BASE   aes        00F68H    00000H
+         FSL_FCD                      00F68H    00097H  CSEG UNIT64KP
+                  FSL_FCD  fsl_f_init
+                                      00F68H    00062H
+                  FSL_FCD  fsl_f_open
+                                      00FCAH    00005H
+                  FSL_FCD  fsl_f_close
+                                      00FD0H    00005H
+                  FSL_FCD  fsl_f_pfunc
+                                      00FD6H    00029H
+* gap *                               00FFFH    00001H
+         FSL_BCD                      01000H    00100H  CSEG UNIT64KP
+                  FSL_BCD  fsl_b_common
+                                      01000H    00100H
+         FSL_RCD                      01100H    00050H  CSEG UNIT64KP
+                  FSL_RCD  fsl_r_std_cmd
+                                      01100H    0001AH
+                  FSL_RCD  fsl_r_status_check
+                                      0111AH    0000EH
+                  FSL_RCD  fsl_r_check_flow
+                                      01128H    00028H
+         @@R_INIT                     01150H    000C4H  CSEG UNIT64KP
+                  @@R_INIT @cstart    01150H    00000H
+                  @@R_INIT my_can     01150H    0001CH
+                  @@R_INIT my_cgc     0116CH    00000H
+                  @@R_INIT my_cgc_user
+                                      0116CH    00000H
+                  @@R_INIT my_main    0116CH    000A8H
+                  @@R_INIT my_port    01214H    00000H
+                  @@R_INIT my_systeminit
+                                      01214H    00000H
+                  @@R_INIT my_timer   01214H    00000H
+                  @@R_INIT my_timer_user
+                                      01214H    00000H
+                  @@R_INIT MY_interrupts
+                                      01214H    00000H
+                  @@R_INIT MY_ram_vector
+                                      01214H    00000H
+                  @@R_INIT securityAcess
+                                      01214H    00000H
+                  @@R_INIT aes        01214H    00000H
+                  @@R_INIT @rom       01214H    00000H
+         @@CODEL                      01214H    01AC9H  CSEG
+                  @@CODEL  my_can     01214H    008A8H
+                  @@CODEL  my_cgc     01ABCH    0003AH
+                  @@CODEL  my_cgc_user
+                                      01AF6H    00001H
+                  @@CODEL  my_main    01AF7H    004EDH
+                  @@CODEL  my_port    01FE4H    00005H
+                  @@CODEL  my_systeminit
+                                      01FE9H    00021H
+                  @@CODEL  my_timer   0200AH    00068H
+                  @@CODEL  my_timer_user
+                                      02072H    00014H
+                  @@CODEL  MY_interrupts
+                                      02086H    00000H
+                  @@CODEL  MY_ram_vector
+                                      02086H    00000H
+                  @@CODEL  securityAcess
+                                      02086H    00099H
+                  @@CODEL  aes        0211FH    00BBEH
+         @@LCODEL                     02CDDH    000C7H  CSEG
+                  @@LCODEL rand       02CDDH    00040H
+                  @@LCODEL @stkinit   02D1DH    00044H
+                  @@LCODEL exit       02D61H    0001CH
+                  @@LCODEL srand      02D7DH    00008H
+                  @@LCODEL memcmp_n   02D85H    0001FH
+* gap *                               02DA4H    0025CH
+         @@CNST                       03000H    002AAH  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   my_can     03000H    00034H
+                  @@CNST   my_cgc     03034H    00000H
+                  @@CNST   my_cgc_user
+                                      03034H    00000H
+                  @@CNST   my_main    03034H    0005AH
+                  @@CNST   my_port    0308EH    00000H
+                  @@CNST   my_systeminit
+                                      0308EH    00000H
+                  @@CNST   my_timer   0308EH    00000H
+                  @@CNST   my_timer_user
+                                      0308EH    00000H
+                  @@CNST   MY_interrupts
+                                      0308EH    00000H
+                  @@CNST   MY_ram_vector
+                                      0308EH    00000H
+                  @@CNST   securityAcess
+                                      0308EH    00010H
+                  @@CNST   aes        0309EH    0020CH
+* gap *                               032AAH    00055H
+
+  MEMORY=OCDROM
+  BASE ADDRESS=03A00H   SIZE=00200H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         ??OCDROM                     03A00H    00200H  CSEG
+
+  MEMORY=RAM
+  BASE ADDRESS=FF700H   SIZE=00520H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         RAM_VECT                     FF700H    000C4H  DSEG AT
+                  RAM_VECT MY_ram_vector
+                                      FF700H    000C4H
+         @@DATA                       FF7C4H    001D8H  DSEG BASEP
+                  @@DATA   @cstart    FF7C4H    000BAH
+                  @@DATA   my_can     FF87EH    00024H
+                  @@DATA   my_cgc     FF8A2H    00000H
+                  @@DATA   my_cgc_user
+                                      FF8A2H    00000H
+                  @@DATA   my_main    FF8A2H    000EAH
+                  @@DATA   my_port    FF98CH    00000H
+                  @@DATA   my_systeminit
+                                      FF98CH    00000H
+                  @@DATA   my_timer   FF98CH    00000H
+                  @@DATA   my_timer_user
+                                      FF98CH    00000H
+                  @@DATA   MY_interrupts
+                                      FF98CH    00000H
+                  @@DATA   securityAcess
+                                      FF98CH    00010H
+                  @@DATA   aes        FF99CH    00000H
+                  @@DATA   @rom       FF99CH    00000H
+         @@INIT                       FF99CH    000C4H  DSEG BASEP
+                  @@INIT   @cstart    FF99CH    00000H
+                  @@INIT   my_can     FF99CH    0001CH
+                  @@INIT   my_cgc     FF9B8H    00000H
+                  @@INIT   my_cgc_user
+                                      FF9B8H    00000H
+                  @@INIT   my_main    FF9B8H    000A8H
+                  @@INIT   my_port    FFA60H    00000H
+                  @@INIT   my_systeminit
+                                      FFA60H    00000H
+                  @@INIT   my_timer   FFA60H    00000H
+                  @@INIT   my_timer_user
+                                      FFA60H    00000H
+                  @@INIT   MY_interrupts
+                                      FFA60H    00000H
+                  @@INIT   MY_ram_vector
+                                      FFA60H    00000H
+                  @@INIT   securityAcess
+                                      FFA60H    00000H
+                  @@INIT   aes        FFA60H    00000H
+                  @@INIT   @rom       FFA60H    00000H
+         @@INIS                       FFA60H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FFA60H    00000H
+                  @@INIS   my_can     FFA60H    00000H
+                  @@INIS   my_cgc     FFA60H    00000H
+                  @@INIS   my_cgc_user
+                                      FFA60H    00000H
+                  @@INIS   my_main    FFA60H    00000H
+                  @@INIS   my_port    FFA60H    00000H
+                  @@INIS   my_systeminit
+                                      FFA60H    00000H
+                  @@INIS   my_timer   FFA60H    00000H
+                  @@INIS   my_timer_user
+                                      FFA60H    00000H
+                  @@INIS   MY_interrupts
+                                      FFA60H    00000H
+                  @@INIS   MY_ram_vector
+                                      FFA60H    00000H
+                  @@INIS   securityAcess
+                                      FFA60H    00000H
+                  @@INIS   aes        FFA60H    00000H
+                  @@INIS   @rom       FFA60H    00000H
+         @@DATS                       FFA60H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FFA60H    00000H
+                  @@DATS   my_can     FFA60H    00000H
+                  @@DATS   my_cgc     FFA60H    00000H
+                  @@DATS   my_cgc_user
+                                      FFA60H    00000H
+                  @@DATS   my_main    FFA60H    00000H
+                  @@DATS   my_port    FFA60H    00000H
+                  @@DATS   my_systeminit
+                                      FFA60H    00000H
+                  @@DATS   my_timer   FFA60H    00000H
+                  @@DATS   my_timer_user
+                                      FFA60H    00000H
+                  @@DATS   MY_interrupts
+                                      FFA60H    00000H
+                  @@DATS   MY_ram_vector
+                                      FFA60H    00000H
+                  @@DATS   securityAcess
+                                      FFA60H    00000H
+                  @@DATS   aes        FFA60H    00000H
+                  @@DATS   @rom       FFA60H    00000H
+         @@INITL                      FFA60H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FFA60H    00000H
+                  @@INITL  my_can     FFA60H    00000H
+                  @@INITL  my_cgc     FFA60H    00000H
+                  @@INITL  my_cgc_user
+                                      FFA60H    00000H
+                  @@INITL  my_main    FFA60H    00000H
+                  @@INITL  my_port    FFA60H    00000H
+                  @@INITL  my_systeminit
+                                      FFA60H    00000H
+                  @@INITL  my_timer   FFA60H    00000H
+                  @@INITL  my_timer_user
+                                      FFA60H    00000H
+                  @@INITL  MY_interrupts
+                                      FFA60H    00000H
+                  @@INITL  MY_ram_vector
+                                      FFA60H    00000H
+                  @@INITL  securityAcess
+                                      FFA60H    00000H
+                  @@INITL  aes        FFA60H    00000H
+                  @@INITL  @rom       FFA60H    00000H
+         @@DATAL                      FFA60H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FFA60H    00000H
+                  @@DATAL  my_can     FFA60H    00000H
+                  @@DATAL  my_cgc     FFA60H    00000H
+                  @@DATAL  my_cgc_user
+                                      FFA60H    00000H
+                  @@DATAL  my_main    FFA60H    00000H
+                  @@DATAL  my_port    FFA60H    00000H
+                  @@DATAL  my_systeminit
+                                      FFA60H    00000H
+                  @@DATAL  my_timer   FFA60H    00000H
+                  @@DATAL  my_timer_user
+                                      FFA60H    00000H
+                  @@DATAL  MY_interrupts
+                                      FFA60H    00000H
+                  @@DATAL  MY_ram_vector
+                                      FFA60H    00000H
+                  @@DATAL  securityAcess
+                                      FFA60H    00000H
+                  @@DATAL  aes        FFA60H    00000H
+                  @@DATAL  @rom       FFA60H    00000H
+* gap *                               FFA60H    001C0H
+
+  MEMORY=STK
+  BASE ADDRESS=FFC20H   SIZE=00200H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FFC20H    00200H
+
+  MEMORY=RAM_SADDR
+  BASE ADDRESS=FFE20H   SIZE=001E0H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@BITS                       FFE20H    00003H  BSEG
+                  @@BITS   @cstart    FFE20H.0  00000H.0
+                  @@BITS   my_can     FFE20H.0  00001H.3
+                  @@BITS   my_cgc     FFE21H.3  00000H.0
+                  @@BITS   my_cgc_user
+                                      FFE21H.3  00000H.0
+                  @@BITS   my_main    FFE21H.3  00000H.6
+                  @@BITS   my_port    FFE22H.1  00000H.0
+                  @@BITS   my_systeminit
+                                      FFE22H.1  00000H.0
+                  @@BITS   my_timer   FFE22H.1  00000H.0
+                  @@BITS   my_timer_user
+                                      FFE22H.1  00000H.1
+                  @@BITS   MY_interrupts
+                                      FFE22H.2  00000H.0
+                  @@BITS   MY_ram_vector
+                                      FFE22H.2  00000H.0
+                  @@BITS   securityAcess
+                                      FFE22H.2  00000H.1
+                  @@BITS   aes        FFE22H.3  00000H.0
+* gap *                               FFE23H    000B1H
+         @@SEGREG                     FFED4H    00004H  DSEG AT
+                  @@SEGREG @SEGREG    FFED4H    00004H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+ Target chip : R5F10DGD
+ Device file : V1.01
+

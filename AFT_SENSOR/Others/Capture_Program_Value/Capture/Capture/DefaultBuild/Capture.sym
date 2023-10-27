@@ -1,0 +1,70 @@
+#05
+;FF     PUBLIC
+02FF3BA_?DATA
+02FF3BA_?DATAL
+02FF3BA_?DATS
+02FF3BA_?INIS
+02FF3BA_?INIT
+02FF3BA_?INITL
+0100002_?RLINIT
+0100002_?R_INIS
+0100002_?R_INIT
+02FF398_@BRKADR
+02FF386_@DIVR
+02FF380_@FNCENT
+02FF300_@FNCTBL
+02FF38A_@LDIVR
+0000000_@MAA
+02FF3BA_@MEMBTM
+02FF39A_@MEMTOP
+01FFE20_@SADBEG
+00000C0_@SADSIZ
+02FF382_@SEED
+00FFEE0_@STBEG
+00FF3BA_@STEND
+02FF392_@TOKPTR
+0100185_@cend
+01000D8_@cstart
+010002C_@vect2c
+010002E_@vect2e
+0100056_@vect56
+010006E_@vect6e
+0100195_R_CGC_Create
+01001D4_R_CGC_Get_ResetSource
+0100424_R_MAIN_UserInit
+01001D9_R_PORT_Create
+0100428_R_Systeminit
+0100293_R_TAU0_Channel0_Start
+01002A4_R_TAU0_Channel0_Stop
+01002B5_R_TAU0_Channel1_Start
+01002C6_R_TAU0_Channel1_Stop
+0100205_R_TAU0_Create
+0100321_R_TAU1_Channel0_Start
+0100332_R_TAU1_Channel0_Stop
+01002D7_R_TAU1_Create
+01003CD_R_TAU2_Channel0_Start
+01003E8_R_TAU2_Channel0_Stop
+0100343_R_TAU2_Create
+02FF396_errno
+010048F_exit
+0100443_hdwinit
+0100403_main
+010044B_stkinit
+;FF     @cstart
+;FF     r_cg_cgc
+;FF     r_cg_cgc_user
+;FF     r_cg_port
+;FF     r_cg_port_user
+;FF     r_cg_timer
+;FF     r_cg_timer_user
+<0100185_r_tau0_channel0_interrupt
+0100187_r_tau0_channel1_interrupt
+0100191_r_tau1_channel0_interrupt
+0100193_r_tau2_channel0_interrupt
+;FF     r_main
+;FF     r_systeminit
+;FF     @stkinit
+;FF     exit
+;FF     @rom
+=
+

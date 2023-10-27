@@ -1,0 +1,365 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Fri Oct 20 14:53:49 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000004
+                   .org_2       code   0x000004    program   0x000b08
+.config_8007_CA0520 TLL35X ISS8T.O       code   0x008007    program   0x000002
+.config_8008_CA0520 TLL35X ISS8T.O       code   0x008008    program   0x000002
+                   .org_3       code   0x00f000    program   0x00003c
+                   .org_4       code   0x00f020    program   0x000024
+                   .org_5       code   0x00f032    program   0x00000a
+                    dbgD0      udata   0x0000b0       data   0x000010
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000001      
+                            0x000004    0x000587      
+                            0x008007    0x008008      
+                            0x00f000    0x00f01d      
+                            0x00f020    0x00f036      
+            1469 out of 2311 program addresses used, program memory utilization is 63%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+               ABSMAXTEST   0x00052d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  ADCMAIN   0x000579    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     ADD1   0x000276    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             ADDLOWOFFSET   0x000523    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             ADDM2TOTOTAL   0x000228    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               ADDTOTIMEp   0x000481    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               ADDTOTIMEt   0x00049c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  AVPRIME   0x0001e6    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             CALCDIVATCAL   0x0002d9    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 CALCMAIN   0x0001c7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                CALCNEWP1   0x00043b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               CALCP1SPAN   0x0002f6    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              CALCPERCENT   0x000191    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             CALCPERCENTa   0x000197    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             CALC_CURRDIV   0x00041d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              CLRJUSTDONE   0x0004fc    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             COMMSTIMEOUT   0x000023    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 COMMTEST   0x000026    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 CONTINUE   0x00000a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            CONVPWMTOSEND   0x000389    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               COUNTTABLE   0x000089    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   CSTART   0x0004a8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   DATAEE   0x00f000    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                DELAYLOOP   0x00057b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DIAGNCHECK   0x000060    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DIVATCAL97   0x000444    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DIVAVERAGE   0x000437    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                DOAVERAGE   0x00020a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DOAVERAGEa   0x000211    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  DOCOMMS   0x000042    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               EEREADADRW   0x000155    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               EEREADNEXT   0x000153    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               EEREADSAME   0x000157    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              EEWRITEMAIN   0x000176    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 EEWRITEW   0x000165    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             EEWRITEWNEXT   0x000161    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                EEWRSETUP   0x000169    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             EXTRACTAVDIV   0x0001fb    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              EXTRACTLOOP   0x000203    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             GETCOMPPROBE   0x0003a3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               GETEESTORE   0x000066    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             GETHIGHLEVEL   0x0002a7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  GETLCAL   0x000312    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              GETLOWLEVEL   0x0002b4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               GETOPPARAM   0x0001b5    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    GETP0   0x000352    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    GETP1   0x000341    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    GETP2   0x000330    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              GETRVOLTAGE   0x000576    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               GETSPANCAL   0x0002a4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     IDLE   0x0004c8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               INCPOINTER   0x000259    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 INITLOOP   0x0004b4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  INITMR1   0x00014d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                INNERLOOP   0x00024b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   INTEND   0x000084    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             INTENDNOFLAG   0x000087    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            INTERVALTABLE   0x000094    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 LASTPART   0x000265    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               LCWAITTEST   0x0004dd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               LOOPU3216A   0x00024d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   M12CAL   0x0002bd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     MAIN   0x00050c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               MAINCLRTMR   0x00050a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  MAININT   0x000084    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            MT_DF_M_N_DVC   0x00027c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                MULT16X16   0x00021e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            MULT16X16LOOP   0x000224    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                NOSPANCAL   0x0004fd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 NOTT0INT   0x00001e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            ONEPDRIFTCALC   0x0003a8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             P0DFNEGATIVE   0x0003b3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P1ADDDRIFT   0x0003d0    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   P1CALC   0x0003c3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  P1CALCa   0x0003ce    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 P1DFCALC   0x0003ba    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P1SUBDRIFT   0x0003d5    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              P1_20PCCALC   0x0003dd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P2ADDDRIFT   0x000404    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   P2CALC   0x0003f7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  P2CALCa   0x000402    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 P2DFCALC   0x0003ee    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              P2DFCALCEND   0x000411    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             P2DFCANCENDa   0x000413    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P2SUBDRIFT   0x000409    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   P2ZERO   0x000417    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                PRIMELOOP   0x0001f4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               PROCESS232   0x00006b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   PWMSET   0x000180    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             RAWP1SPANCAL   0x0002b5    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             RAWP2SPANCAL   0x0002b9    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              RC0_IS_HIGH   0x000009    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                READ232DO   0x00006f    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                READCHECK   0x000056    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                READSTART   0x00005a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            RESETSAVETIME   0x000497    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 REVCHECK   0x000521    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               REVERSEPWM   0x0001dd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  ROTATE1   0x00026a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 ROTATE32   0x000230    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                ROTATE32a   0x000233    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              RPTHCALTEST   0x0004ff    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 SAVELCAL   0x000316    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SAVELCALa   0x000327    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SAVEP12FULL   0x0002aa    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SAVESPANEND   0x000309    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SAVESPANENDa   0x00030e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SENDDIAGDATA   0x000361    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SENDEESTORE   0x0000a3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SENDPWM_PR2   0x000394    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SENDTXW   0x00009d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SETABSMAX   0x000531    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SETALARMOPHI   0x0001ab    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SETALARMOPLO   0x0001b0    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SETALOPFLAG   0x0001a1    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETCURRDIV   0x00042f    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETDRESPWM   0x00053b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETMAXSPAN   0x0001d8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   SETMIN   0x00056a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   SETPWM   0x000563    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SETRESMAX   0x000558    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SETRESMIN   0x00054d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SETSPANZERO   0x00051a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETUNCALOP   0x000571    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    SETUP   0x0000dc    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB0   0x0000dc    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB1   0x0000eb    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB2   0x000100    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB3   0x000117    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB4   0x00012a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB5   0x00013b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB7   0x000146    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 SPANCALC   0x00051e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SPANCHECK   0x0001d2    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               STOREAVDIV   0x000329    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            STOREDIVATCAL   0x0002e7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 STOREM12   0x0002d3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              STOREP1SPAN   0x000303    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     SUB1   0x000270    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  T0SYNCH   0x00002a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  T2SETUP   0x0000d3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              TESTFORHCAL   0x0004ed    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              TESTFORLCAL   0x0004df    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            TESTFORLOWDIV   0x00045a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              TESTSENDTXW   0x00009b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                TIMESHIFT   0x000475    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TRANSFERP0   0x000359    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TRANSFERP1   0x00034a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TRANSFERP2   0x000339    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            TRANSIFOVER20   0x00020b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TSHIFTLOOP   0x00047a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             TWOPROBECALC   0x0003a8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                UADD3216A   0x000252    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                UADD3216B   0x000260    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                UDIV3216L   0x000239    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 UOK3216A   0x000253    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 UOK3216B   0x000261    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               WRITE232DO   0x000073    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              WRITE232DOa   0x00007c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               WRITECHECK   0x00004c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               WRITESTART   0x000050    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 ZEROTEST   0x000516    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+              RC0_IS_HIGH   0x000009    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 CONTINUE   0x00000a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 NOTT0INT   0x00001e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             COMMSTIMEOUT   0x000023    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 COMMTEST   0x000026    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  T0SYNCH   0x00002a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  DOCOMMS   0x000042    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               WRITECHECK   0x00004c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               WRITESTART   0x000050    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                READCHECK   0x000056    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                READSTART   0x00005a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DIAGNCHECK   0x000060    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               GETEESTORE   0x000066    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               PROCESS232   0x00006b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                READ232DO   0x00006f    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               WRITE232DO   0x000073    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              WRITE232DOa   0x00007c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  MAININT   0x000084    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   INTEND   0x000084    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             INTENDNOFLAG   0x000087    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               COUNTTABLE   0x000089    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            INTERVALTABLE   0x000094    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              TESTSENDTXW   0x00009b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SENDTXW   0x00009d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SENDEESTORE   0x0000a3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  T2SETUP   0x0000d3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    SETUP   0x0000dc    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB0   0x0000dc    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB1   0x0000eb    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB2   0x000100    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB3   0x000117    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB4   0x00012a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB5   0x00013b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  SETUPB7   0x000146    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  INITMR1   0x00014d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               EEREADNEXT   0x000153    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               EEREADADRW   0x000155    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               EEREADSAME   0x000157    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             EEWRITEWNEXT   0x000161    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 EEWRITEW   0x000165    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                EEWRSETUP   0x000169    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              EEWRITEMAIN   0x000176    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   PWMSET   0x000180    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              CALCPERCENT   0x000191    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             CALCPERCENTa   0x000197    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SETALOPFLAG   0x0001a1    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SETALARMOPHI   0x0001ab    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SETALARMOPLO   0x0001b0    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               GETOPPARAM   0x0001b5    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 CALCMAIN   0x0001c7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SPANCHECK   0x0001d2    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETMAXSPAN   0x0001d8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               REVERSEPWM   0x0001dd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  AVPRIME   0x0001e6    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                PRIMELOOP   0x0001f4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             EXTRACTAVDIV   0x0001fb    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              EXTRACTLOOP   0x000203    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                DOAVERAGE   0x00020a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            TRANSIFOVER20   0x00020b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DOAVERAGEa   0x000211    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                MULT16X16   0x00021e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            MULT16X16LOOP   0x000224    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             ADDM2TOTOTAL   0x000228    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 ROTATE32   0x000230    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                ROTATE32a   0x000233    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                UDIV3216L   0x000239    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                INNERLOOP   0x00024b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               LOOPU3216A   0x00024d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                UADD3216A   0x000252    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 UOK3216A   0x000253    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               INCPOINTER   0x000259    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                UADD3216B   0x000260    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 UOK3216B   0x000261    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 LASTPART   0x000265    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  ROTATE1   0x00026a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     SUB1   0x000270    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     ADD1   0x000276    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            MT_DF_M_N_DVC   0x00027c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               GETSPANCAL   0x0002a4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             GETHIGHLEVEL   0x0002a7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SAVEP12FULL   0x0002aa    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              GETLOWLEVEL   0x0002b4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             RAWP1SPANCAL   0x0002b5    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             RAWP2SPANCAL   0x0002b9    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   M12CAL   0x0002bd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 STOREM12   0x0002d3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             CALCDIVATCAL   0x0002d9    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            STOREDIVATCAL   0x0002e7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               CALCP1SPAN   0x0002f6    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              STOREP1SPAN   0x000303    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SAVESPANEND   0x000309    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SAVESPANENDa   0x00030e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  GETLCAL   0x000312    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 SAVELCAL   0x000316    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SAVELCALa   0x000327    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               STOREAVDIV   0x000329    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    GETP2   0x000330    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TRANSFERP2   0x000339    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    GETP1   0x000341    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TRANSFERP1   0x00034a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                    GETP0   0x000352    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TRANSFERP0   0x000359    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             SENDDIAGDATA   0x000361    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            CONVPWMTOSEND   0x000389    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SENDPWM_PR2   0x000394    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             GETCOMPPROBE   0x0003a3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             TWOPROBECALC   0x0003a8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            ONEPDRIFTCALC   0x0003a8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             P0DFNEGATIVE   0x0003b3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 P1DFCALC   0x0003ba    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   P1CALC   0x0003c3    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  P1CALCa   0x0003ce    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P1ADDDRIFT   0x0003d0    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P1SUBDRIFT   0x0003d5    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              P1_20PCCALC   0x0003dd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 P2DFCALC   0x0003ee    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   P2CALC   0x0003f7    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  P2CALCa   0x000402    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P2ADDDRIFT   0x000404    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               P2SUBDRIFT   0x000409    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              P2DFCALCEND   0x000411    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             P2DFCANCENDa   0x000413    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   P2ZERO   0x000417    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             CALC_CURRDIV   0x00041d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETCURRDIV   0x00042f    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DIVAVERAGE   0x000437    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                CALCNEWP1   0x00043b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               DIVATCAL97   0x000444    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            TESTFORLOWDIV   0x00045a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                TIMESHIFT   0x000475    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               TSHIFTLOOP   0x00047a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               ADDTOTIMEp   0x000481    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+            RESETSAVETIME   0x000497    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               ADDTOTIMEt   0x00049c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   CSTART   0x0004a8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 INITLOOP   0x0004b4    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     IDLE   0x0004c8    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               LCWAITTEST   0x0004dd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              TESTFORLCAL   0x0004df    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              TESTFORHCAL   0x0004ed    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              CLRJUSTDONE   0x0004fc    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                NOSPANCAL   0x0004fd    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              RPTHCALTEST   0x0004ff    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               MAINCLRTMR   0x00050a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                     MAIN   0x00050c    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 ZEROTEST   0x000516    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              SETSPANZERO   0x00051a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 SPANCALC   0x00051e    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                 REVCHECK   0x000521    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+             ADDLOWOFFSET   0x000523    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               ABSMAXTEST   0x00052d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SETABSMAX   0x000531    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETDRESPWM   0x00053b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SETRESMIN   0x00054d    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                SETRESMAX   0x000558    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   SETPWM   0x000563    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   SETMIN   0x00056a    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+               SETUNCALOP   0x000571    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+              GETRVOLTAGE   0x000576    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                  ADCMAIN   0x000579    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                DELAYLOOP   0x00057b    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+                   DATAEE   0x00f000    program     static D:\Git_Repo_Project\AFT_SENSOR\Others\AFT\31320x_AFT_ASM\CA0520 TLL35x Iss8t.asm
+
+

@@ -1,0 +1,726 @@
+
+
+
+78K0R Linker V1.80                            Date:16 Aug 2022 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -oDefaultBuild\LCD_HourMeter790403.l
+           mf -gi00000000000000000000h -go84h,03A00h,512 -gb7C5FE9H -mi0
+            -s -pDefaultBuild\LCD_HourMeter790403.map C:\Program Files (
+           x86)\Renesas Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r\s0rl
+           l.rel DefaultBuild\r_cg_cgc.rel DefaultBuild\r_cg_cgc_user.re
+           l DefaultBuild\r_cg_lcd.rel DefaultBuild\r_cg_lcd_user.rel De
+           faultBuild\r_cg_port.rel DefaultBuild\r_cg_port_user.rel Defa
+           ultBuild\r_cg_wdt.rel DefaultBuild\r_cg_wdt_user.rel DefaultB
+           uild\r_main.rel DefaultBuild\r_systeminit.rel DefaultBuild\r_
+           cg_timer_user.rel DefaultBuild\r_cg_timer.rel DefaultBuild\Lc
+           dDriver.rel DefaultBuild\HourMeter.rel DefaultBuild\InputSens
+           e.rel DefaultBuild\HrDataSave.rel DefaultBuild\dataflash.rel 
+           DefaultBuild\eel_descriptor.rel DefaultBuild\fdl_descriptor.r
+           el -blib\eel.lib -blib\fdl.lib -bcl0ram.lib -bcl0rm.lib -bcl0
+           rmf.lib -iC:\Program Files (x86)\Renesas Electronics\CS+\CACX
+           \CA78K0R\V1.72\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\LCD_HourMeter790403.lmf
+Map-file:  DefaultBuild\LCD_HourMeter790403.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    51 output segment(s)
+ 379AH byte(s) real data
+  1811 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=06000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNST                       00002H    00000H  CSEG UNITP
+                  @@CNST   @cstart    00002H    00000H
+                  @@CNST   r_cg_cgc   00002H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CNST   r_cg_lcd   00002H    00000H
+                  @@CNST   r_cg_lcd_user
+                                      00002H    00000H
+                  @@CNST   r_cg_port
+                                      00002H    00000H
+                  @@CNST   r_cg_port_user
+                                      00002H    00000H
+                  @@CNST   r_cg_wdt   00002H    00000H
+                  @@CNST   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CNST   r_main     00002H    00000H
+                  @@CNST   r_systeminit
+                                      00002H    00000H
+                  @@CNST   r_cg_timer_user
+                                      00002H    00000H
+                  @@CNST   r_cg_timer
+                                      00002H    00000H
+                  @@CNST   LcdDriver
+                                      00002H    00000H
+                  @@CNST   HourMeter
+                                      00002H    00000H
+                  @@CNST   InputSense
+                                      00002H    00000H
+                  @@CNST   HrDataSave
+                                      00002H    00000H
+                  @@CNST   dataflash
+                                      00002H    00000H
+                  @@CNST   eel_descriptor
+                                      00002H    00000H
+                  @@CNST   FDL_DESCR
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_lcd   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_lcd_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  LcdDriver
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  HourMeter
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  InputSense
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  HrDataSave
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  dataflash
+                                      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_lcd   00002H    00000H
+                  @@RLINIT r_cg_lcd_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt   00002H    00000H
+                  @@RLINIT r_cg_wdt_user
+                                      00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT LcdDriver
+                                      00002H    00000H
+                  @@RLINIT HourMeter
+                                      00002H    00000H
+                  @@RLINIT InputSense
+                                      00002H    00000H
+                  @@RLINIT HrDataSave
+                                      00002H    00000H
+                  @@RLINIT dataflash
+                                      00002H    00000H
+                  @@RLINIT eel_descriptor
+                                      00002H    00000H
+                  @@RLINIT FDL_DESCR
+                                      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_lcd   00002H    00000H
+                  @@R_INIS r_cg_lcd_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt   00002H    00000H
+                  @@R_INIS r_cg_wdt_user
+                                      00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS LcdDriver
+                                      00002H    00000H
+                  @@R_INIS HourMeter
+                                      00002H    00000H
+                  @@R_INIS InputSense
+                                      00002H    00000H
+                  @@R_INIS HrDataSave
+                                      00002H    00000H
+                  @@R_INIS dataflash
+                                      00002H    00000H
+                  @@R_INIS eel_descriptor
+                                      00002H    00000H
+                  @@R_INIS FDL_DESCR
+                                      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_lcd   00002H    00000H
+                  @@CALT   r_cg_lcd_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt   00002H    00000H
+                  @@CALT   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   LcdDriver
+                                      00002H    00000H
+                  @@CALT   HourMeter
+                                      00002H    00000H
+                  @@CALT   InputSense
+                                      00002H    00000H
+                  @@CALT   HrDataSave
+                                      00002H    00000H
+                  @@CALT   dataflash
+                                      00002H    00000H
+                  @@CALT   eel_descriptor
+                                      00002H    00000H
+                  @@CALT   FDL_DESCR
+                                      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+         @@VECT04                     00004H    00002H  CSEG AT
+                  @@VECT04 r_cg_wdt_user
+                                      00004H    00002H
+         EEL_CNST                     00006H    0000EH  CSEG PAGE64KP
+                  EEL_CNST eel_descriptor
+                                      00006H    0000EH
+         FDL_CNST                     00014H    0000AH  CSEG PAGE64KP
+                  FDL_CNST FDL_DESCR
+                                      00014H    0000AH
+         @@R_INIT                     0001EH    00028H  CSEG UNIT64KP
+                  @@R_INIT @cstart    0001EH    00000H
+                  @@R_INIT r_cg_cgc   0001EH    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      0001EH    00000H
+                  @@R_INIT r_cg_lcd   0001EH    00000H
+                  @@R_INIT r_cg_lcd_user
+                                      0001EH    00000H
+                  @@R_INIT r_cg_port
+                                      0001EH    00000H
+                  @@R_INIT r_cg_port_user
+                                      0001EH    00000H
+                  @@R_INIT r_cg_wdt   0001EH    00000H
+                  @@R_INIT r_cg_wdt_user
+                                      0001EH    00000H
+                  @@R_INIT r_main     0001EH    00006H
+                  @@R_INIT r_systeminit
+                                      00024H    00000H
+                  @@R_INIT r_cg_timer_user
+                                      00024H    00002H
+                  @@R_INIT r_cg_timer
+                                      00026H    00000H
+                  @@R_INIT LcdDriver
+                                      00026H    00006H
+                  @@R_INIT HourMeter
+                                      0002CH    0000AH
+                  @@R_INIT InputSense
+                                      00036H    0000CH
+                  @@R_INIT HrDataSave
+                                      00042H    00004H
+                  @@R_INIT dataflash
+                                      00046H    00000H
+                  @@R_INIT eel_descriptor
+                                      00046H    00000H
+                  @@R_INIT FDL_DESCR
+                                      00046H    00000H
+                  @@R_INIT @rom       00046H    00000H
+* gap *                               00046H    00010H
+         @@VECT56                     00056H    00002H  CSEG AT
+                  @@VECT56 r_cg_timer_user
+                                      00056H    00002H
+* gap *                               00058H    00002H
+         @@VECT5A                     0005AH    00002H  CSEG AT
+                  @@VECT5A r_cg_timer_user
+                                      0005AH    00002H
+* gap *                               0005CH    00064H
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   r_cg_cgc   000C4H    00000H
+                  @@CODE   r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_lcd   000C4H    00000H
+                  @@CODE   r_cg_lcd_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_port
+                                      000C4H    00000H
+                  @@CODE   r_cg_port_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_wdt   000C4H    00000H
+                  @@CODE   r_cg_wdt_user
+                                      000C4H    00000H
+                  @@CODE   r_main     000C4H    00000H
+                  @@CODE   r_systeminit
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer
+                                      000C4H    00000H
+                  @@CODE   LcdDriver
+                                      000C4H    00000H
+                  @@CODE   HourMeter
+                                      000C4H    00000H
+                  @@CODE   InputSense
+                                      000C4H    00000H
+                  @@CODE   HrDataSave
+                                      000C4H    00000H
+                  @@CODE   dataflash
+                                      000C4H    00000H
+                  @@CODE   eel_descriptor
+                                      000C4H    00000H
+                  @@CODE   FDL_DESCR
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    00128H  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @ludiv     00185H    0003FH
+                  @@LCODE  @lurem     001C4H    0003CH
+         @@BASE                       00200H    00017H  CSEG BASE
+                  @@BASE   r_cg_cgc   00200H    00000H
+                  @@BASE   r_cg_cgc_user
+                                      00200H    00000H
+                  @@BASE   r_cg_lcd   00200H    00000H
+                  @@BASE   r_cg_lcd_user
+                                      00200H    00000H
+                  @@BASE   r_cg_port
+                                      00200H    00000H
+                  @@BASE   r_cg_port_user
+                                      00200H    00000H
+                  @@BASE   r_cg_wdt   00200H    00000H
+                  @@BASE   r_cg_wdt_user
+                                      00200H    00002H
+                  @@BASE   r_main     00202H    00000H
+                  @@BASE   r_systeminit
+                                      00202H    00000H
+                  @@BASE   r_cg_timer_user
+                                      00202H    00015H
+                  @@BASE   r_cg_timer
+                                      00217H    00000H
+                  @@BASE   LcdDriver
+                                      00217H    00000H
+                  @@BASE   HourMeter
+                                      00217H    00000H
+                  @@BASE   InputSense
+                                      00217H    00000H
+                  @@BASE   HrDataSave
+                                      00217H    00000H
+                  @@BASE   dataflash
+                                      00217H    00000H
+                  @@BASE   eel_descriptor
+                                      00217H    00000H
+                  @@BASE   FDL_DESCR
+                                      00217H    00000H
+         @@CODEL                      00217H    026ADH  CSEG
+                  @@CODEL  r_cg_cgc   00217H    0003FH
+                  @@CODEL  r_cg_cgc_user
+                                      00256H    00015H
+                  @@CODEL  r_cg_lcd   0026BH    0002EH
+                  @@CODEL  r_cg_lcd_user
+                                      00299H    00EDAH
+                  @@CODEL  r_cg_port
+                                      01173H    00022H
+                  @@CODEL  r_cg_port_user
+                                      01195H    00000H
+                  @@CODEL  r_cg_wdt   01195H    00014H
+                  @@CODEL  r_cg_wdt_user
+                                      011A9H    00000H
+                  @@CODEL  r_main     011A9H    000D4H
+                  @@CODEL  r_systeminit
+                                      0127DH    00027H
+                  @@CODEL  r_cg_timer_user
+                                      012A4H    0000EH
+                  @@CODEL  r_cg_timer
+                                      012B2H    000C0H
+                  @@CODEL  LcdDriver
+                                      01372H    00DFEH
+                  @@CODEL  HourMeter
+                                      02170H    00167H
+                  @@CODEL  InputSense
+                                      022D7H    00066H
+                  @@CODEL  HrDataSave
+                                      0233DH    00099H
+                  @@CODEL  dataflash
+                                      023D6H    004EEH
+                  @@CODEL  eel_descriptor
+                                      028C4H    00000H
+                  @@CODEL  FDL_DESCR
+                                      028C4H    00000H
+         EEL_CODE                     028C4H    00AB9H  CSEG UNIT64KP
+                  EEL_CODE eel        028C4H    00062H
+                  EEL_CODE eel_common
+                                      02926H    00001H
+                  EEL_CODE eel_data   02928H    0003DH
+                  EEL_CODE eel_format
+                                      02966H    00127H
+                  EEL_CODE eel_read   02A8EH    00037H
+                  EEL_CODE eel_shutdown
+                                      02AC6H    0000BH
+                  EEL_CODE eel_verify
+                                      02AD2H    0002CH
+                  EEL_CODE eel_bios   02AFEH    000DDH
+                  EEL_CODE eel_functions
+                                      02BDCH    002F6H
+                  EEL_CODE eel_refresh
+                                      02ED2H    001F2H
+                  EEL_CODE eel_startup
+                                      030C4H    00184H
+                  EEL_CODE eel_write
+                                      03248H    000CFH
+                  EEL_CODE eel_gdrv_sts
+                                      03318H    0002EH
+                  EEL_CODE eel_gspace
+                                      03346H    00037H
+* gap *                               0337DH    00001H
+         FDL_CODE                     0337EH    0023CH  CSEG UNIT64KP
+                  FDL_CODE fdl        0337EH    000CFH
+                  FDL_CODE fdl_data   0344EH    0001DH
+                  FDL_CODE fdl_functions
+                                      0346CH    0014EH
+         @@LCODEL                     035BAH    00060H  CSEG
+                  @@LCODEL @stkinit   035BAH    00044H
+                  @@LCODEL exit       035FEH    0001CH
+* gap *                               0361AH    003E6H
+         ??OCDROM                     03A00H    00200H  CSEG
+* gap *                               03C00H    02400H
+
+  MEMORY=RAM
+  BASE ADDRESS=FF700H   SIZE=00900H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FF700H    000ECH  DSEG BASEP
+                  @@DATA   @cstart    FF700H    000BAH
+                  @@DATA   r_cg_cgc   FF7BAH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_lcd   FF7BAH    00000H
+                  @@DATA   r_cg_lcd_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_port
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_port_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_wdt   FF7BAH    00000H
+                  @@DATA   r_cg_wdt_user
+                                      FF7BAH    00000H
+                  @@DATA   r_main     FF7BAH    00000H
+                  @@DATA   r_systeminit
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_timer_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_timer
+                                      FF7BAH    00000H
+                  @@DATA   LcdDriver
+                                      FF7BAH    00004H
+                  @@DATA   HourMeter
+                                      FF7BEH    00000H
+                  @@DATA   InputSense
+                                      FF7BEH    00000H
+                  @@DATA   HrDataSave
+                                      FF7BEH    00000H
+                  @@DATA   dataflash
+                                      FF7BEH    0002EH
+                  @@DATA   eel_descriptor
+                                      FF7ECH    00000H
+                  @@DATA   FDL_DESCR
+                                      FF7ECH    00000H
+                  @@DATA   @rom       FF7ECH    00000H
+         @@INIT                       FF7ECH    00028H  DSEG BASEP
+                  @@INIT   @cstart    FF7ECH    00000H
+                  @@INIT   r_cg_cgc   FF7ECH    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FF7ECH    00000H
+                  @@INIT   r_cg_lcd   FF7ECH    00000H
+                  @@INIT   r_cg_lcd_user
+                                      FF7ECH    00000H
+                  @@INIT   r_cg_port
+                                      FF7ECH    00000H
+                  @@INIT   r_cg_port_user
+                                      FF7ECH    00000H
+                  @@INIT   r_cg_wdt   FF7ECH    00000H
+                  @@INIT   r_cg_wdt_user
+                                      FF7ECH    00000H
+                  @@INIT   r_main     FF7ECH    00006H
+                  @@INIT   r_systeminit
+                                      FF7F2H    00000H
+                  @@INIT   r_cg_timer_user
+                                      FF7F2H    00002H
+                  @@INIT   r_cg_timer
+                                      FF7F4H    00000H
+                  @@INIT   LcdDriver
+                                      FF7F4H    00006H
+                  @@INIT   HourMeter
+                                      FF7FAH    0000AH
+                  @@INIT   InputSense
+                                      FF804H    0000CH
+                  @@INIT   HrDataSave
+                                      FF810H    00004H
+                  @@INIT   dataflash
+                                      FF814H    00000H
+                  @@INIT   eel_descriptor
+                                      FF814H    00000H
+                  @@INIT   FDL_DESCR
+                                      FF814H    00000H
+                  @@INIT   @rom       FF814H    00000H
+         @@INIS                       FF814H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FF814H    00000H
+                  @@INIS   r_cg_cgc   FF814H    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FF814H    00000H
+                  @@INIS   r_cg_lcd   FF814H    00000H
+                  @@INIS   r_cg_lcd_user
+                                      FF814H    00000H
+                  @@INIS   r_cg_port
+                                      FF814H    00000H
+                  @@INIS   r_cg_port_user
+                                      FF814H    00000H
+                  @@INIS   r_cg_wdt   FF814H    00000H
+                  @@INIS   r_cg_wdt_user
+                                      FF814H    00000H
+                  @@INIS   r_main     FF814H    00000H
+                  @@INIS   r_systeminit
+                                      FF814H    00000H
+                  @@INIS   r_cg_timer_user
+                                      FF814H    00000H
+                  @@INIS   r_cg_timer
+                                      FF814H    00000H
+                  @@INIS   LcdDriver
+                                      FF814H    00000H
+                  @@INIS   HourMeter
+                                      FF814H    00000H
+                  @@INIS   InputSense
+                                      FF814H    00000H
+                  @@INIS   HrDataSave
+                                      FF814H    00000H
+                  @@INIS   dataflash
+                                      FF814H    00000H
+                  @@INIS   eel_descriptor
+                                      FF814H    00000H
+                  @@INIS   FDL_DESCR
+                                      FF814H    00000H
+                  @@INIS   @rom       FF814H    00000H
+         @@DATS                       FF814H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FF814H    00000H
+                  @@DATS   r_cg_cgc   FF814H    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FF814H    00000H
+                  @@DATS   r_cg_lcd   FF814H    00000H
+                  @@DATS   r_cg_lcd_user
+                                      FF814H    00000H
+                  @@DATS   r_cg_port
+                                      FF814H    00000H
+                  @@DATS   r_cg_port_user
+                                      FF814H    00000H
+                  @@DATS   r_cg_wdt   FF814H    00000H
+                  @@DATS   r_cg_wdt_user
+                                      FF814H    00000H
+                  @@DATS   r_main     FF814H    00000H
+                  @@DATS   r_systeminit
+                                      FF814H    00000H
+                  @@DATS   r_cg_timer_user
+                                      FF814H    00000H
+                  @@DATS   r_cg_timer
+                                      FF814H    00000H
+                  @@DATS   LcdDriver
+                                      FF814H    00000H
+                  @@DATS   HourMeter
+                                      FF814H    00000H
+                  @@DATS   InputSense
+                                      FF814H    00000H
+                  @@DATS   HrDataSave
+                                      FF814H    00000H
+                  @@DATS   dataflash
+                                      FF814H    00000H
+                  @@DATS   eel_descriptor
+                                      FF814H    00000H
+                  @@DATS   FDL_DESCR
+                                      FF814H    00000H
+                  @@DATS   @rom       FF814H    00000H
+         @@INITL                      FF814H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FF814H    00000H
+                  @@INITL  r_cg_cgc   FF814H    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FF814H    00000H
+                  @@INITL  r_cg_lcd   FF814H    00000H
+                  @@INITL  r_cg_lcd_user
+                                      FF814H    00000H
+                  @@INITL  r_cg_port
+                                      FF814H    00000H
+                  @@INITL  r_cg_port_user
+                                      FF814H    00000H
+                  @@INITL  r_cg_wdt   FF814H    00000H
+                  @@INITL  r_cg_wdt_user
+                                      FF814H    00000H
+                  @@INITL  r_main     FF814H    00000H
+                  @@INITL  r_systeminit
+                                      FF814H    00000H
+                  @@INITL  r_cg_timer_user
+                                      FF814H    00000H
+                  @@INITL  r_cg_timer
+                                      FF814H    00000H
+                  @@INITL  LcdDriver
+                                      FF814H    00000H
+                  @@INITL  HourMeter
+                                      FF814H    00000H
+                  @@INITL  InputSense
+                                      FF814H    00000H
+                  @@INITL  HrDataSave
+                                      FF814H    00000H
+                  @@INITL  dataflash
+                                      FF814H    00000H
+                  @@INITL  eel_descriptor
+                                      FF814H    00000H
+                  @@INITL  FDL_DESCR
+                                      FF814H    00000H
+                  @@INITL  @rom       FF814H    00000H
+         @@DATAL                      FF814H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FF814H    00000H
+                  @@DATAL  r_cg_cgc   FF814H    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FF814H    00000H
+                  @@DATAL  r_cg_lcd   FF814H    00000H
+                  @@DATAL  r_cg_lcd_user
+                                      FF814H    00000H
+                  @@DATAL  r_cg_port
+                                      FF814H    00000H
+                  @@DATAL  r_cg_port_user
+                                      FF814H    00000H
+                  @@DATAL  r_cg_wdt   FF814H    00000H
+                  @@DATAL  r_cg_wdt_user
+                                      FF814H    00000H
+                  @@DATAL  r_main     FF814H    00000H
+                  @@DATAL  r_systeminit
+                                      FF814H    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FF814H    00000H
+                  @@DATAL  r_cg_timer
+                                      FF814H    00000H
+                  @@DATAL  LcdDriver
+                                      FF814H    00000H
+                  @@DATAL  HourMeter
+                                      FF814H    00000H
+                  @@DATAL  InputSense
+                                      FF814H    00000H
+                  @@DATAL  HrDataSave
+                                      FF814H    00000H
+                  @@DATAL  dataflash
+                                      FF814H    00000H
+                  @@DATAL  eel_descriptor
+                                      FF814H    00000H
+                  @@DATAL  FDL_DESCR
+                                      FF814H    00000H
+                  @@DATAL  @rom       FF814H    00000H
+         @@BITS                       FF814H    00000H  BSEG
+                  @@BITS   @cstart    FF814H.0  00000H.0
+                  @@BITS   r_cg_cgc   FF814H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FF814H.0  00000H.0
+                  @@BITS   r_cg_lcd   FF814H.0  00000H.0
+                  @@BITS   r_cg_lcd_user
+                                      FF814H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FF814H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FF814H.0  00000H.0
+                  @@BITS   r_cg_wdt   FF814H.0  00000H.0
+                  @@BITS   r_cg_wdt_user
+                                      FF814H.0  00000H.0
+                  @@BITS   r_main     FF814H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FF814H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FF814H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FF814H.0  00000H.0
+                  @@BITS   LcdDriver
+                                      FF814H.0  00000H.0
+                  @@BITS   HourMeter
+                                      FF814H.0  00000H.0
+                  @@BITS   InputSense
+                                      FF814H.0  00000H.0
+                  @@BITS   HrDataSave
+                                      FF814H.0  00000H.0
+                  @@BITS   dataflash
+                                      FF814H.0  00000H.0
+                  @@BITS   eel_descriptor
+                                      FF814H.0  00000H.0
+                  @@BITS   FDL_DESCR
+                                      FF814H.0  00000H.0
+* gap *                               FF814H    0060CH
+         EEL_SDAT                     FFE20H    00001H  DSEG SADDRP
+                  EEL_SDAT eel_data   FFE20H    00001H
+* gap *                               FFE21H    00001H
+         FDL_SDAT                     FFE22H    00002H  DSEG SADDRP
+                  FDL_SDAT fdl_data   FFE22H    00002H
+* gap *                               FFE24H    000B4H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+ Target chip : R5F10CGB
+ Device file : V1.01
+

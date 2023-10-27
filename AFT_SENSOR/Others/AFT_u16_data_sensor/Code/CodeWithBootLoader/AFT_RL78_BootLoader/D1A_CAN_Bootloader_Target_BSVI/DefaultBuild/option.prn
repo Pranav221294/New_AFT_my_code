@@ -1,0 +1,45 @@
+
+
+
+78K0R Assembler V1.91                                                                                    Date:19 Dec 2018 Page:   1
+
+
+
+Command:  -cf10dpg -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\RL78\Devicefile option.asm -_msgoff -pDefaultBuild -
+          oDefaultBuild -zs
+Para-file:
+In-file:  option.asm
+Obj-file: DefaultBuild\option.rel
+Prn-file: DefaultBuild\option.prn
+
+      Assemble list
+
+ ALNO  STNO ADRS   OBJECT   M I  SOURCE STATEMENT
+
+    1     1 -----                OPT CSEG OPT_BYTE
+    2     2 00000  EF            DB 0EFH ; Does not use interval interrupt of watchdog timer,
+    3     3                              ; Enables watchdog timer operation,
+    4     4                              ; Window open period of watchdog timer is 50%,
+    5     5                              ; Overflow time of watchdog timer is 29/fIL,
+    6     6                              ; Stops watchdog timer operation during HALT/STOP mode
+    7     7 00001  FF            DB 0FFH ; Select 2.75 V for VLVIL
+    8     8                              ; Select rising edge 2.92 V, falling edge 2.86 V for VLVIH
+    9     9                              ; Select the interrupt & reset mode as the LVD operation mode
+   10    10                              ;stops clock monitoring
+   11    11 00002  E8            DB 0E8H ; Select the HS (high speed main) mode as the flash operation mode
+   12    12                              ;and 32 MHz as the frequency of the high-speed on-chip oscillator
+   13    13 00003  84            DB 084H ; Enables on-chip debug operation, does not erase flash memory
+   14    14                              ;data when security ID authorization fails
+   15    15                              
+   16    16                              end
+
+Segment informations:
+
+ADRS  LEN      NAME
+
+00000 00004H   OPT
+
+ Target chip : R5F10DPG
+ Device file : V1.01
+Assembly complete,     0 error(s) and     0 warning(s) found. (    0)
+

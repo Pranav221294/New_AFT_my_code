@@ -1,0 +1,192 @@
+Microchip MPLAB XC8 PIC(R) Assembler V2.41
+
+Linker command line:
+
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
+  -cs -h+dist/default/production\Asembly.X.production.sym \
+  --cmf=dist/default/production\Asembly.X.production.cmf -z -Q16F1823 \
+  -oC:\Users\PRANAV~1.MOU\AppData\Local\Temp\xcAs15cs.\driver_tmp_3.o \
+  --fixupoverflow=error -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
+  -Mdist/default/production/Asembly.X.production.map -E1 --acfsm=1493 \
+  -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 \
+  -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh \
+  -ABANK0=020h-06Fh -ABANK1=0A0h-0BFh -ABIGRAM=02000h-0206Fh \
+  -ARAM=020h-06Fh,0A0h-0BFh -AABS1=020h-07Fh,0A0h-0BFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-016Fh -ASFR3=0180h-01EFh -ASFR4=0200h-026Fh \
+  -ASFR5=0280h-02EFh -ASFR6=0300h-036Fh -ASFR7=0380h-03EFh \
+  -ASFR8=0400h-046Fh -ASFR9=0480h-04EFh -ASFR10=0500h-056Fh \
+  -ASFR11=0580h-05EFh -ASFR12=0600h-066Fh -ASFR13=0680h-06EFh \
+  -ASFR14=0700h-076Fh -ASFR15=0780h-07EFh -ASFR16=0800h-086Fh \
+  -ASFR17=0880h-08EFh -ASFR18=0900h-096Fh -ASFR19=0980h-09EFh \
+  -ASFR20=0A00h-0A6Fh -ASFR21=0A80h-0AEFh -ASFR22=0B00h-0B6Fh \
+  -ASFR23=0B80h-0BEFh -ASFR24=0C00h-0C6Fh -ASFR25=0C80h-0CEFh \
+  -ASFR26=0D00h-0D6Fh -ASFR27=0D80h-0DEFh -ASFR28=0E00h-0E6Fh \
+  -ASFR29=0E80h-0EEFh -ASFR30=0F00h-0F6Fh -ASFR31=0F80h-0FEFh \
+  -ACONFIG=08007h-08008h -DCONFIG=2 -AIDLOC=08000h-08003h -DIDLOC=2 \
+  -AEEDATA=00h-0FFh/0F000h -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 \
+  -DCONST=2 -DENTRY=2 build/default/production/newAsmTemplate.o 
+
+Object code version is 3.11
+
+Machine type is 16F1823
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+build/default/production/newAsmTemplate.o
+                
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   SFR4           
+
+        CLASS   SFR5           
+
+        CLASS   SFR6           
+
+        CLASS   SFR7           
+
+        CLASS   SFR8           
+
+        CLASS   SFR9           
+
+        CLASS   SFR10          
+
+        CLASS   SFR11          
+
+        CLASS   SFR12          
+
+        CLASS   SFR13          
+
+        CLASS   SFR14          
+
+        CLASS   SFR15          
+
+        CLASS   SFR16          
+
+        CLASS   SFR17          
+
+        CLASS   SFR18          
+
+        CLASS   SFR19          
+
+        CLASS   SFR20          
+
+        CLASS   SFR21          
+
+        CLASS   SFR22          
+
+        CLASS   SFR23          
+
+        CLASS   SFR24          
+
+        CLASS   SFR25          
+
+        CLASS   SFR26          
+
+        CLASS   SFR27          
+
+        CLASS   SFR28          
+
+        CLASS   SFR29          
+
+        CLASS   SFR30          
+
+        CLASS   SFR31          
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            20-6F          50           1
+        BANK1            A0-BF          20           1
+        BIGRAM           2000-206F          70           1
+        CODE             0-7FF         800           2
+        COMMON           70-7F          10           1
+        CONFIG           8007-8008           2           2
+        CONST            0-7FF         100           2
+        EEDATA           F000-F0FF         100           2
+        ENTRY            0-7FF         100           2
+        IDLOC            8000-8003           4           2
+        RAM              20-6F          50           1
+                         A0-BF          20
+        SFR0             0-1F          20           1
+        SFR1             80-9F          20           1
+        SFR10            500-56F          70           1
+        SFR11            580-5EF          70           1
+        SFR12            600-66F          70           1
+        SFR13            680-6EF          70           1
+        SFR14            700-76F          70           1
+        SFR15            780-7EF          70           1
+        SFR16            800-86F          70           1
+        SFR17            880-8EF          70           1
+        SFR18            900-96F          70           1
+        SFR19            980-9EF          70           1
+        SFR2             100-16F          70           1
+        SFR20            A00-A6F          70           1
+        SFR21            A80-AEF          70           1
+        SFR22            B00-B6F          70           1
+        SFR23            B80-BEF          70           1
+        SFR24            C00-C6F          70           1
+        SFR25            C80-CEF          70           1
+        SFR26            D00-D6F          70           1
+        SFR27            D80-DEF          70           1
+        SFR28            E00-E6F          70           1
+        SFR29            E80-EEF          70           1
+        SFR3             180-1EF          70           1
+        SFR30            F00-F6F          70           1
+        SFR31            F80-FEF          70           1
+        SFR4             200-26F          70           1
+        SFR5             280-2EF          70           1
+        SFR6             300-36F          70           1
+        SFR7             380-3EF          70           1
+        SFR8             400-46F          70           1
+        SFR9             480-4EF          70           1
+        STRCODE          0-7FF         800           2
+        STRING           0-7FF         100           2
+
+                                  Symbol Table
+
+__H__absolute__ __absolute__ 0  __Hspace_0      (abs)        0
+__L__absolute__ __absolute__ 0  __Lspace_0      (abs)        0

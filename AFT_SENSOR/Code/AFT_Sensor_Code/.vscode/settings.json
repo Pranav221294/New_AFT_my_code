@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "readwriteparamflash.h": "c",
+        "user.h": "c",
+        "can.h": "c",
+        "r_cg_userdefine.h": "c",
+        "calibration.h": "c",
+        "guicommprotocol.h": "c",
+        "customdatatypes.h": "c",
+        "configuration.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

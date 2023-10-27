@@ -1,0 +1,628 @@
+
+
+
+78K0R Linker V1.80                            Date:25 Dec 2021 Page:   1
+
+Command:   -yC:\Program Files (x86)\Renesas Electronics\CS+\CACX\Device\
+           RL78\Devicefile -_msgoff -oDefaultBuild\CNH_Industrial.lmf -g
+           i00000000000000000000h -go84h,5E00h,512 -gb7F330AH -mi0 -s -p
+           DefaultBuild\CNH_Industrial.map C:\Program Files (x86)\Renesa
+           s Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r\s0rll.rel Defau
+           ltBuild\r_cg_cgc.rel DefaultBuild\r_cg_cgc_user.rel DefaultBu
+           ild\r_cg_lcd.rel DefaultBuild\r_cg_lcd_user.rel DefaultBuild\
+           r_cg_port.rel DefaultBuild\r_cg_port_user.rel DefaultBuild\r_
+           cg_wdt.rel DefaultBuild\r_cg_wdt_user.rel DefaultBuild\r_main
+           .rel DefaultBuild\r_systeminit.rel DefaultBuild\r_Stepper.rel
+            DefaultBuild\r_cg_timer_user.rel DefaultBuild\r_cg_timer.rel
+            DefaultBuild\eel_descriptor.rel DefaultBuild\fdl_descriptor.
+           rel DefaultBuild\dataflash.rel -blib\eel.lib -blib\fdl.lib -b
+           cl0ram.lib -bcl0rm.lib -bcl0rmf.lib -iC:\Program Files (x86)\
+           Renesas Electronics\CS+\CACX\CA78K0R\V1.72\lib78k0r
+Para-file:
+Out-file:  DefaultBuild\CNH_Industrial.lmf
+Map-file:  DefaultBuild\CNH_Industrial.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    48 output segment(s)
+ 2EDAH byte(s) real data
+  1651 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=00000H   SIZE=06000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     00000H    00002H  CSEG AT
+                  @@VECT00 @cstart    00000H    00002H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  @cstart    00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_cgc_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_lcd   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_lcd_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_port_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt   00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_wdt_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_main     00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_systeminit
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_Stepper
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer_user
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  r_cg_timer
+                                      00002H    00000H
+         @@CNSTL                      00002H    00000H  CSEG PAGE64KP
+                  @@CNSTL  dataflash
+                                      00002H    00000H
+         @@RLINIT                     00002H    00000H  CSEG UNIT64KP
+                  @@RLINIT @cstart    00002H    00000H
+                  @@RLINIT r_cg_cgc   00002H    00000H
+                  @@RLINIT r_cg_cgc_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_lcd   00002H    00000H
+                  @@RLINIT r_cg_lcd_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_port
+                                      00002H    00000H
+                  @@RLINIT r_cg_port_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_wdt   00002H    00000H
+                  @@RLINIT r_cg_wdt_user
+                                      00002H    00000H
+                  @@RLINIT r_main     00002H    00000H
+                  @@RLINIT r_systeminit
+                                      00002H    00000H
+                  @@RLINIT r_Stepper
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer_user
+                                      00002H    00000H
+                  @@RLINIT r_cg_timer
+                                      00002H    00000H
+                  @@RLINIT eel_descriptor
+                                      00002H    00000H
+                  @@RLINIT FDL_DESCR
+                                      00002H    00000H
+                  @@RLINIT dataflash
+                                      00002H    00000H
+                  @@RLINIT @rom       00002H    00000H
+         @@R_INIS                     00002H    00000H  CSEG UNIT64KP
+                  @@R_INIS @cstart    00002H    00000H
+                  @@R_INIS r_cg_cgc   00002H    00000H
+                  @@R_INIS r_cg_cgc_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_lcd   00002H    00000H
+                  @@R_INIS r_cg_lcd_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_port
+                                      00002H    00000H
+                  @@R_INIS r_cg_port_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_wdt   00002H    00000H
+                  @@R_INIS r_cg_wdt_user
+                                      00002H    00000H
+                  @@R_INIS r_main     00002H    00000H
+                  @@R_INIS r_systeminit
+                                      00002H    00000H
+                  @@R_INIS r_Stepper
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer_user
+                                      00002H    00000H
+                  @@R_INIS r_cg_timer
+                                      00002H    00000H
+                  @@R_INIS eel_descriptor
+                                      00002H    00000H
+                  @@R_INIS FDL_DESCR
+                                      00002H    00000H
+                  @@R_INIS dataflash
+                                      00002H    00000H
+                  @@R_INIS @rom       00002H    00000H
+         @@CALT                       00002H    00000H  CSEG
+                  @@CALT   @cstart    00002H    00000H
+                  @@CALT   r_cg_cgc   00002H    00000H
+                  @@CALT   r_cg_cgc_user
+                                      00002H    00000H
+                  @@CALT   r_cg_lcd   00002H    00000H
+                  @@CALT   r_cg_lcd_user
+                                      00002H    00000H
+                  @@CALT   r_cg_port
+                                      00002H    00000H
+                  @@CALT   r_cg_port_user
+                                      00002H    00000H
+                  @@CALT   r_cg_wdt   00002H    00000H
+                  @@CALT   r_cg_wdt_user
+                                      00002H    00000H
+                  @@CALT   r_main     00002H    00000H
+                  @@CALT   r_systeminit
+                                      00002H    00000H
+                  @@CALT   r_Stepper
+                                      00002H    00000H
+                  @@CALT   r_cg_timer_user
+                                      00002H    00000H
+                  @@CALT   r_cg_timer
+                                      00002H    00000H
+                  @@CALT   eel_descriptor
+                                      00002H    00000H
+                  @@CALT   FDL_DESCR
+                                      00002H    00000H
+                  @@CALT   dataflash
+                                      00002H    00000H
+         ??NMIROM                     00002H    00002H  CSEG
+         @@VECT04                     00004H    00002H  CSEG AT
+                  @@VECT04 r_cg_wdt_user
+                                      00004H    00002H
+         EEL_CNST                     00006H    00008H  CSEG PAGE64KP
+                  EEL_CNST eel_descriptor
+                                      00006H    00008H
+         FDL_CNST                     0000EH    0000AH  CSEG PAGE64KP
+                  FDL_CNST FDL_DESCR
+                                      0000EH    0000AH
+* gap *                               00018H    00016H
+         @@VECT2E                     0002EH    00002H  CSEG AT
+                  @@VECT2E r_cg_timer_user
+                                      0002EH    00002H
+* gap *                               00030H    00026H
+         @@VECT56                     00056H    00004H  CSEG AT
+                  @@VECT56 r_cg_timer_user
+                                      00056H    00004H
+         @@R_INIT                     0005AH    00038H  CSEG UNIT64KP
+                  @@R_INIT @cstart    0005AH    00000H
+                  @@R_INIT r_cg_cgc   0005AH    00000H
+                  @@R_INIT r_cg_cgc_user
+                                      0005AH    00000H
+                  @@R_INIT r_cg_lcd   0005AH    00000H
+                  @@R_INIT r_cg_lcd_user
+                                      0005AH    00002H
+                  @@R_INIT r_cg_port
+                                      0005CH    00000H
+                  @@R_INIT r_cg_port_user
+                                      0005CH    00000H
+                  @@R_INIT r_cg_wdt   0005CH    00000H
+                  @@R_INIT r_cg_wdt_user
+                                      0005CH    00000H
+                  @@R_INIT r_main     0005CH    0002CH
+                  @@R_INIT r_systeminit
+                                      00088H    00000H
+                  @@R_INIT r_Stepper
+                                      00088H    00000H
+                  @@R_INIT r_cg_timer_user
+                                      00088H    0000AH
+                  @@R_INIT r_cg_timer
+                                      00092H    00000H
+                  @@R_INIT eel_descriptor
+                                      00092H    00000H
+                  @@R_INIT FDL_DESCR
+                                      00092H    00000H
+                  @@R_INIT dataflash
+                                      00092H    00000H
+                  @@R_INIT @rom       00092H    00000H
+* gap *                               00092H    0002EH
+         ?CSEGOB0                     000C0H    00004H  CSEG OPT_BYTE
+         @@CODE                       000C4H    00000H  CSEG BASE
+                  @@CODE   r_cg_cgc   000C4H    00000H
+                  @@CODE   r_cg_cgc_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_lcd   000C4H    00000H
+                  @@CODE   r_cg_lcd_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_port
+                                      000C4H    00000H
+                  @@CODE   r_cg_port_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_wdt   000C4H    00000H
+                  @@CODE   r_cg_wdt_user
+                                      000C4H    00000H
+                  @@CODE   r_main     000C4H    00000H
+                  @@CODE   r_systeminit
+                                      000C4H    00000H
+                  @@CODE   r_Stepper
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer_user
+                                      000C4H    00000H
+                  @@CODE   r_cg_timer
+                                      000C4H    00000H
+                  @@CODE   eel_descriptor
+                                      000C4H    00000H
+                  @@CODE   FDL_DESCR
+                                      000C4H    00000H
+                  @@CODE   dataflash
+                                      000C4H    00000H
+         ?CSEGSI                      000C4H    0000AH  CSEG
+         ?OCDSTAD                     000CEH    0000AH  CSEG
+         @@LCODE                      000D8H    00174H  CSEG BASE
+                  @@LCODE  @cstart    000D8H    000ADH
+                  @@LCODE  @lmul      00185H    0002BH
+                  @@LCODE  @ludiv     001B0H    0003FH
+                  @@LCODE  @lurem     001EFH    0003CH
+                  @@LCODE  @ladd      0022BH    0000FH
+                  @@LCODE  @lsub      0023AH    00012H
+         @@BASE                       0024CH    00216H  CSEG BASE
+                  @@BASE   r_cg_cgc   0024CH    00000H
+                  @@BASE   r_cg_cgc_user
+                                      0024CH    00000H
+                  @@BASE   r_cg_lcd   0024CH    00000H
+                  @@BASE   r_cg_lcd_user
+                                      0024CH    00000H
+                  @@BASE   r_cg_port
+                                      0024CH    00000H
+                  @@BASE   r_cg_port_user
+                                      0024CH    00000H
+                  @@BASE   r_cg_wdt   0024CH    00000H
+                  @@BASE   r_cg_wdt_user
+                                      0024CH    00002H
+                  @@BASE   r_main     0024EH    00000H
+                  @@BASE   r_systeminit
+                                      0024EH    00000H
+                  @@BASE   r_Stepper
+                                      0024EH    00000H
+                  @@BASE   r_cg_timer_user
+                                      0024EH    00214H
+                  @@BASE   r_cg_timer
+                                      00462H    00000H
+                  @@BASE   eel_descriptor
+                                      00462H    00000H
+                  @@BASE   FDL_DESCR
+                                      00462H    00000H
+                  @@BASE   dataflash
+                                      00462H    00000H
+         @@CODEL                      00462H    01AD0H  CSEG
+                  @@CODEL  r_cg_cgc   00462H    00018H
+                  @@CODEL  r_cg_cgc_user
+                                      0047AH    00015H
+                  @@CODEL  r_cg_lcd   0048FH    0002DH
+                  @@CODEL  r_cg_lcd_user
+                                      004BCH    00D07H
+                  @@CODEL  r_cg_port
+                                      011C3H    0000DH
+                  @@CODEL  r_cg_port_user
+                                      011D0H    00000H
+                  @@CODEL  r_cg_wdt   011D0H    00014H
+                  @@CODEL  r_cg_wdt_user
+                                      011E4H    00000H
+                  @@CODEL  r_main     011E4H    005E1H
+                  @@CODEL  r_systeminit
+                                      017C5H    0002BH
+                  @@CODEL  r_Stepper
+                                      017F0H    002F8H
+                  @@CODEL  r_cg_timer_user
+                                      01AE8H    00000H
+                  @@CODEL  r_cg_timer
+                                      01AE8H    00146H
+                  @@CODEL  eel_descriptor
+                                      01C2EH    00000H
+                  @@CODEL  FDL_DESCR
+                                      01C2EH    00000H
+                  @@CODEL  dataflash
+                                      01C2EH    00304H
+         EEL_CODE                     01F32H    00AB9H  CSEG UNIT64KP
+                  EEL_CODE eel        01F32H    00062H
+                  EEL_CODE eel_common
+                                      01F94H    00001H
+                  EEL_CODE eel_data   01F96H    0003DH
+                  EEL_CODE eel_format
+                                      01FD4H    00127H
+                  EEL_CODE eel_read   020FCH    00037H
+                  EEL_CODE eel_shutdown
+                                      02134H    0000BH
+                  EEL_CODE eel_verify
+                                      02140H    0002CH
+                  EEL_CODE eel_bios   0216CH    000DDH
+                  EEL_CODE eel_functions
+                                      0224AH    002F6H
+                  EEL_CODE eel_refresh
+                                      02540H    001F2H
+                  EEL_CODE eel_startup
+                                      02732H    00184H
+                  EEL_CODE eel_write
+                                      028B6H    000CFH
+                  EEL_CODE eel_gdrv_sts
+                                      02986H    0002EH
+                  EEL_CODE eel_gspace
+                                      029B4H    00037H
+* gap *                               029EBH    00001H
+         FDL_CODE                     029ECH    0023CH  CSEG UNIT64KP
+                  FDL_CODE fdl        029ECH    000CFH
+                  FDL_CODE fdl_data   02ABCH    0001DH
+                  FDL_CODE fdl_functions
+                                      02ADAH    0014EH
+         @@LCODEL                     02C28H    00060H  CSEG
+                  @@LCODEL @stkinit   02C28H    00044H
+                  @@LCODEL exit       02C6CH    0001CH
+* gap *                               02C88H    00378H
+         @@CNST                       03000H    000C6H  CSEG MIRRORP
+                  @@CNST   @cstart    03000H    00000H
+                  @@CNST   r_cg_cgc   03000H    00000H
+                  @@CNST   r_cg_cgc_user
+                                      03000H    00000H
+                  @@CNST   r_cg_lcd   03000H    00000H
+                  @@CNST   r_cg_lcd_user
+                                      03000H    00000H
+                  @@CNST   r_cg_port
+                                      03000H    00000H
+                  @@CNST   r_cg_port_user
+                                      03000H    00000H
+                  @@CNST   r_cg_wdt   03000H    00000H
+                  @@CNST   r_cg_wdt_user
+                                      03000H    00000H
+                  @@CNST   r_main     03000H    00000H
+                  @@CNST   r_systeminit
+                                      03000H    00000H
+                  @@CNST   r_Stepper
+                                      03000H    000C6H
+                  @@CNST   r_cg_timer_user
+                                      030C6H    00000H
+                  @@CNST   r_cg_timer
+                                      030C6H    00000H
+                  @@CNST   eel_descriptor
+                                      030C6H    00000H
+                  @@CNST   FDL_DESCR
+                                      030C6H    00000H
+                  @@CNST   dataflash
+                                      030C6H    00000H
+* gap *                               030C6H    02D3AH
+         ??OCDROM                     05E00H    00200H  CSEG
+
+  MEMORY=RAM
+  BASE ADDRESS=FF700H   SIZE=00900H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FF700H    0014CH  DSEG BASEP
+                  @@DATA   @cstart    FF700H    000BAH
+                  @@DATA   r_cg_cgc   FF7BAH    00000H
+                  @@DATA   r_cg_cgc_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_lcd   FF7BAH    00000H
+                  @@DATA   r_cg_lcd_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_port
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_port_user
+                                      FF7BAH    00000H
+                  @@DATA   r_cg_wdt   FF7BAH    00000H
+                  @@DATA   r_cg_wdt_user
+                                      FF7BAH    00000H
+                  @@DATA   r_main     FF7BAH    0006AH
+                  @@DATA   r_systeminit
+                                      FF824H    00000H
+                  @@DATA   r_Stepper
+                                      FF824H    00000H
+                  @@DATA   r_cg_timer_user
+                                      FF824H    00000H
+                  @@DATA   r_cg_timer
+                                      FF824H    00000H
+                  @@DATA   eel_descriptor
+                                      FF824H    00000H
+                  @@DATA   FDL_DESCR
+                                      FF824H    00000H
+                  @@DATA   dataflash
+                                      FF824H    00028H
+                  @@DATA   @rom       FF84CH    00000H
+         @@INIT                       FF84CH    00038H  DSEG BASEP
+                  @@INIT   @cstart    FF84CH    00000H
+                  @@INIT   r_cg_cgc   FF84CH    00000H
+                  @@INIT   r_cg_cgc_user
+                                      FF84CH    00000H
+                  @@INIT   r_cg_lcd   FF84CH    00000H
+                  @@INIT   r_cg_lcd_user
+                                      FF84CH    00002H
+                  @@INIT   r_cg_port
+                                      FF84EH    00000H
+                  @@INIT   r_cg_port_user
+                                      FF84EH    00000H
+                  @@INIT   r_cg_wdt   FF84EH    00000H
+                  @@INIT   r_cg_wdt_user
+                                      FF84EH    00000H
+                  @@INIT   r_main     FF84EH    0002CH
+                  @@INIT   r_systeminit
+                                      FF87AH    00000H
+                  @@INIT   r_Stepper
+                                      FF87AH    00000H
+                  @@INIT   r_cg_timer_user
+                                      FF87AH    0000AH
+                  @@INIT   r_cg_timer
+                                      FF884H    00000H
+                  @@INIT   eel_descriptor
+                                      FF884H    00000H
+                  @@INIT   FDL_DESCR
+                                      FF884H    00000H
+                  @@INIT   dataflash
+                                      FF884H    00000H
+                  @@INIT   @rom       FF884H    00000H
+         @@INIS                       FF884H    00000H  DSEG UNITP
+                  @@INIS   @cstart    FF884H    00000H
+                  @@INIS   r_cg_cgc   FF884H    00000H
+                  @@INIS   r_cg_cgc_user
+                                      FF884H    00000H
+                  @@INIS   r_cg_lcd   FF884H    00000H
+                  @@INIS   r_cg_lcd_user
+                                      FF884H    00000H
+                  @@INIS   r_cg_port
+                                      FF884H    00000H
+                  @@INIS   r_cg_port_user
+                                      FF884H    00000H
+                  @@INIS   r_cg_wdt   FF884H    00000H
+                  @@INIS   r_cg_wdt_user
+                                      FF884H    00000H
+                  @@INIS   r_main     FF884H    00000H
+                  @@INIS   r_systeminit
+                                      FF884H    00000H
+                  @@INIS   r_Stepper
+                                      FF884H    00000H
+                  @@INIS   r_cg_timer_user
+                                      FF884H    00000H
+                  @@INIS   r_cg_timer
+                                      FF884H    00000H
+                  @@INIS   eel_descriptor
+                                      FF884H    00000H
+                  @@INIS   FDL_DESCR
+                                      FF884H    00000H
+                  @@INIS   dataflash
+                                      FF884H    00000H
+                  @@INIS   @rom       FF884H    00000H
+         @@DATS                       FF884H    00000H  DSEG UNITP
+                  @@DATS   @cstart    FF884H    00000H
+                  @@DATS   r_cg_cgc   FF884H    00000H
+                  @@DATS   r_cg_cgc_user
+                                      FF884H    00000H
+                  @@DATS   r_cg_lcd   FF884H    00000H
+                  @@DATS   r_cg_lcd_user
+                                      FF884H    00000H
+                  @@DATS   r_cg_port
+                                      FF884H    00000H
+                  @@DATS   r_cg_port_user
+                                      FF884H    00000H
+                  @@DATS   r_cg_wdt   FF884H    00000H
+                  @@DATS   r_cg_wdt_user
+                                      FF884H    00000H
+                  @@DATS   r_main     FF884H    00000H
+                  @@DATS   r_systeminit
+                                      FF884H    00000H
+                  @@DATS   r_Stepper
+                                      FF884H    00000H
+                  @@DATS   r_cg_timer_user
+                                      FF884H    00000H
+                  @@DATS   r_cg_timer
+                                      FF884H    00000H
+                  @@DATS   eel_descriptor
+                                      FF884H    00000H
+                  @@DATS   FDL_DESCR
+                                      FF884H    00000H
+                  @@DATS   dataflash
+                                      FF884H    00000H
+                  @@DATS   @rom       FF884H    00000H
+         @@INITL                      FF884H    00000H  DSEG UNIT64KP
+                  @@INITL  @cstart    FF884H    00000H
+                  @@INITL  r_cg_cgc   FF884H    00000H
+                  @@INITL  r_cg_cgc_user
+                                      FF884H    00000H
+                  @@INITL  r_cg_lcd   FF884H    00000H
+                  @@INITL  r_cg_lcd_user
+                                      FF884H    00000H
+                  @@INITL  r_cg_port
+                                      FF884H    00000H
+                  @@INITL  r_cg_port_user
+                                      FF884H    00000H
+                  @@INITL  r_cg_wdt   FF884H    00000H
+                  @@INITL  r_cg_wdt_user
+                                      FF884H    00000H
+                  @@INITL  r_main     FF884H    00000H
+                  @@INITL  r_systeminit
+                                      FF884H    00000H
+                  @@INITL  r_Stepper
+                                      FF884H    00000H
+                  @@INITL  r_cg_timer_user
+                                      FF884H    00000H
+                  @@INITL  r_cg_timer
+                                      FF884H    00000H
+                  @@INITL  eel_descriptor
+                                      FF884H    00000H
+                  @@INITL  FDL_DESCR
+                                      FF884H    00000H
+                  @@INITL  dataflash
+                                      FF884H    00000H
+                  @@INITL  @rom       FF884H    00000H
+         @@DATAL                      FF884H    00000H  DSEG UNIT64KP
+                  @@DATAL  @cstart    FF884H    00000H
+                  @@DATAL  r_cg_cgc   FF884H    00000H
+                  @@DATAL  r_cg_cgc_user
+                                      FF884H    00000H
+                  @@DATAL  r_cg_lcd   FF884H    00000H
+                  @@DATAL  r_cg_lcd_user
+                                      FF884H    00000H
+                  @@DATAL  r_cg_port
+                                      FF884H    00000H
+                  @@DATAL  r_cg_port_user
+                                      FF884H    00000H
+                  @@DATAL  r_cg_wdt   FF884H    00000H
+                  @@DATAL  r_cg_wdt_user
+                                      FF884H    00000H
+                  @@DATAL  r_main     FF884H    00000H
+                  @@DATAL  r_systeminit
+                                      FF884H    00000H
+                  @@DATAL  r_Stepper
+                                      FF884H    00000H
+                  @@DATAL  r_cg_timer_user
+                                      FF884H    00000H
+                  @@DATAL  r_cg_timer
+                                      FF884H    00000H
+                  @@DATAL  eel_descriptor
+                                      FF884H    00000H
+                  @@DATAL  FDL_DESCR
+                                      FF884H    00000H
+                  @@DATAL  dataflash
+                                      FF884H    00000H
+                  @@DATAL  @rom       FF884H    00000H
+         @@BITS                       FF884H    00000H  BSEG
+                  @@BITS   @cstart    FF884H.0  00000H.0
+                  @@BITS   r_cg_cgc   FF884H.0  00000H.0
+                  @@BITS   r_cg_cgc_user
+                                      FF884H.0  00000H.0
+                  @@BITS   r_cg_lcd   FF884H.0  00000H.0
+                  @@BITS   r_cg_lcd_user
+                                      FF884H.0  00000H.0
+                  @@BITS   r_cg_port
+                                      FF884H.0  00000H.0
+                  @@BITS   r_cg_port_user
+                                      FF884H.0  00000H.0
+                  @@BITS   r_cg_wdt   FF884H.0  00000H.0
+                  @@BITS   r_cg_wdt_user
+                                      FF884H.0  00000H.0
+                  @@BITS   r_main     FF884H.0  00000H.0
+                  @@BITS   r_systeminit
+                                      FF884H.0  00000H.0
+                  @@BITS   r_Stepper
+                                      FF884H.0  00000H.0
+                  @@BITS   r_cg_timer_user
+                                      FF884H.0  00000H.0
+                  @@BITS   r_cg_timer
+                                      FF884H.0  00000H.0
+                  @@BITS   eel_descriptor
+                                      FF884H.0  00000H.0
+                  @@BITS   FDL_DESCR
+                                      FF884H.0  00000H.0
+                  @@BITS   dataflash
+                                      FF884H.0  00000H.0
+* gap *                               FF884H    0059CH
+         EEL_SDAT                     FFE20H    00001H  DSEG SADDRP
+                  EEL_SDAT eel_data   FFE20H    00001H
+* gap *                               FFE21H    00001H
+         FDL_SDAT                     FFE22H    00002H  DSEG SADDRP
+                  FDL_SDAT fdl_data   FFE22H    00002H
+* gap *                               FFE24H    000B4H
+         @@RTARG0                     FFED8H    00008H  DSEG AT
+                  @@RTARG0 @RTARG0    FFED8H    00008H
+* gap *                               FFEE0H    00020H
+* gap (Not Free Area) *               FFF00H    00100H
+
+
+ Target chip : R5F10CGB
+ Device file : V1.01
+

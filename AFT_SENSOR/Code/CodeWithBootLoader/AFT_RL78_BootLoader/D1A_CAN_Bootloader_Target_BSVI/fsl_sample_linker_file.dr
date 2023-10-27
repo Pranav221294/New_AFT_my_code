@@ -1,0 +1,33 @@
+;MEMORY ROM   : ( 000000H , 0032FFH )	; //2bffBoot clusters - 10 KB
+;MERGE FSL_FCD  : = ROM
+;MERGE FSL_BCD  : = ROM
+;MERGE FSL_RCD  : = ROM
+;MEMORY OCDROM :( 03A00H, 000200H)
+;MEMORY RAM : ( 0FDF00H , 01C10H )	; for device RAM size 8-KB
+
+;MEMORY RAM_SADDR : ( 0FFE20H , 001E0H )	; RAM (saddr)
+;MEMORY STK :(0FFB10H,0300H)	;stack end edress + size
+
+;MEMORY RAM : ( 0FDF00H , 01D20H )	; for device RAM size 8-KB
+;MEMORY STK :(0FFC20H,0200H)	;stack end edress + size
+
+;MEMORY RAM_SADDR : ( 0FFE20H , 00DFH )	; RAM (saddr)
+
+;-------------------------------------------------------------
+
+MEMORY ROM   : ( 000000H , 0032FFH )	; //2bffBoot clusters - 10 KB
+MERGE FSL_FCD  : = ROM
+MERGE FSL_BCD  : = ROM
+MERGE FSL_RCD  : = ROM
+MEMORY OCDROM :( 03A00H, 000200H)
+
+MEMORY RAM : ( 0FF700H ,00520H )	; for device RAM size 3-KB, 2KB
+
+MEMORY STK :(0FFC20H,0200H)	;stack end edress + size
+
+MEMORY RAM_SADDR : ( 0FFE20H , 001E0H )	; RAM (saddr)
+
+;MEMORY RAM : ( 0FDF00H , 01D20H )	; for device RAM size 8-KB
+;MEMORY STK :(0FFC20H,0200H)	;stack end edress + size
+
+;
